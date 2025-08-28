@@ -1,0 +1,1670 @@
+2025-08-14 00:16:03,254 - __main__ - INFO - Configuration: batch_size=10, interval=5s, quality_check=True, faiss=True
+2025-08-14 00:16:03,299 - __main__ - INFO - 
+======================================================================
+2025-08-14 00:16:03,304 - __main__ - INFO - ======================================================================
+2025-08-14 00:16:03,306 - __main__ - INFO -   Total Unique Persons: 12
+2025-08-14 00:16:03,306 - __main__ - INFO -   Total Visits: 12
+2025-08-14 00:16:03,306 - __main__ - INFO -   Recent Visitors (24h): 12
+2025-08-14 00:16:03,306 - __main__ - INFO -   Total Batches: 0
+2025-08-14 00:16:03,312 - __main__ - INFO -   Total Images Processed: 0
+2025-08-14 00:16:03,312 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-14 00:16:03,312 - __main__ - INFO -   Total New Persons: 0
+2025-08-14 00:16:03,312 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 00:16:03,312 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-14 00:16:03,312 - __main__ - INFO -   System Uptime: 0:00:00.046188
+2025-08-14 00:16:03,315 - __main__ - INFO -   Memory Usage: 191.3 MB (1.2%)
+2025-08-14 00:16:03,315 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 00:16:03,315 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:16:03,315 - __main__ - INFO -   FAISS Available: True
+2025-08-14 00:16:03,317 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 00:16:03,317 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 00:16:03,317 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 00:16:03,317 - __main__ - INFO -   Quality Check: True
+2025-08-14 00:16:03,318 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 00:16:03,318 - __main__ - INFO - ======================================================================
+
+2025-08-14 00:16:08,349 - __main__ - INFO - Memory before processing: 191.4 MB
+2025-08-14 00:16:09,011 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:16:11,398 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:16:11,413 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:16:11,458 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:16:11,466 - __main__ - INFO - Memory after processing: 243.6 MB
+2025-08-14 00:16:11,474 - utils.performance_optimizer - INFO -   Memory Usage: 243.6 MB (1.5%)
+2025-08-14 00:16:11,474 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:16:11,474 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:16:11,474 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:16:11,474 - __main__ - INFO - ============================================================
+2025-08-14 00:16:11,482 - __main__ - INFO - ============================================================
+2025-08-14 00:16:11,520 - __main__ - INFO - ============================================================
+2025-08-14 00:16:16,551 - __main__ - INFO - Memory before processing: 243.6 MB
+2025-08-14 00:16:17,015 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:16:19,208 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:16:19,238 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:16:19,282 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:16:19,283 - __main__ - INFO - Memory after processing: 247.9 MB
+2025-08-14 00:16:19,298 - utils.performance_optimizer - INFO -   Memory Usage: 247.9 MB (1.5%)
+2025-08-14 00:16:19,299 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:16:19,299 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:16:19,299 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:16:19,299 - __main__ - INFO - ============================================================
+2025-08-14 00:16:19,302 - __main__ - INFO - ============================================================
+2025-08-14 00:16:19,324 - __main__ - INFO - ============================================================
+2025-08-14 00:16:24,521 - __main__ - INFO - Memory before processing: 247.9 MB
+2025-08-14 00:16:24,738 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:16:31,466 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:16:31,647 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:16:31,743 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:16:31,746 - __main__ - INFO - Memory after processing: 247.9 MB
+2025-08-14 00:16:31,832 - utils.performance_optimizer - INFO -   Memory Usage: 247.9 MB (1.5%)
+2025-08-14 00:16:31,836 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:16:31,836 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:16:31,841 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:16:31,843 - __main__ - INFO - ============================================================
+2025-08-14 00:16:31,982 - __main__ - INFO - ============================================================
+2025-08-14 00:16:34,916 - __main__ - INFO - ============================================================
+2025-08-14 00:16:35,955 - __main__ - INFO - 
+======================================================================
+2025-08-14 00:16:36,141 - __main__ - INFO - ======================================================================
+2025-08-14 00:16:36,509 - __main__ - INFO -   Total Unique Persons: 24
+2025-08-14 00:16:36,550 - __main__ - INFO -   Total Visits: 24
+2025-08-14 00:16:36,568 - __main__ - INFO -   Recent Visitors (24h): 24
+2025-08-14 00:16:37,200 - __main__ - INFO -   Total Batches: 3
+2025-08-14 00:16:37,277 - __main__ - INFO -   Total Images Processed: 3
+2025-08-14 00:16:37,286 - __main__ - INFO -   Total Faces Detected: 12
+2025-08-14 00:16:37,295 - __main__ - INFO -   Total New Persons: 0
+2025-08-14 00:16:37,332 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 00:16:37,343 - __main__ - INFO -   Total Processing Time: 13.23s
+2025-08-14 00:16:37,371 - __main__ - INFO -   System Uptime: 0:00:32.702355
+2025-08-14 00:16:37,889 - __main__ - INFO -   Memory Usage: 247.9 MB (1.5%)
+2025-08-14 00:16:37,904 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 00:16:37,943 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:16:37,999 - __main__ - INFO -   FAISS Available: True
+2025-08-14 00:16:38,511 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 00:16:38,518 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 00:16:38,542 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 00:16:38,552 - __main__ - INFO -   Quality Check: True
+2025-08-14 00:16:38,562 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 00:16:38,572 - __main__ - INFO - ======================================================================
+
+2025-08-14 00:16:41,049 - __main__ - INFO - Memory before processing: 247.9 MB
+2025-08-14 00:16:41,482 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:16:44,423 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:16:44,467 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:16:44,502 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:16:44,502 - __main__ - INFO - Memory after processing: 248.0 MB
+2025-08-14 00:16:44,507 - utils.performance_optimizer - INFO -   Memory Usage: 248.0 MB (1.5%)
+2025-08-14 00:16:44,507 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:16:44,508 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:16:44,508 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:16:44,508 - __main__ - INFO - ============================================================
+2025-08-14 00:16:44,510 - __main__ - INFO - ============================================================
+2025-08-14 00:16:44,520 - __main__ - INFO - ============================================================
+2025-08-14 00:16:49,571 - __main__ - INFO - Memory before processing: 248.0 MB
+2025-08-14 00:16:49,805 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:16:51,953 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:16:51,975 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:16:52,018 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:16:52,018 - __main__ - INFO - Memory after processing: 248.0 MB
+2025-08-14 00:16:52,028 - utils.performance_optimizer - INFO -   Memory Usage: 248.0 MB (1.5%)
+2025-08-14 00:16:52,028 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:16:52,028 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:16:52,028 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:16:52,029 - __main__ - INFO - ============================================================
+2025-08-14 00:16:52,030 - __main__ - INFO - ============================================================
+2025-08-14 00:16:52,049 - __main__ - INFO - ============================================================
+2025-08-14 00:16:52,545 - __main__ - INFO - 
+======================================================================
+2025-08-14 00:16:52,547 - __main__ - INFO - ======================================================================
+2025-08-14 00:16:52,550 - __main__ - INFO -   Total Unique Persons: 32
+2025-08-14 00:16:52,550 - __main__ - INFO -   Total Visits: 32
+2025-08-14 00:16:52,550 - __main__ - INFO -   Recent Visitors (24h): 32
+2025-08-14 00:16:52,552 - __main__ - INFO -   Total Batches: 5
+2025-08-14 00:16:52,552 - __main__ - INFO -   Total Images Processed: 5
+2025-08-14 00:16:52,552 - __main__ - INFO -   Total Faces Detected: 20
+2025-08-14 00:16:52,552 - __main__ - INFO -   Total New Persons: 0
+2025-08-14 00:16:52,552 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 00:16:52,552 - __main__ - INFO -   Total Processing Time: 19.57s
+2025-08-14 00:16:52,552 - __main__ - INFO -   System Uptime: 0:00:49.292631
+2025-08-14 00:16:52,554 - __main__ - INFO -   Memory Usage: 248.1 MB (1.5%)
+2025-08-14 00:16:52,555 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 00:16:52,555 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:16:52,555 - __main__ - INFO -   FAISS Available: True
+2025-08-14 00:16:52,557 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 00:16:52,557 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 00:16:52,557 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 00:16:52,557 - __main__ - INFO -   Quality Check: True
+2025-08-14 00:16:52,557 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 00:16:52,557 - __main__ - INFO - ======================================================================
+
+2025-08-14 00:16:52,558 - utils.enhanced_face_service - INFO - Cleaned up 0 temporary face files
+2025-08-14 00:25:47,251 - __main__ - INFO - Configuration: batch_size=10, interval=5s, quality_check=True, faiss=True
+2025-08-14 00:25:47,251 - __main__ - INFO - [START] Starting Enhanced Face Recognition System...
+2025-08-14 00:25:47,259 - __main__ - INFO - 
+======================================================================
+2025-08-14 00:25:47,259 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-14 00:25:47,259 - __main__ - INFO - ======================================================================
+2025-08-14 00:25:47,260 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-14 00:25:47,260 - __main__ - INFO -   Total Unique Persons: 48
+2025-08-14 00:25:47,260 - __main__ - INFO -   Total Visits: 48
+2025-08-14 00:25:47,260 - __main__ - INFO -   Recent Visitors (24h): 48
+2025-08-14 00:25:47,260 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-14 00:25:47,260 - __main__ - INFO -   Total Batches: 0
+2025-08-14 00:25:47,260 - __main__ - INFO -   Total Images Processed: 0
+2025-08-14 00:25:47,260 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-14 00:25:47,260 - __main__ - INFO -   Total New Persons: 0
+2025-08-14 00:25:47,262 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 00:25:47,262 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-14 00:25:47,262 - __main__ - INFO -   System Uptime: 0:00:00.011537
+2025-08-14 00:25:47,262 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-14 00:25:47,262 - __main__ - INFO -   Memory Usage: 191.8 MB (1.2%)
+2025-08-14 00:25:47,262 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 00:25:47,263 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:25:47,263 - __main__ - INFO -   FAISS Available: True
+2025-08-14 00:25:47,263 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-14 00:25:47,263 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 00:25:47,263 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 00:25:47,263 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 00:25:47,263 - __main__ - INFO -   Quality Check: True
+2025-08-14 00:25:47,264 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 00:25:47,264 - __main__ - INFO - ======================================================================
+
+2025-08-14 00:25:52,302 - __main__ - INFO - Memory before processing: 192.1 MB
+2025-08-14 00:25:52,843 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:25:55,270 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:25:55,293 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:25:55,337 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:25:55,337 - __main__ - INFO - Memory after processing: 244.4 MB
+2025-08-14 00:25:55,344 - utils.performance_optimizer - INFO -   Memory Usage: 244.4 MB (1.5%)
+2025-08-14 00:25:55,345 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:25:55,345 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:25:55,345 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:25:55,345 - __main__ - INFO - ============================================================
+2025-08-14 00:25:55,346 - __main__ - INFO - ============================================================
+2025-08-14 00:25:55,357 - __main__ - INFO - [NEW] New persons: 0
+2025-08-14 00:25:55,357 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-14 00:25:55,357 - __main__ - INFO - [TIME] Processing time: 3.04s
+2025-08-14 00:25:55,357 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-14 00:25:55,357 - __main__ - INFO - [MEMORY] Memory usage: 244.4 MB
+2025-08-14 00:25:55,357 - __main__ - INFO - [INCREASE] Memory increase: 52.4 MB
+2025-08-14 00:25:55,357 - __main__ - INFO - ============================================================
+2025-08-14 00:26:00,397 - __main__ - INFO - Memory before processing: 244.5 MB
+2025-08-14 00:26:00,620 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:26:02,909 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:26:02,929 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:26:02,955 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:26:02,958 - __main__ - INFO - Memory after processing: 248.6 MB
+2025-08-14 00:26:02,962 - utils.performance_optimizer - INFO -   Memory Usage: 248.6 MB (1.5%)
+2025-08-14 00:26:02,962 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:26:02,963 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:26:02,963 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:26:02,963 - __main__ - INFO - ============================================================
+2025-08-14 00:26:02,965 - __main__ - INFO - ============================================================
+2025-08-14 00:26:02,969 - __main__ - INFO - [NEW] New persons: 0
+2025-08-14 00:26:02,969 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-14 00:26:02,969 - __main__ - INFO - [TIME] Processing time: 2.56s
+2025-08-14 00:26:02,970 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-14 00:26:02,970 - __main__ - INFO - [MEMORY] Memory usage: 248.6 MB
+2025-08-14 00:26:02,970 - __main__ - INFO - [INCREASE] Memory increase: 4.2 MB
+2025-08-14 00:26:02,970 - __main__ - INFO - ============================================================
+2025-08-14 00:26:08,007 - __main__ - INFO - Memory before processing: 248.6 MB
+2025-08-14 00:26:08,213 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:26:10,724 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:26:10,756 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:26:10,809 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:26:10,811 - __main__ - INFO - Memory after processing: 248.6 MB
+2025-08-14 00:26:10,816 - utils.performance_optimizer - INFO -   Memory Usage: 248.6 MB (1.5%)
+2025-08-14 00:26:10,816 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:26:10,816 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:26:10,816 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:26:10,816 - __main__ - INFO - ============================================================
+2025-08-14 00:26:10,825 - __main__ - INFO - ============================================================
+2025-08-14 00:26:10,828 - __main__ - INFO - [NEW] New persons: 0
+2025-08-14 00:26:10,828 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-14 00:26:10,829 - __main__ - INFO - [TIME] Processing time: 2.81s
+2025-08-14 00:26:10,829 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-14 00:26:10,829 - __main__ - INFO - [MEMORY] Memory usage: 248.6 MB
+2025-08-14 00:26:10,829 - __main__ - INFO - [INCREASE] Memory increase: 0.0 MB
+2025-08-14 00:26:10,829 - __main__ - INFO - ============================================================
+2025-08-14 00:26:15,850 - __main__ - INFO - Memory before processing: 248.6 MB
+2025-08-14 00:26:16,079 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:26:18,397 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:26:18,432 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:26:18,459 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:26:18,459 - __main__ - INFO - Memory after processing: 248.8 MB
+2025-08-14 00:26:18,474 - utils.performance_optimizer - INFO -   Memory Usage: 248.8 MB (1.5%)
+2025-08-14 00:26:18,474 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:26:18,474 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:26:18,474 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:26:18,474 - __main__ - INFO - ============================================================
+2025-08-14 00:26:18,475 - __main__ - INFO - ============================================================
+2025-08-14 00:26:18,477 - __main__ - INFO - [NEW] New persons: 0
+2025-08-14 00:26:18,479 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-14 00:26:18,479 - __main__ - INFO - [TIME] Processing time: 2.61s
+2025-08-14 00:26:18,479 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-14 00:26:18,479 - __main__ - INFO - [MEMORY] Memory usage: 248.8 MB
+2025-08-14 00:26:18,479 - __main__ - INFO - [INCREASE] Memory increase: 0.2 MB
+2025-08-14 00:26:18,482 - __main__ - INFO - ============================================================
+2025-08-14 00:26:19,502 - __main__ - INFO - 
+======================================================================
+2025-08-14 00:26:19,502 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-14 00:26:19,502 - __main__ - INFO - ======================================================================
+2025-08-14 00:26:19,502 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-14 00:26:19,504 - __main__ - INFO -   Total Unique Persons: 64
+2025-08-14 00:26:19,504 - __main__ - INFO -   Total Visits: 64
+2025-08-14 00:26:19,504 - __main__ - INFO -   Recent Visitors (24h): 64
+2025-08-14 00:26:19,504 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-14 00:26:19,504 - __main__ - INFO -   Total Batches: 4
+2025-08-14 00:26:19,504 - __main__ - INFO -   Total Images Processed: 4
+2025-08-14 00:26:19,504 - __main__ - INFO -   Total Faces Detected: 16
+2025-08-14 00:26:19,504 - __main__ - INFO -   Total New Persons: 0
+2025-08-14 00:26:19,504 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 00:26:19,506 - __main__ - INFO -   Total Processing Time: 11.02s
+2025-08-14 00:26:19,506 - __main__ - INFO -   System Uptime: 0:00:32.254177
+2025-08-14 00:26:19,506 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-14 00:26:19,506 - __main__ - INFO -   Memory Usage: 248.8 MB (1.5%)
+2025-08-14 00:26:19,506 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 00:26:19,506 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:26:19,506 - __main__ - INFO -   FAISS Available: True
+2025-08-14 00:26:19,506 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-14 00:26:19,506 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 00:26:19,506 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 00:26:19,507 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 00:26:19,507 - __main__ - INFO -   Quality Check: True
+2025-08-14 00:26:19,507 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 00:26:19,507 - __main__ - INFO - ======================================================================
+
+2025-08-14 00:26:23,534 - __main__ - INFO - Memory before processing: 248.8 MB
+2025-08-14 00:26:23,756 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:26:25,987 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:26:26,014 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:26:26,035 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:26:26,035 - __main__ - INFO - Memory after processing: 248.8 MB
+2025-08-14 00:26:26,044 - utils.performance_optimizer - INFO -   Memory Usage: 248.8 MB (1.5%)
+2025-08-14 00:26:26,047 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:26:26,047 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:26:26,047 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:26:26,047 - __main__ - INFO - ============================================================
+2025-08-14 00:26:26,049 - __main__ - INFO - ============================================================
+2025-08-14 00:26:26,055 - __main__ - INFO - [NEW] New persons: 0
+2025-08-14 00:26:26,055 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-14 00:26:26,055 - __main__ - INFO - [TIME] Processing time: 2.50s
+2025-08-14 00:26:26,055 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-14 00:26:26,055 - __main__ - INFO - [MEMORY] Memory usage: 248.8 MB
+2025-08-14 00:26:26,055 - __main__ - INFO - [INCREASE] Memory increase: 0.0 MB
+2025-08-14 00:26:26,056 - __main__ - INFO - ============================================================
+2025-08-14 00:26:31,098 - __main__ - INFO - Memory before processing: 248.8 MB
+2025-08-14 00:26:31,317 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:26:33,457 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:26:33,475 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:26:33,506 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:26:33,508 - __main__ - INFO - Memory after processing: 250.2 MB
+2025-08-14 00:26:33,512 - utils.performance_optimizer - INFO -   Memory Usage: 250.2 MB (1.6%)
+2025-08-14 00:26:33,514 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:26:33,514 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:26:33,514 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:26:33,514 - __main__ - INFO - ============================================================
+2025-08-14 00:26:33,515 - __main__ - INFO - ============================================================
+2025-08-14 00:26:33,519 - __main__ - INFO - [NEW] New persons: 0
+2025-08-14 00:26:33,519 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-14 00:26:33,519 - __main__ - INFO - [TIME] Processing time: 2.41s
+2025-08-14 00:26:33,519 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-14 00:26:33,519 - __main__ - INFO - [MEMORY] Memory usage: 250.2 MB
+2025-08-14 00:26:33,519 - __main__ - INFO - [INCREASE] Memory increase: 1.4 MB
+2025-08-14 00:26:33,519 - __main__ - INFO - ============================================================
+2025-08-14 00:26:38,554 - __main__ - INFO - Memory before processing: 250.2 MB
+2025-08-14 00:26:38,769 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:26:41,017 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:26:41,057 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:26:41,099 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:26:41,099 - __main__ - INFO - Memory after processing: 250.5 MB
+2025-08-14 00:26:41,104 - utils.performance_optimizer - INFO -   Memory Usage: 250.5 MB (1.6%)
+2025-08-14 00:26:41,104 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:26:41,104 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:26:41,104 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:26:41,104 - __main__ - INFO - ============================================================
+2025-08-14 00:26:41,106 - __main__ - INFO - ============================================================
+2025-08-14 00:26:41,110 - __main__ - INFO - [NEW] New persons: 0
+2025-08-14 00:26:41,110 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-14 00:26:41,110 - __main__ - INFO - [TIME] Processing time: 2.55s
+2025-08-14 00:26:41,110 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-14 00:26:41,110 - __main__ - INFO - [MEMORY] Memory usage: 250.5 MB
+2025-08-14 00:26:41,110 - __main__ - INFO - [INCREASE] Memory increase: 0.3 MB
+2025-08-14 00:26:41,110 - __main__ - INFO - ============================================================
+2025-08-14 00:26:43,318 - __main__ - INFO - [STOP] System shutdown requested by user
+2025-08-14 00:26:43,318 - __main__ - INFO - [CLEANUP] Performing cleanup...
+2025-08-14 00:26:43,325 - __main__ - INFO - 
+======================================================================
+2025-08-14 00:26:43,325 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-14 00:26:43,326 - __main__ - INFO - ======================================================================
+2025-08-14 00:26:43,326 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-14 00:26:43,326 - __main__ - INFO -   Total Unique Persons: 76
+2025-08-14 00:26:43,326 - __main__ - INFO -   Total Visits: 76
+2025-08-14 00:26:43,326 - __main__ - INFO -   Recent Visitors (24h): 76
+2025-08-14 00:26:43,326 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-14 00:26:43,326 - __main__ - INFO -   Total Batches: 7
+2025-08-14 00:26:43,326 - __main__ - INFO -   Total Images Processed: 7
+2025-08-14 00:26:43,326 - __main__ - INFO -   Total Faces Detected: 28
+2025-08-14 00:26:43,326 - __main__ - INFO -   Total New Persons: 0
+2025-08-14 00:26:43,326 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 00:26:43,326 - __main__ - INFO -   Total Processing Time: 18.48s
+2025-08-14 00:26:43,326 - __main__ - INFO -   System Uptime: 0:00:56.077082
+2025-08-14 00:26:43,326 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-14 00:26:43,326 - __main__ - INFO -   Memory Usage: 250.5 MB (1.6%)
+2025-08-14 00:26:43,326 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 00:26:43,326 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:26:43,326 - __main__ - INFO -   FAISS Available: True
+2025-08-14 00:26:43,326 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-14 00:26:43,326 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 00:26:43,326 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 00:26:43,326 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 00:26:43,326 - __main__ - INFO -   Quality Check: True
+2025-08-14 00:26:43,326 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 00:26:43,326 - __main__ - INFO - ======================================================================
+
+2025-08-14 00:26:43,326 - utils.enhanced_face_service - INFO - Cleaned up 0 temporary face files
+2025-08-14 00:26:43,326 - utils.performance_optimizer - INFO - [GC] Performing garbage collection...
+2025-08-14 00:26:43,355 - utils.performance_optimizer - INFO - [OK] Memory after GC: 250.5 MB
+2025-08-14 00:26:43,355 - __main__ - INFO - [DONE] System shutdown complete
+2025-08-14 00:35:43,941 - __main__ - INFO - Configuration: batch_size=10, interval=5s, quality_check=True, faiss=True
+2025-08-14 00:35:43,941 - __main__ - INFO - [START] Starting Enhanced Face Recognition System...
+2025-08-14 00:35:43,949 - __main__ - INFO - 
+======================================================================
+2025-08-14 00:35:43,950 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-14 00:35:43,950 - __main__ - INFO - ======================================================================
+2025-08-14 00:35:43,950 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-14 00:35:43,950 - __main__ - INFO -   Total Unique Persons: 76
+2025-08-14 00:35:43,950 - __main__ - INFO -   Total Visits: 76
+2025-08-14 00:35:43,950 - __main__ - INFO -   Recent Visitors (24h): 76
+2025-08-14 00:35:43,950 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-14 00:35:43,950 - __main__ - INFO -   Total Batches: 0
+2025-08-14 00:35:43,950 - __main__ - INFO -   Total Images Processed: 0
+2025-08-14 00:35:43,950 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-14 00:35:43,950 - __main__ - INFO -   Total New Persons: 0
+2025-08-14 00:35:43,950 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 00:35:43,951 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-14 00:35:43,951 - __main__ - INFO -   System Uptime: 0:00:00.011094
+2025-08-14 00:35:43,951 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-14 00:35:43,951 - __main__ - INFO -   Memory Usage: 191.9 MB (1.2%)
+2025-08-14 00:35:43,951 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 00:35:43,951 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:35:43,951 - __main__ - INFO -   FAISS Available: True
+2025-08-14 00:35:43,951 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-14 00:35:43,951 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 00:35:43,952 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 00:35:43,952 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 00:35:43,952 - __main__ - INFO -   Quality Check: True
+2025-08-14 00:35:43,952 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 00:35:43,952 - __main__ - INFO - ======================================================================
+
+2025-08-14 00:35:48,972 - __main__ - INFO - [START] Starting enhanced batch processing: 87eb8ea5-8ef0-4a81-82b5-e28f3dbe400a
+2025-08-14 00:35:48,972 - __main__ - INFO - Memory before processing: 192.0 MB
+2025-08-14 00:35:49,467 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:35:49,469 - __main__ - INFO - [FOUND] Found 1 recent images
+2025-08-14 00:35:51,573 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:35:51,591 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:35:51,628 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:35:51,628 - __main__ - INFO - Memory after processing: 244.0 MB
+2025-08-14 00:35:51,630 - utils.performance_optimizer - INFO - [STATS] Performance Statistics:
+2025-08-14 00:35:51,631 - utils.performance_optimizer - INFO -   Memory Usage: 244.0 MB (1.5%)
+2025-08-14 00:35:51,631 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:35:51,631 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:35:51,631 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:35:51,632 - __main__ - INFO - ============================================================
+2025-08-14 00:35:51,632 - __main__ - INFO - [BATCH] BATCH PROCESSING SUMMARY
+2025-08-14 00:35:51,632 - __main__ - INFO - ============================================================
+2025-08-14 00:35:51,632 - __main__ - INFO - [ID] Batch ID: 87eb8ea5-8ef0-4a81-82b5-e28f3dbe400a
+2025-08-14 00:35:51,632 - __main__ - INFO - [IMAGES] Images processed: 1
+2025-08-14 00:35:51,632 - __main__ - INFO - [FACES] Faces detected: 4
+2025-08-14 00:35:51,632 - __main__ - INFO - [NEW] New persons: 4
+2025-08-14 00:35:51,632 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-14 00:35:51,632 - __main__ - INFO - [TIME] Processing time: 2.66s
+2025-08-14 00:35:51,632 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-14 00:35:51,632 - __main__ - INFO - [MEMORY] Memory usage: 244.0 MB
+2025-08-14 00:35:51,632 - __main__ - INFO - [INCREASE] Memory increase: 52.1 MB
+2025-08-14 00:35:51,632 - __main__ - INFO - ============================================================
+2025-08-14 00:35:56,661 - __main__ - INFO - [START] Starting enhanced batch processing: 0ef199c4-2be3-47ed-91c1-6819422d20b2
+2025-08-14 00:35:56,661 - __main__ - INFO - Memory before processing: 244.0 MB
+2025-08-14 00:35:56,994 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:35:56,999 - __main__ - INFO - [FOUND] Found 1 recent images
+2025-08-14 00:35:59,124 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:35:59,146 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:35:59,182 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:35:59,182 - __main__ - INFO - Memory after processing: 248.8 MB
+2025-08-14 00:35:59,186 - utils.performance_optimizer - INFO - [STATS] Performance Statistics:
+2025-08-14 00:35:59,186 - utils.performance_optimizer - INFO -   Memory Usage: 248.8 MB (1.5%)
+2025-08-14 00:35:59,188 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:35:59,192 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:35:59,192 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:35:59,192 - __main__ - INFO - ============================================================
+2025-08-14 00:35:59,192 - __main__ - INFO - [BATCH] BATCH PROCESSING SUMMARY
+2025-08-14 00:35:59,192 - __main__ - INFO - ============================================================
+2025-08-14 00:35:59,192 - __main__ - INFO - [ID] Batch ID: 0ef199c4-2be3-47ed-91c1-6819422d20b2
+2025-08-14 00:35:59,192 - __main__ - INFO - [IMAGES] Images processed: 1
+2025-08-14 00:35:59,192 - __main__ - INFO - [FACES] Faces detected: 4
+2025-08-14 00:35:59,193 - __main__ - INFO - [NEW] New persons: 4
+2025-08-14 00:35:59,193 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-14 00:35:59,193 - __main__ - INFO - [TIME] Processing time: 2.52s
+2025-08-14 00:35:59,193 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-14 00:35:59,193 - __main__ - INFO - [MEMORY] Memory usage: 248.8 MB
+2025-08-14 00:35:59,194 - __main__ - INFO - [INCREASE] Memory increase: 4.7 MB
+2025-08-14 00:35:59,194 - __main__ - INFO - ============================================================
+2025-08-14 00:36:04,223 - __main__ - INFO - [START] Starting enhanced batch processing: e363387a-47c2-4059-ae1a-294c1c0a4b04
+2025-08-14 00:36:04,223 - __main__ - INFO - Memory before processing: 248.8 MB
+2025-08-14 00:36:04,480 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:36:04,485 - __main__ - INFO - [FOUND] Found 1 recent images
+2025-08-14 00:36:06,432 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:36:06,458 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:36:06,499 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:36:06,501 - __main__ - INFO - Memory after processing: 248.8 MB
+2025-08-14 00:36:06,503 - utils.performance_optimizer - INFO - [STATS] Performance Statistics:
+2025-08-14 00:36:06,503 - utils.performance_optimizer - INFO -   Memory Usage: 248.8 MB (1.5%)
+2025-08-14 00:36:06,503 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:36:06,503 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:36:06,503 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:36:06,503 - __main__ - INFO - ============================================================
+2025-08-14 00:36:06,503 - __main__ - INFO - [BATCH] BATCH PROCESSING SUMMARY
+2025-08-14 00:36:06,503 - __main__ - INFO - ============================================================
+2025-08-14 00:36:06,503 - __main__ - INFO - [ID] Batch ID: e363387a-47c2-4059-ae1a-294c1c0a4b04
+2025-08-14 00:36:06,503 - __main__ - INFO - [IMAGES] Images processed: 1
+2025-08-14 00:36:06,503 - __main__ - INFO - [FACES] Faces detected: 4
+2025-08-14 00:36:06,503 - __main__ - INFO - [NEW] New persons: 4
+2025-08-14 00:36:06,503 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-14 00:36:06,503 - __main__ - INFO - [TIME] Processing time: 2.28s
+2025-08-14 00:36:06,503 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-14 00:36:06,503 - __main__ - INFO - [MEMORY] Memory usage: 248.8 MB
+2025-08-14 00:36:06,503 - __main__ - INFO - [INCREASE] Memory increase: 0.0 MB
+2025-08-14 00:36:06,508 - __main__ - INFO - ============================================================
+2025-08-14 00:36:10,688 - __main__ - INFO - [STOP] System shutdown requested by user
+2025-08-14 00:36:10,689 - __main__ - INFO - [CLEANUP] Performing cleanup...
+2025-08-14 00:36:10,691 - __main__ - INFO - 
+======================================================================
+2025-08-14 00:36:10,692 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-14 00:36:10,692 - __main__ - INFO - ======================================================================
+2025-08-14 00:36:10,692 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-14 00:36:10,692 - __main__ - INFO -   Total Unique Persons: 88
+2025-08-14 00:36:10,692 - __main__ - INFO -   Total Visits: 88
+2025-08-14 00:36:10,692 - __main__ - INFO -   Recent Visitors (24h): 88
+2025-08-14 00:36:10,692 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-14 00:36:10,693 - __main__ - INFO -   Total Batches: 3
+2025-08-14 00:36:10,693 - __main__ - INFO -   Total Images Processed: 3
+2025-08-14 00:36:10,693 - __main__ - INFO -   Total Faces Detected: 12
+2025-08-14 00:36:10,693 - __main__ - INFO -   Total New Persons: 12
+2025-08-14 00:36:10,693 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 00:36:10,694 - __main__ - INFO -   Total Processing Time: 7.45s
+2025-08-14 00:36:10,694 - __main__ - INFO -   System Uptime: 0:00:26.753323
+2025-08-14 00:36:10,694 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-14 00:36:10,694 - __main__ - INFO -   Memory Usage: 248.8 MB (1.5%)
+2025-08-14 00:36:10,694 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 00:36:10,694 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:36:10,694 - __main__ - INFO -   FAISS Available: True
+2025-08-14 00:36:10,694 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-14 00:36:10,694 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 00:36:10,695 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 00:36:10,695 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 00:36:10,695 - __main__ - INFO -   Quality Check: True
+2025-08-14 00:36:10,695 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 00:36:10,696 - __main__ - INFO - ======================================================================
+
+2025-08-14 00:36:10,696 - utils.enhanced_face_service - INFO - Cleaned up 0 temporary face files
+2025-08-14 00:36:10,696 - utils.performance_optimizer - INFO - [GC] Performing garbage collection...
+2025-08-14 00:36:10,724 - utils.performance_optimizer - INFO - [OK] Memory after GC: 248.8 MB
+2025-08-14 00:36:10,725 - __main__ - INFO - [DONE] System shutdown complete
+2025-08-14 00:44:27,048 - __main__ - INFO - Configuration: batch_size=10, interval=5s, quality_check=True, faiss=True
+2025-08-14 00:44:27,048 - __main__ - INFO - [START] Starting Enhanced Face Recognition System...
+2025-08-14 00:44:27,062 - __main__ - INFO - 
+======================================================================
+2025-08-14 00:44:27,063 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-14 00:44:27,063 - __main__ - INFO - ======================================================================
+2025-08-14 00:44:27,063 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-14 00:44:27,063 - __main__ - INFO -   Total Unique Persons: 88
+2025-08-14 00:44:27,063 - __main__ - INFO -   Total Visits: 88
+2025-08-14 00:44:27,064 - __main__ - INFO -   Recent Visitors (24h): 88
+2025-08-14 00:44:27,064 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-14 00:44:27,064 - __main__ - INFO -   Total Batches: 0
+2025-08-14 00:44:27,064 - __main__ - INFO -   Total Images Processed: 0
+2025-08-14 00:44:27,064 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-14 00:44:27,064 - __main__ - INFO -   Total New Persons: 0
+2025-08-14 00:44:27,064 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 00:44:27,064 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-14 00:44:27,064 - __main__ - INFO -   System Uptime: 0:00:00.016654
+2025-08-14 00:44:27,065 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-14 00:44:27,065 - __main__ - INFO -   Memory Usage: 191.8 MB (1.2%)
+2025-08-14 00:44:27,065 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 00:44:27,065 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:44:27,065 - __main__ - INFO -   FAISS Available: True
+2025-08-14 00:44:27,065 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-14 00:44:27,065 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 00:44:27,065 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 00:44:27,065 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 00:44:27,066 - __main__ - INFO -   Quality Check: True
+2025-08-14 00:44:27,066 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 00:44:27,066 - __main__ - INFO - ======================================================================
+
+2025-08-14 00:44:32,112 - __main__ - INFO - [START] Starting enhanced batch processing: b7bd652a-c840-464a-b947-6d25c8370530
+2025-08-14 00:44:32,113 - __main__ - INFO - Memory before processing: 191.9 MB
+2025-08-14 00:44:32,745 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:44:32,747 - __main__ - INFO - [FOUND] Found 1 recent images
+2025-08-14 00:44:35,006 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:44:35,024 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:44:35,029 - __main__ - INFO - [NEW] Created new person: ff38438f-a0bd-4254-afc1-50d1c2b43efe
+2025-08-14 00:44:35,035 - __main__ - INFO - [NEW] Created new person: 9acde033-c3d8-49a2-a894-23472a2f424b
+2025-08-14 00:44:35,043 - __main__ - INFO - [NEW] Created new person: 73ca10f2-002b-4517-962c-447c8e84c7e3
+2025-08-14 00:44:35,049 - __main__ - INFO - [NEW] Created new person: d7153e54-d4d8-43f5-9265-021261b050bf
+2025-08-14 00:44:35,055 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:44:35,055 - __main__ - INFO - Memory after processing: 243.9 MB
+2025-08-14 00:44:35,057 - utils.performance_optimizer - INFO - [STATS] Performance Statistics:
+2025-08-14 00:44:35,059 - utils.performance_optimizer - INFO -   Memory Usage: 243.9 MB (1.5%)
+2025-08-14 00:44:35,059 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:44:35,059 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:44:35,059 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:44:35,059 - __main__ - INFO - ============================================================
+2025-08-14 00:44:35,059 - __main__ - INFO - [BATCH] BATCH PROCESSING SUMMARY
+2025-08-14 00:44:35,059 - __main__ - INFO - ============================================================
+2025-08-14 00:44:35,059 - __main__ - INFO - [ID] Batch ID: b7bd652a-c840-464a-b947-6d25c8370530
+2025-08-14 00:44:35,060 - __main__ - INFO - [IMAGES] Images processed: 1
+2025-08-14 00:44:35,060 - __main__ - INFO - [FACES] Faces detected: 4
+2025-08-14 00:44:35,060 - __main__ - INFO - [NEW] New persons: 4
+2025-08-14 00:44:35,060 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-14 00:44:35,060 - __main__ - INFO - [TIME] Processing time: 2.94s
+2025-08-14 00:44:35,060 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-14 00:44:35,062 - __main__ - INFO - [MEMORY] Memory usage: 243.9 MB
+2025-08-14 00:44:35,062 - __main__ - INFO - [INCREASE] Memory increase: 52.0 MB
+2025-08-14 00:44:35,062 - __main__ - INFO - ============================================================
+2025-08-14 00:44:40,097 - __main__ - INFO - [START] Starting enhanced batch processing: 937aa014-0870-469c-b46f-71a5f5d3797e
+2025-08-14 00:44:40,098 - __main__ - INFO - Memory before processing: 243.9 MB
+2025-08-14 00:44:40,470 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:44:40,472 - __main__ - INFO - [FOUND] Found 1 recent images
+2025-08-14 00:44:42,557 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:44:42,576 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:44:42,580 - __main__ - INFO - [NEW] Created new person: 7089c2eb-3195-4f94-a0d5-11139e2b17fc
+2025-08-14 00:44:42,593 - __main__ - INFO - [NEW] Created new person: 03fe5b6e-607e-4e43-abf0-9bca98126ffb
+2025-08-14 00:44:42,601 - __main__ - INFO - [NEW] Created new person: 859e79a9-565d-4e71-b6cc-38cc6fb4cef9
+2025-08-14 00:44:42,607 - __main__ - INFO - [NEW] Created new person: 40b12333-570a-499f-816b-55740bd2a4eb
+2025-08-14 00:44:42,611 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:44:42,611 - __main__ - INFO - Memory after processing: 248.3 MB
+2025-08-14 00:44:42,617 - utils.performance_optimizer - INFO - [STATS] Performance Statistics:
+2025-08-14 00:44:42,617 - utils.performance_optimizer - INFO -   Memory Usage: 248.3 MB (1.5%)
+2025-08-14 00:44:42,619 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:44:42,619 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:44:42,619 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:44:42,619 - __main__ - INFO - ============================================================
+2025-08-14 00:44:42,619 - __main__ - INFO - [BATCH] BATCH PROCESSING SUMMARY
+2025-08-14 00:44:42,619 - __main__ - INFO - ============================================================
+2025-08-14 00:44:42,619 - __main__ - INFO - [ID] Batch ID: 937aa014-0870-469c-b46f-71a5f5d3797e
+2025-08-14 00:44:42,619 - __main__ - INFO - [IMAGES] Images processed: 1
+2025-08-14 00:44:42,619 - __main__ - INFO - [FACES] Faces detected: 4
+2025-08-14 00:44:42,619 - __main__ - INFO - [NEW] New persons: 4
+2025-08-14 00:44:42,621 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-14 00:44:42,621 - __main__ - INFO - [TIME] Processing time: 2.51s
+2025-08-14 00:44:42,621 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-14 00:44:42,621 - __main__ - INFO - [MEMORY] Memory usage: 248.3 MB
+2025-08-14 00:44:42,621 - __main__ - INFO - [INCREASE] Memory increase: 4.5 MB
+2025-08-14 00:44:42,621 - __main__ - INFO - ============================================================
+2025-08-14 00:44:43,561 - __main__ - INFO - [STOP] System shutdown requested by user
+2025-08-14 00:44:43,561 - __main__ - INFO - [CLEANUP] Performing cleanup...
+2025-08-14 00:44:43,568 - __main__ - INFO - 
+======================================================================
+2025-08-14 00:44:43,569 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-14 00:44:43,569 - __main__ - INFO - ======================================================================
+2025-08-14 00:44:43,569 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-14 00:44:43,569 - __main__ - INFO -   Total Unique Persons: 96
+2025-08-14 00:44:43,570 - __main__ - INFO -   Total Visits: 96
+2025-08-14 00:44:43,570 - __main__ - INFO -   Recent Visitors (24h): 96
+2025-08-14 00:44:43,570 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-14 00:44:43,570 - __main__ - INFO -   Total Batches: 2
+2025-08-14 00:44:43,570 - __main__ - INFO -   Total Images Processed: 2
+2025-08-14 00:44:43,571 - __main__ - INFO -   Total Faces Detected: 8
+2025-08-14 00:44:43,571 - __main__ - INFO -   Total New Persons: 8
+2025-08-14 00:44:43,571 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 00:44:43,571 - __main__ - INFO -   Total Processing Time: 5.46s
+2025-08-14 00:44:43,572 - __main__ - INFO -   System Uptime: 0:00:16.522398
+2025-08-14 00:44:43,572 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-14 00:44:43,572 - __main__ - INFO -   Memory Usage: 248.3 MB (1.5%)
+2025-08-14 00:44:43,573 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 00:44:43,573 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:44:43,573 - __main__ - INFO -   FAISS Available: True
+2025-08-14 00:44:43,574 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-14 00:44:43,574 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 00:44:43,574 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 00:44:43,575 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 00:44:43,575 - __main__ - INFO -   Quality Check: True
+2025-08-14 00:44:43,575 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 00:44:43,576 - __main__ - INFO - ======================================================================
+
+2025-08-14 00:44:43,576 - utils.enhanced_face_service - INFO - Cleaned up 0 temporary face files
+2025-08-14 00:44:43,576 - utils.performance_optimizer - INFO - [GC] Performing garbage collection...
+2025-08-14 00:44:43,599 - utils.performance_optimizer - INFO - [OK] Memory after GC: 248.3 MB
+2025-08-14 00:44:43,599 - __main__ - INFO - [DONE] System shutdown complete
+2025-08-14 00:55:10,904 - __main__ - INFO - [START] Enhanced Face Recognition System initialized
+2025-08-14 00:55:10,904 - __main__ - INFO - Configuration: batch_size=10, interval=5s, quality_check=True, faiss=True
+2025-08-14 00:55:10,904 - __main__ - INFO - Sleep Mode: enabled=True, sleep_duration=300s, max_duplicates=3
+2025-08-14 00:55:10,904 - __main__ - INFO - [START] Starting Enhanced Face Recognition System...
+2025-08-14 00:55:10,907 - __main__ - INFO - 
+======================================================================
+2025-08-14 00:55:10,909 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-14 00:55:10,909 - __main__ - INFO - ======================================================================
+2025-08-14 00:55:10,909 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-14 00:55:10,909 - __main__ - INFO -   Total Unique Persons: 96
+2025-08-14 00:55:10,909 - __main__ - INFO -   Total Visits: 96
+2025-08-14 00:55:10,910 - __main__ - INFO -   Recent Visitors (24h): 96
+2025-08-14 00:55:10,910 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-14 00:55:10,910 - __main__ - INFO -   Total Batches: 0
+2025-08-14 00:55:10,910 - __main__ - INFO -   Total Images Processed: 0
+2025-08-14 00:55:10,910 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-14 00:55:10,910 - __main__ - INFO -   Total New Persons: 0
+2025-08-14 00:55:10,910 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 00:55:10,910 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-14 00:55:10,910 - __main__ - INFO -   System Uptime: 0:00:00.003880
+2025-08-14 00:55:10,910 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-14 00:55:10,910 - __main__ - INFO -   Memory Usage: 191.8 MB (1.2%)
+2025-08-14 00:55:10,910 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 00:55:10,910 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:55:10,910 - __main__ - INFO -   FAISS Available: True
+2025-08-14 00:55:10,915 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-14 00:55:10,915 - __main__ - INFO -   Total Duplicates (24h): 0
+2025-08-14 00:55:10,915 - __main__ - INFO -   Image Duplicates: 0
+2025-08-14 00:55:10,915 - __main__ - INFO -   Face Duplicates: 0
+2025-08-14 00:55:10,915 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-14 00:55:10,915 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-14 00:55:10,915 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-14 00:55:10,915 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 00:55:10,915 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 00:55:10,915 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 00:55:10,915 - __main__ - INFO -   Quality Check: True
+2025-08-14 00:55:10,915 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 00:55:10,915 - __main__ - INFO -   Sleep Mode: True
+2025-08-14 00:55:10,915 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-14 00:55:10,915 - __main__ - INFO - ======================================================================
+
+2025-08-14 00:55:15,956 - __main__ - INFO - [START] Starting enhanced batch processing: 283493e0-f89a-4cd7-b51a-2291e43efcb3
+2025-08-14 00:55:15,958 - __main__ - INFO - Memory before processing: 191.9 MB
+2025-08-14 00:55:16,506 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:55:16,506 - __main__ - INFO - [FOUND] Found 1 recent images
+2025-08-14 00:55:18,805 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-14 00:55:18,838 - __main__ - INFO - Processing 4 temp faces against 0 known persons
+2025-08-14 00:55:18,845 - __main__ - INFO - [NEW] Created new person: 1b5c378f-cca8-4559-9cbf-16f8f12e2ae0
+2025-08-14 00:55:18,870 - __main__ - INFO - [NEW] Created new person: 6fa83a37-1401-411e-99d9-cd4788b35ac0
+2025-08-14 00:55:18,889 - __main__ - INFO - [NEW] Created new person: f8c8ac84-fdcc-46da-8982-3c4e1c9c33a3
+2025-08-14 00:55:18,905 - __main__ - INFO - [NEW] Created new person: 71f3094a-6c0c-4eaa-925e-d6db540785b0
+2025-08-14 00:55:18,911 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-14 00:55:18,920 - __main__ - INFO - Memory after processing: 243.9 MB
+2025-08-14 00:55:18,924 - utils.performance_optimizer - INFO - [STATS] Performance Statistics:
+2025-08-14 00:55:18,926 - utils.performance_optimizer - INFO -   Memory Usage: 243.9 MB (1.5%)
+2025-08-14 00:55:18,926 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-14 00:55:18,933 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:55:18,936 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-14 00:55:18,936 - __main__ - INFO - ============================================================
+2025-08-14 00:55:18,936 - __main__ - INFO - [BATCH] BATCH PROCESSING SUMMARY
+2025-08-14 00:55:18,937 - __main__ - INFO - ============================================================
+2025-08-14 00:55:18,937 - __main__ - INFO - [ID] Batch ID: 283493e0-f89a-4cd7-b51a-2291e43efcb3
+2025-08-14 00:55:18,937 - __main__ - INFO - [IMAGES] Images processed: 1
+2025-08-14 00:55:18,937 - __main__ - INFO - [FACES] Faces detected: 4
+2025-08-14 00:55:18,938 - __main__ - INFO - [NEW] New persons: 4
+2025-08-14 00:55:18,938 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-14 00:55:18,939 - __main__ - INFO - [TIME] Processing time: 2.96s
+2025-08-14 00:55:18,940 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-14 00:55:18,940 - __main__ - INFO - [MEMORY] Memory usage: 243.9 MB
+2025-08-14 00:55:18,940 - __main__ - INFO - [INCREASE] Memory increase: 52.0 MB
+2025-08-14 00:55:18,940 - __main__ - INFO - ============================================================
+2025-08-14 00:55:23,981 - __main__ - INFO - [START] Starting enhanced batch processing: c434d4a5-4dcd-4d74-b674-6faacff7289d
+2025-08-14 00:55:23,983 - __main__ - INFO - Memory before processing: 243.9 MB
+2025-08-14 00:55:24,248 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:55:24,250 - __main__ - INFO - [FOUND] Found 1 recent images
+2025-08-14 00:55:24,688 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-14 00:55:24,688 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-14 00:55:24,695 - __main__ - INFO - [DUPLICATE] Found 1 duplicate images, continuing with new images
+2025-08-14 00:55:24,697 - __main__ - INFO - No new images to process after duplicate check
+2025-08-14 00:55:29,737 - __main__ - INFO - [START] Starting enhanced batch processing: 8dda8ced-4ea2-42ba-9335-6b0c8144b27d
+2025-08-14 00:55:29,738 - __main__ - INFO - Memory before processing: 246.1 MB
+2025-08-14 00:55:30,217 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:55:30,230 - __main__ - INFO - [FOUND] Found 1 recent images
+2025-08-14 00:55:30,614 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-14 00:55:30,614 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-14 00:55:30,643 - __main__ - INFO - [DUPLICATE] Found 1 duplicate images, continuing with new images
+2025-08-14 00:55:30,643 - __main__ - INFO - No new images to process after duplicate check
+2025-08-14 00:55:35,670 - __main__ - INFO - [START] Starting enhanced batch processing: 77a51fc0-dd57-4858-a58d-589f14ed24ea
+2025-08-14 00:55:35,672 - __main__ - INFO - Memory before processing: 246.2 MB
+2025-08-14 00:55:35,904 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 00:55:35,909 - __main__ - INFO - [FOUND] Found 1 recent images
+2025-08-14 00:55:36,275 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-14 00:55:36,275 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-14 00:55:36,297 - __main__ - INFO - [DUPLICATE] Found 1 duplicate images, continuing with new images
+2025-08-14 00:55:36,297 - __main__ - INFO - No new images to process after duplicate check
+2025-08-14 00:55:39,997 - __main__ - INFO - [STOP] System shutdown requested by user
+2025-08-14 00:55:39,997 - __main__ - INFO - [CLEANUP] Performing cleanup...
+2025-08-14 00:55:40,002 - __main__ - INFO - 
+======================================================================
+2025-08-14 00:55:40,003 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-14 00:55:40,003 - __main__ - INFO - ======================================================================
+2025-08-14 00:55:40,003 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-14 00:55:40,003 - __main__ - INFO -   Total Unique Persons: 100
+2025-08-14 00:55:40,003 - __main__ - INFO -   Total Visits: 100
+2025-08-14 00:55:40,003 - __main__ - INFO -   Recent Visitors (24h): 100
+2025-08-14 00:55:40,003 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-14 00:55:40,003 - __main__ - INFO -   Total Batches: 1
+2025-08-14 00:55:40,005 - __main__ - INFO -   Total Images Processed: 1
+2025-08-14 00:55:40,005 - __main__ - INFO -   Total Faces Detected: 4
+2025-08-14 00:55:40,005 - __main__ - INFO -   Total New Persons: 4
+2025-08-14 00:55:40,005 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 00:55:40,005 - __main__ - INFO -   Total Processing Time: 2.96s
+2025-08-14 00:55:40,005 - __main__ - INFO -   System Uptime: 0:00:29.098604
+2025-08-14 00:55:40,005 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-14 00:55:40,005 - __main__ - INFO -   Memory Usage: 246.3 MB (1.5%)
+2025-08-14 00:55:40,005 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 00:55:40,005 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 00:55:40,007 - __main__ - INFO -   FAISS Available: True
+2025-08-14 00:55:40,008 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-14 00:55:40,008 - __main__ - INFO -   Total Duplicates (24h): 3
+2025-08-14 00:55:40,008 - __main__ - INFO -   Image Duplicates: 3
+2025-08-14 00:55:40,008 - __main__ - INFO -   Face Duplicates: 0
+2025-08-14 00:55:40,008 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-14 00:55:40,011 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-14 00:55:40,011 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-14 00:55:40,011 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 00:55:40,011 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 00:55:40,011 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 00:55:40,011 - __main__ - INFO -   Quality Check: True
+2025-08-14 00:55:40,011 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 00:55:40,011 - __main__ - INFO -   Sleep Mode: True
+2025-08-14 00:55:40,011 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-14 00:55:40,011 - __main__ - INFO - ======================================================================
+
+2025-08-14 00:55:40,011 - utils.enhanced_face_service - INFO - Cleaned up 0 temporary face files
+2025-08-14 00:55:40,011 - utils.performance_optimizer - INFO - [GC] Performing garbage collection...
+2025-08-14 00:55:40,035 - utils.performance_optimizer - INFO - [OK] Memory after GC: 246.3 MB
+2025-08-14 00:55:40,036 - __main__ - INFO - [DONE] System shutdown complete
+2025-08-14 10:53:25,161 - __main__ - INFO - [START] Enhanced Face Recognition System initialized
+2025-08-14 10:53:25,161 - __main__ - INFO - Configuration: batch_size=10, interval=5s, quality_check=True, faiss=True
+2025-08-14 10:53:25,161 - __main__ - INFO - Sleep Mode: enabled=True, sleep_duration=300s, max_duplicates=3
+2025-08-14 10:53:25,161 - __main__ - INFO - [START] Starting Enhanced Face Recognition System...
+2025-08-14 10:53:25,165 - __main__ - INFO - 
+======================================================================
+2025-08-14 10:53:25,166 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-14 10:53:25,166 - __main__ - INFO - ======================================================================
+2025-08-14 10:53:25,166 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-14 10:53:25,166 - __main__ - INFO -   Total Unique Persons: 0
+2025-08-14 10:53:25,166 - __main__ - INFO -   Total Visits: 0
+2025-08-14 10:53:25,166 - __main__ - INFO -   Recent Visitors (24h): 0
+2025-08-14 10:53:25,167 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-14 10:53:25,167 - __main__ - INFO -   Total Batches: 0
+2025-08-14 10:53:25,167 - __main__ - INFO -   Total Images Processed: 0
+2025-08-14 10:53:25,167 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-14 10:53:25,167 - __main__ - INFO -   Total New Persons: 0
+2025-08-14 10:53:25,167 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 10:53:25,167 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-14 10:53:25,167 - __main__ - INFO -   System Uptime: 0:00:00.003834
+2025-08-14 10:53:25,167 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-14 10:53:25,167 - __main__ - INFO -   Memory Usage: 191.5 MB (1.2%)
+2025-08-14 10:53:25,168 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 10:53:25,168 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 10:53:25,168 - __main__ - INFO -   FAISS Available: True
+2025-08-14 10:53:25,172 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-14 10:53:25,172 - __main__ - INFO -   Total Duplicates (24h): 0
+2025-08-14 10:53:25,172 - __main__ - INFO -   Image Duplicates: 0
+2025-08-14 10:53:25,173 - __main__ - INFO -   Face Duplicates: 0
+2025-08-14 10:53:25,173 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-14 10:53:25,173 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-14 10:53:25,173 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-14 10:53:25,174 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 10:53:25,174 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 10:53:25,174 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 10:53:25,174 - __main__ - INFO -   Quality Check: True
+2025-08-14 10:53:25,174 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 10:53:25,174 - __main__ - INFO -   Sleep Mode: True
+2025-08-14 10:53:25,174 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-14 10:53:25,175 - __main__ - INFO - ======================================================================
+
+2025-08-14 10:53:30,219 - __main__ - INFO - [START] Starting enhanced batch processing: 49c96858-7ec8-4ad6-aea6-ceaafa779a62
+2025-08-14 10:53:30,221 - __main__ - INFO - Memory before processing: 191.5 MB
+2025-08-14 10:53:30,413 - __main__ - INFO - [STOP] System shutdown requested by user
+2025-08-14 10:53:30,413 - __main__ - INFO - [CLEANUP] Performing cleanup...
+2025-08-14 10:53:30,415 - __main__ - INFO - 
+======================================================================
+2025-08-14 10:53:30,415 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-14 10:53:30,415 - __main__ - INFO - ======================================================================
+2025-08-14 10:53:30,415 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-14 10:53:30,415 - __main__ - INFO -   Total Unique Persons: 0
+2025-08-14 10:53:30,415 - __main__ - INFO -   Total Visits: 0
+2025-08-14 10:53:30,415 - __main__ - INFO -   Recent Visitors (24h): 0
+2025-08-14 10:53:30,415 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-14 10:53:30,417 - __main__ - INFO -   Total Batches: 0
+2025-08-14 10:53:30,417 - __main__ - INFO -   Total Images Processed: 0
+2025-08-14 10:53:30,417 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-14 10:53:30,417 - __main__ - INFO -   Total New Persons: 0
+2025-08-14 10:53:30,417 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 10:53:30,417 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-14 10:53:30,417 - __main__ - INFO -   System Uptime: 0:00:05.254102
+2025-08-14 10:53:30,417 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-14 10:53:30,417 - __main__ - INFO -   Memory Usage: 192.5 MB (1.2%)
+2025-08-14 10:53:30,417 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 10:53:30,417 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 10:53:30,417 - __main__ - INFO -   FAISS Available: True
+2025-08-14 10:53:30,421 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-14 10:53:30,421 - __main__ - INFO -   Total Duplicates (24h): 0
+2025-08-14 10:53:30,422 - __main__ - INFO -   Image Duplicates: 0
+2025-08-14 10:53:30,422 - __main__ - INFO -   Face Duplicates: 0
+2025-08-14 10:53:30,422 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-14 10:53:30,422 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-14 10:53:30,422 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-14 10:53:30,422 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 10:53:30,422 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 10:53:30,423 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 10:53:30,423 - __main__ - INFO -   Quality Check: True
+2025-08-14 10:53:30,423 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 10:53:30,423 - __main__ - INFO -   Sleep Mode: True
+2025-08-14 10:53:30,423 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-14 10:53:30,423 - __main__ - INFO - ======================================================================
+
+2025-08-14 10:53:30,423 - utils.enhanced_face_service - INFO - Cleaned up 0 temporary face files
+2025-08-14 10:53:30,423 - utils.performance_optimizer - INFO - [GC] Performing garbage collection...
+2025-08-14 10:53:30,441 - utils.performance_optimizer - INFO - [OK] Memory after GC: 192.5 MB
+2025-08-14 10:53:30,441 - __main__ - INFO - [DONE] System shutdown complete
+2025-08-14 10:54:40,432 - __main__ - INFO - [START] Enhanced Face Recognition System initialized
+2025-08-14 10:54:40,433 - __main__ - INFO - Configuration: batch_size=10, interval=5s, quality_check=True, faiss=True
+2025-08-14 10:54:40,433 - __main__ - INFO - Sleep Mode: enabled=True, sleep_duration=300s, max_duplicates=3
+2025-08-14 10:54:40,433 - __main__ - INFO - [START] Starting Enhanced Face Recognition System...
+2025-08-14 10:54:40,457 - __main__ - INFO - 
+======================================================================
+2025-08-14 10:54:40,457 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-14 10:54:40,457 - __main__ - INFO - ======================================================================
+2025-08-14 10:54:40,457 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-14 10:54:40,457 - __main__ - INFO -   Total Unique Persons: 0
+2025-08-14 10:54:40,458 - __main__ - INFO -   Total Visits: 0
+2025-08-14 10:54:40,458 - __main__ - INFO -   Recent Visitors (24h): 0
+2025-08-14 10:54:40,458 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-14 10:54:40,458 - __main__ - INFO -   Total Batches: 0
+2025-08-14 10:54:40,458 - __main__ - INFO -   Total Images Processed: 0
+2025-08-14 10:54:40,458 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-14 10:54:40,458 - __main__ - INFO -   Total New Persons: 0
+2025-08-14 10:54:40,458 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 10:54:40,458 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-14 10:54:40,458 - __main__ - INFO -   System Uptime: 0:00:00.024470
+2025-08-14 10:54:40,458 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-14 10:54:40,460 - __main__ - INFO -   Memory Usage: 191.6 MB (1.2%)
+2025-08-14 10:54:40,460 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 10:54:40,460 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 10:54:40,460 - __main__ - INFO -   FAISS Available: True
+2025-08-14 10:54:40,473 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-14 10:54:40,473 - __main__ - INFO -   Total Duplicates (24h): 0
+2025-08-14 10:54:40,473 - __main__ - INFO -   Image Duplicates: 0
+2025-08-14 10:54:40,473 - __main__ - INFO -   Face Duplicates: 0
+2025-08-14 10:54:40,473 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-14 10:54:40,474 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-14 10:54:40,474 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-14 10:54:40,474 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 10:54:40,474 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 10:54:40,474 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 10:54:40,474 - __main__ - INFO -   Quality Check: True
+2025-08-14 10:54:40,474 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 10:54:40,474 - __main__ - INFO -   Sleep Mode: True
+2025-08-14 10:54:40,474 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-14 10:54:40,476 - __main__ - INFO - ======================================================================
+
+2025-08-14 10:54:45,500 - __main__ - INFO - [START] Starting enhanced batch processing: dcb6e813-cbff-4d1f-86d0-37bd7dfd8fff
+2025-08-14 10:54:45,504 - __main__ - INFO - Memory before processing: 191.6 MB
+2025-08-14 10:54:46,351 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 10:54:46,355 - __main__ - INFO - [FOUND] Found 1 recent images
+2025-08-14 10:54:54,884 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-14 10:54:54,885 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-14 10:54:54,893 - __main__ - INFO - [DUPLICATE] Found 1 duplicate images, continuing with new images
+2025-08-14 10:54:54,893 - __main__ - INFO - No new images to process after duplicate check
+2025-08-14 10:54:59,941 - __main__ - INFO - [START] Starting enhanced batch processing: bfadecdf-8f4c-4737-bfa4-e7f8e9d02582
+2025-08-14 10:54:59,944 - __main__ - INFO - Memory before processing: 196.1 MB
+2025-08-14 10:55:01,414 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-14 10:55:01,415 - __main__ - INFO - [FOUND] Found 1 recent images
+2025-08-14 10:55:09,448 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-14 10:55:09,448 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-14 10:55:09,515 - __main__ - INFO - [DUPLICATE] Found 1 duplicate images, continuing with new images
+2025-08-14 10:55:09,516 - __main__ - INFO - No new images to process after duplicate check
+2025-08-14 10:55:10,525 - __main__ - INFO - 
+======================================================================
+2025-08-14 10:55:10,525 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-14 10:55:10,525 - __main__ - INFO - ======================================================================
+2025-08-14 10:55:10,525 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-14 10:55:10,526 - __main__ - INFO -   Total Unique Persons: 0
+2025-08-14 10:55:10,526 - __main__ - INFO -   Total Visits: 0
+2025-08-14 10:55:10,526 - __main__ - INFO -   Recent Visitors (24h): 0
+2025-08-14 10:55:10,526 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-14 10:55:10,526 - __main__ - INFO -   Total Batches: 0
+2025-08-14 10:55:10,526 - __main__ - INFO -   Total Images Processed: 0
+2025-08-14 10:55:10,526 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-14 10:55:10,526 - __main__ - INFO -   Total New Persons: 0
+2025-08-14 10:55:10,526 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 10:55:10,526 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-14 10:55:10,526 - __main__ - INFO -   System Uptime: 0:00:30.092852
+2025-08-14 10:55:10,526 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-14 10:55:10,526 - __main__ - INFO -   Memory Usage: 196.2 MB (1.2%)
+2025-08-14 10:55:10,527 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 10:55:10,527 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 10:55:10,527 - __main__ - INFO -   FAISS Available: True
+2025-08-14 10:55:10,531 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-14 10:55:10,531 - __main__ - INFO -   Total Duplicates (24h): 2
+2025-08-14 10:55:10,531 - __main__ - INFO -   Image Duplicates: 2
+2025-08-14 10:55:10,532 - __main__ - INFO -   Face Duplicates: 0
+2025-08-14 10:55:10,532 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-14 10:55:10,532 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-14 10:55:10,532 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-14 10:55:10,532 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 10:55:10,532 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 10:55:10,532 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 10:55:10,532 - __main__ - INFO -   Quality Check: True
+2025-08-14 10:55:10,532 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 10:55:10,532 - __main__ - INFO -   Sleep Mode: True
+2025-08-14 10:55:10,532 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-14 10:55:10,532 - __main__ - INFO - ======================================================================
+
+2025-08-14 10:55:13,031 - __main__ - INFO - [STOP] System shutdown requested by user
+2025-08-14 10:55:13,031 - __main__ - INFO - [CLEANUP] Performing cleanup...
+2025-08-14 10:55:13,043 - __main__ - INFO - 
+======================================================================
+2025-08-14 10:55:13,043 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-14 10:55:13,043 - __main__ - INFO - ======================================================================
+2025-08-14 10:55:13,043 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-14 10:55:13,043 - __main__ - INFO -   Total Unique Persons: 0
+2025-08-14 10:55:13,043 - __main__ - INFO -   Total Visits: 0
+2025-08-14 10:55:13,043 - __main__ - INFO -   Recent Visitors (24h): 0
+2025-08-14 10:55:13,044 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-14 10:55:13,044 - __main__ - INFO -   Total Batches: 0
+2025-08-14 10:55:13,044 - __main__ - INFO -   Total Images Processed: 0
+2025-08-14 10:55:13,044 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-14 10:55:13,044 - __main__ - INFO -   Total New Persons: 0
+2025-08-14 10:55:13,044 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-14 10:55:13,044 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-14 10:55:13,044 - __main__ - INFO -   System Uptime: 0:00:32.610583
+2025-08-14 10:55:13,044 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-14 10:55:13,044 - __main__ - INFO -   Memory Usage: 196.2 MB (1.2%)
+2025-08-14 10:55:13,044 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-14 10:55:13,046 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-14 10:55:13,046 - __main__ - INFO -   FAISS Available: True
+2025-08-14 10:55:13,051 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-14 10:55:13,052 - __main__ - INFO -   Total Duplicates (24h): 2
+2025-08-14 10:55:13,053 - __main__ - INFO -   Image Duplicates: 2
+2025-08-14 10:55:13,053 - __main__ - INFO -   Face Duplicates: 0
+2025-08-14 10:55:13,053 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-14 10:55:13,053 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-14 10:55:13,053 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-14 10:55:13,053 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-14 10:55:13,053 - __main__ - INFO -   Max Batch Size: 10
+2025-08-14 10:55:13,054 - __main__ - INFO -   Processing Interval: 5s
+2025-08-14 10:55:13,054 - __main__ - INFO -   Quality Check: True
+2025-08-14 10:55:13,054 - __main__ - INFO -   FAISS Enabled: True
+2025-08-14 10:55:13,054 - __main__ - INFO -   Sleep Mode: True
+2025-08-14 10:55:13,054 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-14 10:55:13,054 - __main__ - INFO - ======================================================================
+
+2025-08-14 10:55:13,054 - utils.enhanced_face_service - INFO - Cleaned up 0 temporary face files
+2025-08-14 10:55:13,054 - utils.performance_optimizer - INFO - [GC] Performing garbage collection...
+2025-08-14 10:55:13,079 - utils.performance_optimizer - INFO - [OK] Memory after GC: 196.2 MB
+2025-08-14 10:55:13,079 - __main__ - INFO - [DONE] System shutdown complete
+2025-08-19 00:28:40,905 - __main__ - INFO - [START] Enhanced Face Recognition System initialized
+2025-08-19 00:28:40,905 - __main__ - INFO - Configuration: batch_size=10, interval=5s, quality_check=True, faiss=True
+2025-08-19 00:28:40,905 - __main__ - INFO - Sleep Mode: enabled=True, sleep_duration=300s, max_duplicates=3
+2025-08-19 00:28:40,905 - __main__ - INFO - [START] Starting Enhanced Face Recognition System...
+2025-08-19 00:28:53,071 - __main__ - INFO - 
+======================================================================
+2025-08-19 00:28:53,071 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-19 00:28:53,073 - __main__ - INFO - ======================================================================
+2025-08-19 00:28:53,073 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-19 00:28:53,073 - __main__ - INFO -   Total Unique Persons: 0
+2025-08-19 00:28:53,073 - __main__ - INFO -   Total Visits: 0
+2025-08-19 00:28:53,073 - __main__ - INFO -   Recent Visitors (24h): 0
+2025-08-19 00:28:53,073 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-19 00:28:53,073 - __main__ - INFO -   Total Batches: 0
+2025-08-19 00:28:53,073 - __main__ - INFO -   Total Images Processed: 0
+2025-08-19 00:28:53,073 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-19 00:28:53,073 - __main__ - INFO -   Total New Persons: 0
+2025-08-19 00:28:53,073 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-19 00:28:53,073 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-19 00:28:53,079 - __main__ - INFO -   System Uptime: 0:00:12.166002
+2025-08-19 00:28:53,079 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-19 00:28:53,079 - __main__ - INFO -   Memory Usage: 191.0 MB (1.2%)
+2025-08-19 00:28:53,079 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-19 00:28:53,079 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-19 00:28:53,079 - __main__ - INFO -   FAISS Available: True
+2025-08-19 00:29:05,235 - utils.duplicate_detector - ERROR - Error getting recent duplicate events: 'NoneType' object is not iterable
+2025-08-19 00:29:17,415 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-19 00:29:17,415 - __main__ - INFO -   Total Duplicates (24h): 0
+2025-08-19 00:29:17,415 - __main__ - INFO -   Image Duplicates: 0
+2025-08-19 00:29:17,415 - __main__ - INFO -   Face Duplicates: 0
+2025-08-19 00:29:17,415 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-19 00:29:17,415 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-19 00:29:17,415 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-19 00:29:17,415 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-19 00:29:17,415 - __main__ - INFO -   Max Batch Size: 10
+2025-08-19 00:29:17,415 - __main__ - INFO -   Processing Interval: 5s
+2025-08-19 00:29:17,415 - __main__ - INFO -   Quality Check: True
+2025-08-19 00:29:17,415 - __main__ - INFO -   FAISS Enabled: True
+2025-08-19 00:29:17,415 - __main__ - INFO -   Sleep Mode: True
+2025-08-19 00:29:17,415 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-19 00:29:17,415 - __main__ - INFO - ======================================================================
+
+2025-08-19 00:29:17,415 - __main__ - INFO - [START] Starting enhanced batch processing: 516c0476-1983-446a-aa14-4bb12ec95ee9
+2025-08-19 00:29:29,645 - __main__ - INFO - Memory before processing: 191.0 MB
+2025-08-19 00:29:31,136 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-19 00:29:31,152 - __main__ - INFO - [FOUND] Found 1 recent images
+2025-08-19 00:29:51,481 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-19 00:31:16,852 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-19 00:31:16,871 - __main__ - INFO - Memory after processing: 243.5 MB
+2025-08-19 00:31:29,064 - utils.performance_optimizer - INFO - [STATS] Performance Statistics:
+2025-08-19 00:31:29,068 - utils.performance_optimizer - INFO -   Memory Usage: 243.5 MB (1.5%)
+2025-08-19 00:31:29,094 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-19 00:31:29,114 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-19 00:31:29,124 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-19 00:31:29,138 - __main__ - INFO - ============================================================
+2025-08-19 00:31:29,159 - __main__ - INFO - [BATCH] BATCH PROCESSING SUMMARY
+2025-08-19 00:31:29,179 - __main__ - INFO - ============================================================
+2025-08-19 00:31:29,189 - __main__ - INFO - [ID] Batch ID: 516c0476-1983-446a-aa14-4bb12ec95ee9
+2025-08-19 00:31:29,253 - __main__ - INFO - [IMAGES] Images processed: 1
+2025-08-19 00:31:29,301 - __main__ - INFO - [FACES] Faces detected: 4
+2025-08-19 00:31:29,327 - __main__ - INFO - [NEW] New persons: 0
+2025-08-19 00:31:29,327 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-19 00:31:29,327 - __main__ - INFO - [TIME] Processing time: 119.46s
+2025-08-19 00:31:29,332 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-19 00:31:29,332 - __main__ - INFO - [MEMORY] Memory usage: 243.5 MB
+2025-08-19 00:31:29,332 - __main__ - INFO - [INCREASE] Memory increase: 52.5 MB
+2025-08-19 00:31:29,334 - __main__ - INFO - ============================================================
+2025-08-19 00:31:41,517 - __main__ - INFO - 
+======================================================================
+2025-08-19 00:31:41,517 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-19 00:31:41,517 - __main__ - INFO - ======================================================================
+2025-08-19 00:31:41,517 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-19 00:31:41,517 - __main__ - INFO -   Total Unique Persons: 0
+2025-08-19 00:31:41,517 - __main__ - INFO -   Total Visits: 0
+2025-08-19 00:31:41,517 - __main__ - INFO -   Recent Visitors (24h): 0
+2025-08-19 00:31:41,517 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-19 00:31:41,525 - __main__ - INFO -   Total Batches: 1
+2025-08-19 00:31:41,526 - __main__ - INFO -   Total Images Processed: 1
+2025-08-19 00:31:41,526 - __main__ - INFO -   Total Faces Detected: 4
+2025-08-19 00:31:41,526 - __main__ - INFO -   Total New Persons: 0
+2025-08-19 00:31:41,535 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-19 00:31:41,535 - __main__ - INFO -   Total Processing Time: 119.46s
+2025-08-19 00:31:41,535 - __main__ - INFO -   System Uptime: 0:03:00.611482
+2025-08-19 00:31:41,535 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-19 00:31:41,535 - __main__ - INFO -   Memory Usage: 243.5 MB (1.5%)
+2025-08-19 00:31:41,542 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-19 00:31:41,542 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-19 00:31:41,542 - __main__ - INFO -   FAISS Available: True
+2025-08-19 00:31:53,745 - utils.duplicate_detector - ERROR - Error getting recent duplicate events: 'NoneType' object is not iterable
+2025-08-19 00:32:05,960 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-19 00:32:05,960 - __main__ - INFO -   Total Duplicates (24h): 0
+2025-08-19 00:32:05,970 - __main__ - INFO -   Image Duplicates: 0
+2025-08-19 00:32:05,970 - __main__ - INFO -   Face Duplicates: 0
+2025-08-19 00:32:05,970 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-19 00:32:05,978 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-19 00:32:05,978 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-19 00:32:05,980 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-19 00:32:05,982 - __main__ - INFO -   Max Batch Size: 10
+2025-08-19 00:32:05,984 - __main__ - INFO -   Processing Interval: 5s
+2025-08-19 00:32:05,990 - __main__ - INFO -   Quality Check: True
+2025-08-19 00:32:06,003 - __main__ - INFO -   FAISS Enabled: True
+2025-08-19 00:32:06,006 - __main__ - INFO -   Sleep Mode: True
+2025-08-19 00:32:06,008 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-19 00:32:06,041 - __main__ - INFO - ======================================================================
+
+2025-08-19 00:32:07,045 - __main__ - INFO - [START] Starting enhanced batch processing: d8c23c4e-92f8-4907-a1d1-577916cdb85d
+2025-08-19 00:32:19,252 - __main__ - INFO - Memory before processing: 243.5 MB
+2025-08-19 00:32:20,067 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-19 00:32:20,067 - __main__ - INFO - [FOUND] Found 1 recent images
+2025-08-19 00:32:41,201 - utils.enhanced_face_service - INFO - Successfully processed 4 faces from temp_images/h4.jpg
+2025-08-19 00:33:36,135 - utils.enhanced_face_service - INFO - Cleaned up 4 temporary face files
+2025-08-19 00:33:36,151 - __main__ - INFO - Memory after processing: 249.6 MB
+2025-08-19 00:33:36,153 - utils.performance_optimizer - INFO - [STATS] Performance Statistics:
+2025-08-19 00:33:36,153 - utils.performance_optimizer - INFO -   Memory Usage: 249.6 MB (1.6%)
+2025-08-19 00:33:36,153 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-19 00:33:36,153 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-19 00:33:36,160 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-19 00:33:36,160 - __main__ - INFO - ============================================================
+2025-08-19 00:33:36,160 - __main__ - INFO - [BATCH] BATCH PROCESSING SUMMARY
+2025-08-19 00:33:36,160 - __main__ - INFO - ============================================================
+2025-08-19 00:33:36,160 - __main__ - INFO - [ID] Batch ID: d8c23c4e-92f8-4907-a1d1-577916cdb85d
+2025-08-19 00:33:36,160 - __main__ - INFO - [IMAGES] Images processed: 1
+2025-08-19 00:33:36,160 - __main__ - INFO - [FACES] Faces detected: 4
+2025-08-19 00:33:36,160 - __main__ - INFO - [NEW] New persons: 0
+2025-08-19 00:33:36,164 - __main__ - INFO - [RETURN] Returning persons: 0
+2025-08-19 00:33:36,168 - __main__ - INFO - [TIME] Processing time: 89.11s
+2025-08-19 00:33:36,170 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-19 00:33:36,172 - __main__ - INFO - [MEMORY] Memory usage: 249.6 MB
+2025-08-19 00:33:36,178 - __main__ - INFO - [INCREASE] Memory increase: 6.1 MB
+2025-08-19 00:33:36,182 - __main__ - INFO - ============================================================
+2025-08-19 00:33:37,207 - __main__ - INFO - 
+======================================================================
+2025-08-19 00:33:37,207 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-19 00:33:37,207 - __main__ - INFO - ======================================================================
+2025-08-19 00:33:37,207 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-19 00:33:37,207 - __main__ - INFO -   Total Unique Persons: 0
+2025-08-19 00:33:37,207 - __main__ - INFO -   Total Visits: 0
+2025-08-19 00:33:37,207 - __main__ - INFO -   Recent Visitors (24h): 0
+2025-08-19 00:33:37,214 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-19 00:33:37,214 - __main__ - INFO -   Total Batches: 2
+2025-08-19 00:33:37,214 - __main__ - INFO -   Total Images Processed: 2
+2025-08-19 00:33:37,214 - __main__ - INFO -   Total Faces Detected: 8
+2025-08-19 00:33:37,214 - __main__ - INFO -   Total New Persons: 0
+2025-08-19 00:33:37,216 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-19 00:33:37,216 - __main__ - INFO -   Total Processing Time: 208.57s
+2025-08-19 00:33:37,216 - __main__ - INFO -   System Uptime: 0:04:56.302046
+2025-08-19 00:33:37,216 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-19 00:33:37,219 - __main__ - INFO -   Memory Usage: 249.6 MB (1.6%)
+2025-08-19 00:33:37,219 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-19 00:33:37,219 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-19 00:33:37,219 - __main__ - INFO -   FAISS Available: True
+2025-08-19 00:33:37,231 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-19 00:33:37,233 - __main__ - INFO -   Total Duplicates (24h): 0
+2025-08-19 00:33:37,233 - __main__ - INFO -   Image Duplicates: 0
+2025-08-19 00:33:37,233 - __main__ - INFO -   Face Duplicates: 0
+2025-08-19 00:33:37,235 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-19 00:33:37,235 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-19 00:33:37,235 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-19 00:33:37,235 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-19 00:33:37,237 - __main__ - INFO -   Max Batch Size: 10
+2025-08-19 00:33:37,237 - __main__ - INFO -   Processing Interval: 5s
+2025-08-19 00:33:37,237 - __main__ - INFO -   Quality Check: True
+2025-08-19 00:33:37,237 - __main__ - INFO -   FAISS Enabled: True
+2025-08-19 00:33:37,239 - __main__ - INFO -   Sleep Mode: True
+2025-08-19 00:33:37,240 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-19 00:33:37,240 - __main__ - INFO - ======================================================================
+
+2025-08-19 00:33:41,280 - __main__ - INFO - [START] Starting enhanced batch processing: daf270cb-09ce-4c24-b232-f64aa97bf79b
+2025-08-19 00:33:41,280 - __main__ - INFO - Memory before processing: 249.6 MB
+2025-08-19 00:33:42,603 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-19 00:33:42,603 - __main__ - INFO - [FOUND] Found 2 recent images
+2025-08-19 00:33:45,491 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-19 00:33:45,491 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-19 00:33:47,119 - __main__ - INFO - [DUPLICATE] Found 1 duplicate images, continuing with new images
+2025-08-19 00:33:49,156 - utils.enhanced_face_service - INFO - Successfully processed 3 faces from temp_images/WIN_20250819_00_27_12_Pro.jpg
+2025-08-19 00:33:49,190 - __main__ - INFO - Processing 3 temp faces against 0 known persons
+2025-08-19 00:33:49,201 - __main__ - INFO - [NEW] Created new person: 723a479b-1a39-41af-bc34-cc713b165991
+2025-08-19 00:33:49,211 - __main__ - INFO - [UPDATE] Updated visit for person: 723a479b-1a39-41af-bc34-cc713b165991
+2025-08-19 00:33:49,217 - __main__ - INFO - [UPDATE] Updated visit for person: 723a479b-1a39-41af-bc34-cc713b165991
+2025-08-19 00:33:49,222 - utils.enhanced_face_service - INFO - Cleaned up 3 temporary face files
+2025-08-19 00:33:49,222 - __main__ - INFO - Memory after processing: 230.1 MB
+2025-08-19 00:33:49,230 - utils.performance_optimizer - INFO - [STATS] Performance Statistics:
+2025-08-19 00:33:49,230 - utils.performance_optimizer - INFO -   Memory Usage: 230.1 MB (1.4%)
+2025-08-19 00:33:49,230 - utils.performance_optimizer - INFO -   Avg Processing Time: 0.000s
+2025-08-19 00:33:49,230 - utils.performance_optimizer - INFO -   Cache Hit Rate: 0.00%
+2025-08-19 00:33:49,230 - utils.performance_optimizer - INFO -   FAISS Available: True
+2025-08-19 00:33:49,230 - __main__ - INFO - ============================================================
+2025-08-19 00:33:49,230 - __main__ - INFO - [BATCH] BATCH PROCESSING SUMMARY
+2025-08-19 00:33:49,230 - __main__ - INFO - ============================================================
+2025-08-19 00:33:49,230 - __main__ - INFO - [ID] Batch ID: daf270cb-09ce-4c24-b232-f64aa97bf79b
+2025-08-19 00:33:49,230 - __main__ - INFO - [IMAGES] Images processed: 1
+2025-08-19 00:33:49,230 - __main__ - INFO - [FACES] Faces detected: 3
+2025-08-19 00:33:49,230 - __main__ - INFO - [NEW] New persons: 1
+2025-08-19 00:33:49,230 - __main__ - INFO - [RETURN] Returning persons: 2
+2025-08-19 00:33:49,230 - __main__ - INFO - [TIME] Processing time: 7.94s
+2025-08-19 00:33:49,238 - __main__ - INFO - [STATUS] Status: SUCCESS
+2025-08-19 00:33:49,238 - __main__ - INFO - [MEMORY] Memory usage: 230.1 MB
+2025-08-19 00:33:49,238 - __main__ - INFO - [INCREASE] Memory increase: -19.5 MB
+2025-08-19 00:33:49,238 - __main__ - INFO - ============================================================
+2025-08-19 00:33:49,239 - __main__ - INFO - [DUPLICATE] Batch had 1 duplicate events
+2025-08-19 00:33:54,271 - __main__ - INFO - [START] Starting enhanced batch processing: 59fc9ee9-b452-477e-a447-bcd78121f445
+2025-08-19 00:33:54,271 - __main__ - INFO - Memory before processing: 230.1 MB
+2025-08-19 00:33:56,215 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-19 00:33:56,215 - __main__ - INFO - [FOUND] Found 2 recent images
+2025-08-19 00:33:59,693 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-19 00:33:59,693 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-19 00:34:01,550 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-19 00:34:01,550 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-19 00:34:01,568 - __main__ - INFO - [DUPLICATE] Found 2 duplicate images, continuing with new images
+2025-08-19 00:34:01,569 - __main__ - INFO - No new images to process after duplicate check
+2025-08-19 00:34:06,617 - __main__ - INFO - [START] Starting enhanced batch processing: 9bee887b-6784-490d-8f30-847b560d96ae
+2025-08-19 00:34:06,617 - __main__ - INFO - Memory before processing: 230.1 MB
+2025-08-19 00:34:07,788 - __main__ - INFO - [STOP] System shutdown requested by user
+2025-08-19 00:34:07,788 - __main__ - INFO - [CLEANUP] Performing cleanup...
+2025-08-19 00:34:07,797 - __main__ - INFO - 
+======================================================================
+2025-08-19 00:34:07,797 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-19 00:34:07,797 - __main__ - INFO - ======================================================================
+2025-08-19 00:34:07,797 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-19 00:34:07,797 - __main__ - INFO -   Total Unique Persons: 1
+2025-08-19 00:34:07,797 - __main__ - INFO -   Total Visits: 3
+2025-08-19 00:34:07,797 - __main__ - INFO -   Recent Visitors (24h): 1
+2025-08-19 00:34:07,797 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-19 00:34:07,797 - __main__ - INFO -   Total Batches: 3
+2025-08-19 00:34:07,797 - __main__ - INFO -   Total Images Processed: 3
+2025-08-19 00:34:07,797 - __main__ - INFO -   Total Faces Detected: 11
+2025-08-19 00:34:07,797 - __main__ - INFO -   Total New Persons: 1
+2025-08-19 00:34:07,797 - __main__ - INFO -   Total Existing Persons: 2
+2025-08-19 00:34:07,797 - __main__ - INFO -   Total Processing Time: 216.51s
+2025-08-19 00:34:07,797 - __main__ - INFO -   System Uptime: 0:05:26.891058
+2025-08-19 00:34:07,797 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-19 00:34:07,797 - __main__ - INFO -   Memory Usage: 230.1 MB (1.4%)
+2025-08-19 00:34:07,797 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-19 00:34:07,797 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-19 00:34:07,797 - __main__ - INFO -   FAISS Available: True
+2025-08-19 00:34:07,887 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-19 00:34:07,889 - __main__ - INFO -   Total Duplicates (24h): 2
+2025-08-19 00:34:07,891 - __main__ - INFO -   Image Duplicates: 2
+2025-08-19 00:34:07,896 - __main__ - INFO -   Face Duplicates: 0
+2025-08-19 00:34:07,900 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-19 00:34:07,902 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-19 00:34:07,902 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-19 00:34:07,904 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-19 00:34:07,908 - __main__ - INFO -   Max Batch Size: 10
+2025-08-19 00:34:07,911 - __main__ - INFO -   Processing Interval: 5s
+2025-08-19 00:34:07,912 - __main__ - INFO -   Quality Check: True
+2025-08-19 00:34:07,914 - __main__ - INFO -   FAISS Enabled: True
+2025-08-19 00:34:07,916 - __main__ - INFO -   Sleep Mode: True
+2025-08-19 00:34:07,918 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-19 00:34:07,923 - __main__ - INFO - ======================================================================
+
+2025-08-19 00:34:07,927 - utils.enhanced_face_service - INFO - Cleaned up 0 temporary face files
+2025-08-19 00:34:07,928 - utils.performance_optimizer - INFO - [GC] Performing garbage collection...
+2025-08-19 00:34:08,064 - utils.performance_optimizer - INFO - [OK] Memory after GC: 230.1 MB
+2025-08-19 00:34:08,064 - __main__ - INFO - [DONE] System shutdown complete
+2025-08-21 13:15:35,402 - __main__ - INFO - [START] Enhanced Face Recognition System initialized
+2025-08-21 13:15:35,402 - __main__ - INFO - Configuration: batch_size=10, interval=5s, quality_check=True, faiss=True
+2025-08-21 13:15:35,403 - __main__ - INFO - Sleep Mode: enabled=True, sleep_duration=300s, max_duplicates=3
+2025-08-21 13:15:35,403 - __main__ - INFO - [START] Starting Enhanced Face Recognition System...
+2025-08-21 13:15:35,409 - __main__ - INFO - 
+======================================================================
+2025-08-21 13:15:35,409 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-21 13:15:35,409 - __main__ - INFO - ======================================================================
+2025-08-21 13:15:35,409 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-21 13:15:35,409 - __main__ - INFO -   Total Unique Persons: 1
+2025-08-21 13:15:35,409 - __main__ - INFO -   Total Visits: 3
+2025-08-21 13:15:35,409 - __main__ - INFO -   Recent Visitors (24h): 0
+2025-08-21 13:15:35,409 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-21 13:15:35,409 - __main__ - INFO -   Total Batches: 0
+2025-08-21 13:15:35,409 - __main__ - INFO -   Total Images Processed: 0
+2025-08-21 13:15:35,409 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-21 13:15:35,409 - __main__ - INFO -   Total New Persons: 0
+2025-08-21 13:15:35,409 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-21 13:15:35,409 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-21 13:15:35,409 - __main__ - INFO -   System Uptime: 0:00:00.007354
+2025-08-21 13:15:35,409 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-21 13:15:35,409 - __main__ - INFO -   Memory Usage: 191.6 MB (1.2%)
+2025-08-21 13:15:35,409 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-21 13:15:35,409 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-21 13:15:35,409 - __main__ - INFO -   FAISS Available: True
+2025-08-21 13:15:35,423 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-21 13:15:35,423 - __main__ - INFO -   Total Duplicates (24h): 0
+2025-08-21 13:15:35,423 - __main__ - INFO -   Image Duplicates: 0
+2025-08-21 13:15:35,423 - __main__ - INFO -   Face Duplicates: 0
+2025-08-21 13:15:35,423 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-21 13:15:35,423 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-21 13:15:35,425 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-21 13:15:35,425 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-21 13:15:35,425 - __main__ - INFO -   Max Batch Size: 10
+2025-08-21 13:15:35,426 - __main__ - INFO -   Processing Interval: 5s
+2025-08-21 13:15:35,426 - __main__ - INFO -   Quality Check: True
+2025-08-21 13:15:35,426 - __main__ - INFO -   FAISS Enabled: True
+2025-08-21 13:15:35,426 - __main__ - INFO -   Sleep Mode: True
+2025-08-21 13:15:35,426 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-21 13:15:35,426 - __main__ - INFO - ======================================================================
+
+2025-08-21 13:15:40,459 - __main__ - INFO - [START] Starting enhanced batch processing: 6d1851a5-c85f-4b0e-bb3d-d54db222bcbf
+2025-08-21 13:15:40,460 - __main__ - INFO - Memory before processing: 191.7 MB
+2025-08-21 13:15:41,706 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-21 13:15:41,712 - __main__ - INFO - [FOUND] Found 2 recent images
+2025-08-21 13:15:42,725 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:15:42,725 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:15:43,774 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:15:43,774 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:15:43,784 - __main__ - INFO - [DUPLICATE] Found 2 duplicate images, continuing with new images
+2025-08-21 13:15:43,784 - __main__ - INFO - No new images to process after duplicate check
+2025-08-21 13:15:48,820 - __main__ - INFO - [START] Starting enhanced batch processing: 863c0f5f-cea9-4387-b83c-c8742effa3b3
+2025-08-21 13:15:48,828 - __main__ - INFO - Memory before processing: 196.1 MB
+2025-08-21 13:15:49,251 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-21 13:15:49,255 - __main__ - INFO - [FOUND] Found 2 recent images
+2025-08-21 13:15:50,063 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:15:50,063 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:15:50,469 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:15:50,469 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:15:50,484 - __main__ - INFO - [DUPLICATE] Found 2 duplicate images, continuing with new images
+2025-08-21 13:15:50,484 - __main__ - INFO - No new images to process after duplicate check
+2025-08-21 13:15:55,511 - __main__ - INFO - [START] Starting enhanced batch processing: 88e9f591-4a21-4374-b94d-e33212c30fdb
+2025-08-21 13:15:55,515 - __main__ - INFO - Memory before processing: 196.2 MB
+2025-08-21 13:15:56,286 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-21 13:15:56,290 - __main__ - INFO - [FOUND] Found 2 recent images
+2025-08-21 13:15:56,941 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:15:56,941 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:15:57,341 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:15:57,341 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:15:57,357 - __main__ - INFO - [DUPLICATE] Found 2 duplicate images, continuing with new images
+2025-08-21 13:15:57,357 - __main__ - INFO - No new images to process after duplicate check
+2025-08-21 13:16:02,413 - __main__ - INFO - [START] Starting enhanced batch processing: a0836296-165d-4948-b8e1-a36b9e4c4694
+2025-08-21 13:16:02,421 - __main__ - INFO - Memory before processing: 196.3 MB
+2025-08-21 13:16:02,972 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-21 13:16:02,972 - __main__ - INFO - [FOUND] Found 2 recent images
+2025-08-21 13:16:03,802 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:16:03,802 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:16:04,489 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:16:04,489 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:16:04,505 - __main__ - INFO - [DUPLICATE] Found 2 duplicate images, continuing with new images
+2025-08-21 13:16:04,505 - __main__ - INFO - No new images to process after duplicate check
+2025-08-21 13:16:05,516 - __main__ - INFO - 
+======================================================================
+2025-08-21 13:16:05,516 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-21 13:16:05,516 - __main__ - INFO - ======================================================================
+2025-08-21 13:16:05,516 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-21 13:16:05,516 - __main__ - INFO -   Total Unique Persons: 1
+2025-08-21 13:16:05,516 - __main__ - INFO -   Total Visits: 3
+2025-08-21 13:16:05,516 - __main__ - INFO -   Recent Visitors (24h): 0
+2025-08-21 13:16:05,516 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-21 13:16:05,516 - __main__ - INFO -   Total Batches: 0
+2025-08-21 13:16:05,516 - __main__ - INFO -   Total Images Processed: 0
+2025-08-21 13:16:05,516 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-21 13:16:05,516 - __main__ - INFO -   Total New Persons: 0
+2025-08-21 13:16:05,524 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-21 13:16:05,524 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-21 13:16:05,525 - __main__ - INFO -   System Uptime: 0:00:30.114030
+2025-08-21 13:16:05,525 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-21 13:16:05,525 - __main__ - INFO -   Memory Usage: 196.3 MB (1.2%)
+2025-08-21 13:16:05,525 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-21 13:16:05,525 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-21 13:16:05,525 - __main__ - INFO -   FAISS Available: True
+2025-08-21 13:16:05,540 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-21 13:16:05,542 - __main__ - INFO -   Total Duplicates (24h): 4
+2025-08-21 13:16:05,542 - __main__ - INFO -   Image Duplicates: 4
+2025-08-21 13:16:05,542 - __main__ - INFO -   Face Duplicates: 0
+2025-08-21 13:16:05,544 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-21 13:16:05,544 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-21 13:16:05,544 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-21 13:16:05,544 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-21 13:16:05,544 - __main__ - INFO -   Max Batch Size: 10
+2025-08-21 13:16:05,544 - __main__ - INFO -   Processing Interval: 5s
+2025-08-21 13:16:05,544 - __main__ - INFO -   Quality Check: True
+2025-08-21 13:16:05,544 - __main__ - INFO -   FAISS Enabled: True
+2025-08-21 13:16:05,544 - __main__ - INFO -   Sleep Mode: True
+2025-08-21 13:16:05,546 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-21 13:16:05,546 - __main__ - INFO - ======================================================================
+
+2025-08-21 13:16:09,599 - __main__ - INFO - [START] Starting enhanced batch processing: 23eaa2b0-0eb2-4c98-ba20-cf517ccecc27
+2025-08-21 13:16:09,600 - __main__ - INFO - Memory before processing: 196.3 MB
+2025-08-21 13:16:46,724 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-21 13:16:46,724 - __main__ - INFO - [FOUND] Found 2 recent images
+2025-08-21 13:16:47,944 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:16:47,944 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:16:48,482 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:16:48,482 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:16:48,502 - __main__ - INFO - [DUPLICATE] Found 2 duplicate images, continuing with new images
+2025-08-21 13:16:48,502 - __main__ - INFO - No new images to process after duplicate check
+2025-08-21 13:16:49,512 - __main__ - INFO - 
+======================================================================
+2025-08-21 13:16:49,518 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-21 13:16:49,518 - __main__ - INFO - ======================================================================
+2025-08-21 13:16:49,518 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-21 13:16:49,518 - __main__ - INFO -   Total Unique Persons: 1
+2025-08-21 13:16:49,518 - __main__ - INFO -   Total Visits: 3
+2025-08-21 13:16:49,518 - __main__ - INFO -   Recent Visitors (24h): 0
+2025-08-21 13:16:49,518 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-21 13:16:49,518 - __main__ - INFO -   Total Batches: 0
+2025-08-21 13:16:49,518 - __main__ - INFO -   Total Images Processed: 0
+2025-08-21 13:16:49,518 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-21 13:16:49,518 - __main__ - INFO -   Total New Persons: 0
+2025-08-21 13:16:49,527 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-21 13:16:49,527 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-21 13:16:49,527 - __main__ - INFO -   System Uptime: 0:01:14.110868
+2025-08-21 13:16:49,527 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-21 13:16:49,527 - __main__ - INFO -   Memory Usage: 196.5 MB (1.2%)
+2025-08-21 13:16:49,527 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-21 13:16:49,527 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-21 13:16:49,527 - __main__ - INFO -   FAISS Available: True
+2025-08-21 13:16:49,543 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-21 13:16:49,543 - __main__ - INFO -   Total Duplicates (24h): 5
+2025-08-21 13:16:49,543 - __main__ - INFO -   Image Duplicates: 5
+2025-08-21 13:16:49,544 - __main__ - INFO -   Face Duplicates: 0
+2025-08-21 13:16:49,545 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-21 13:16:49,545 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-21 13:16:49,545 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-21 13:16:49,547 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-21 13:16:49,547 - __main__ - INFO -   Max Batch Size: 10
+2025-08-21 13:16:49,547 - __main__ - INFO -   Processing Interval: 5s
+2025-08-21 13:16:49,549 - __main__ - INFO -   Quality Check: True
+2025-08-21 13:16:49,549 - __main__ - INFO -   FAISS Enabled: True
+2025-08-21 13:16:49,551 - __main__ - INFO -   Sleep Mode: True
+2025-08-21 13:16:49,551 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-21 13:16:49,551 - __main__ - INFO - ======================================================================
+
+2025-08-21 13:16:53,562 - __main__ - INFO - [START] Starting enhanced batch processing: be0f698a-df50-4c6f-b006-f14e89a3be0c
+2025-08-21 13:16:53,571 - __main__ - INFO - Memory before processing: 196.5 MB
+2025-08-21 13:16:53,944 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-21 13:16:53,953 - __main__ - INFO - [FOUND] Found 2 recent images
+2025-08-21 13:16:54,635 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:16:54,635 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:16:55,032 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:16:55,032 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:16:55,040 - __main__ - INFO - [DUPLICATE] Found 2 duplicate images, continuing with new images
+2025-08-21 13:16:55,040 - __main__ - INFO - No new images to process after duplicate check
+2025-08-21 13:17:00,084 - __main__ - INFO - [START] Starting enhanced batch processing: 591dbaf6-69fe-4d2b-988b-bc7196166c1b
+2025-08-21 13:17:00,092 - __main__ - INFO - Memory before processing: 196.7 MB
+2025-08-21 13:17:00,488 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-21 13:17:00,488 - __main__ - INFO - [FOUND] Found 2 recent images
+2025-08-21 13:17:01,133 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:17:01,133 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:17:01,806 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:17:01,806 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:17:01,830 - __main__ - INFO - [DUPLICATE] Found 2 duplicate images, continuing with new images
+2025-08-21 13:17:01,830 - __main__ - INFO - No new images to process after duplicate check
+2025-08-21 13:17:05,826 - __main__ - INFO - [STOP] System shutdown requested by user
+2025-08-21 13:17:05,826 - __main__ - INFO - [CLEANUP] Performing cleanup...
+2025-08-21 13:17:05,834 - __main__ - INFO - 
+======================================================================
+2025-08-21 13:17:05,834 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-21 13:17:05,834 - __main__ - INFO - ======================================================================
+2025-08-21 13:17:05,834 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-21 13:17:05,834 - __main__ - INFO -   Total Unique Persons: 1
+2025-08-21 13:17:05,834 - __main__ - INFO -   Total Visits: 3
+2025-08-21 13:17:05,836 - __main__ - INFO -   Recent Visitors (24h): 0
+2025-08-21 13:17:05,836 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-21 13:17:05,836 - __main__ - INFO -   Total Batches: 0
+2025-08-21 13:17:05,836 - __main__ - INFO -   Total Images Processed: 0
+2025-08-21 13:17:05,836 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-21 13:17:05,836 - __main__ - INFO -   Total New Persons: 0
+2025-08-21 13:17:05,838 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-21 13:17:05,838 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-21 13:17:05,838 - __main__ - INFO -   System Uptime: 0:01:30.432508
+2025-08-21 13:17:05,838 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-21 13:17:05,838 - __main__ - INFO -   Memory Usage: 196.8 MB (1.2%)
+2025-08-21 13:17:05,840 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-21 13:17:05,840 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-21 13:17:05,840 - __main__ - INFO -   FAISS Available: True
+2025-08-21 13:17:05,850 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-21 13:17:05,850 - __main__ - INFO -   Total Duplicates (24h): 7
+2025-08-21 13:17:05,850 - __main__ - INFO -   Image Duplicates: 7
+2025-08-21 13:17:05,850 - __main__ - INFO -   Face Duplicates: 0
+2025-08-21 13:17:05,850 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-21 13:17:05,850 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-21 13:17:05,850 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-21 13:17:05,850 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-21 13:17:05,850 - __main__ - INFO -   Max Batch Size: 10
+2025-08-21 13:17:05,850 - __main__ - INFO -   Processing Interval: 5s
+2025-08-21 13:17:05,857 - __main__ - INFO -   Quality Check: True
+2025-08-21 13:17:05,857 - __main__ - INFO -   FAISS Enabled: True
+2025-08-21 13:17:05,857 - __main__ - INFO -   Sleep Mode: True
+2025-08-21 13:17:05,857 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-21 13:17:05,857 - __main__ - INFO - ======================================================================
+
+2025-08-21 13:17:05,859 - utils.enhanced_face_service - INFO - Cleaned up 0 temporary face files
+2025-08-21 13:17:05,859 - utils.performance_optimizer - INFO - [GC] Performing garbage collection...
+2025-08-21 13:17:05,893 - utils.performance_optimizer - INFO - [OK] Memory after GC: 196.8 MB
+2025-08-21 13:17:05,893 - __main__ - INFO - [DONE] System shutdown complete
+2025-08-21 13:20:56,848 - __main__ - INFO - [START] Enhanced Face Recognition System initialized
+2025-08-21 13:20:56,848 - __main__ - INFO - Configuration: batch_size=10, interval=5s, quality_check=True, faiss=True
+2025-08-21 13:20:56,848 - __main__ - INFO - Sleep Mode: enabled=True, sleep_duration=300s, max_duplicates=3
+2025-08-21 13:20:56,848 - __main__ - INFO - [START] Starting Enhanced Face Recognition System...
+2025-08-21 13:20:56,853 - __main__ - INFO - 
+======================================================================
+2025-08-21 13:20:56,853 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-21 13:20:56,853 - __main__ - INFO - ======================================================================
+2025-08-21 13:20:56,853 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-21 13:20:56,853 - __main__ - INFO -   Total Unique Persons: 1
+2025-08-21 13:20:56,853 - __main__ - INFO -   Total Visits: 3
+2025-08-21 13:20:56,853 - __main__ - INFO -   Recent Visitors (24h): 0
+2025-08-21 13:20:56,853 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-21 13:20:56,853 - __main__ - INFO -   Total Batches: 0
+2025-08-21 13:20:56,857 - __main__ - INFO -   Total Images Processed: 0
+2025-08-21 13:20:56,857 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-21 13:20:56,857 - __main__ - INFO -   Total New Persons: 0
+2025-08-21 13:20:56,857 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-21 13:20:56,857 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-21 13:20:56,857 - __main__ - INFO -   System Uptime: 0:00:00.004238
+2025-08-21 13:20:56,857 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-21 13:20:56,857 - __main__ - INFO -   Memory Usage: 191.8 MB (1.2%)
+2025-08-21 13:20:56,859 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-21 13:20:56,859 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-21 13:20:56,859 - __main__ - INFO -   FAISS Available: True
+2025-08-21 13:20:56,866 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-21 13:20:56,866 - __main__ - INFO -   Total Duplicates (24h): 7
+2025-08-21 13:20:56,866 - __main__ - INFO -   Image Duplicates: 7
+2025-08-21 13:20:56,866 - __main__ - INFO -   Face Duplicates: 0
+2025-08-21 13:20:56,866 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-21 13:20:56,866 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-21 13:20:56,866 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-21 13:20:56,868 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-21 13:20:56,868 - __main__ - INFO -   Max Batch Size: 10
+2025-08-21 13:20:56,868 - __main__ - INFO -   Processing Interval: 5s
+2025-08-21 13:20:56,868 - __main__ - INFO -   Quality Check: True
+2025-08-21 13:20:56,868 - __main__ - INFO -   FAISS Enabled: True
+2025-08-21 13:20:56,868 - __main__ - INFO -   Sleep Mode: True
+2025-08-21 13:20:56,868 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-21 13:20:56,870 - __main__ - INFO - ======================================================================
+
+2025-08-21 13:21:01,896 - __main__ - INFO - [START] Starting enhanced batch processing: 3543420c-7704-4687-a1b1-2f750704cb58
+2025-08-21 13:21:01,896 - __main__ - INFO - Memory before processing: 191.9 MB
+2025-08-21 13:21:03,001 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-21 13:21:03,094 - __main__ - INFO - [FOUND] Found 2 recent images
+2025-08-21 13:21:16,444 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:21:16,444 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:21:18,744 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:21:18,749 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-21 13:21:18,760 - __main__ - INFO - [DUPLICATE] Found 2 duplicate images, continuing with new images
+2025-08-21 13:21:18,760 - __main__ - INFO - No new images to process after duplicate check
+2025-08-21 13:21:23,804 - __main__ - INFO - [START] Starting enhanced batch processing: fd4f4518-5e57-4ee3-b454-6d553b371a94
+2025-08-21 13:21:23,809 - __main__ - INFO - Memory before processing: 196.3 MB
+2025-08-21 13:21:25,266 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/1.1 200 OK"
+2025-08-21 13:21:25,266 - __main__ - INFO - [FOUND] Found 2 recent images
+2025-08-21 13:21:43,451 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:21:43,451 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-21 13:21:45,507 - __main__ - INFO - [STOP] System shutdown requested by user
+2025-08-21 13:21:45,507 - __main__ - INFO - [CLEANUP] Performing cleanup...
+2025-08-21 13:21:45,517 - __main__ - INFO - 
+======================================================================
+2025-08-21 13:21:45,517 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-21 13:21:45,517 - __main__ - INFO - ======================================================================
+2025-08-21 13:21:45,517 - __main__ - INFO - [DB] DATABASE STATISTICS:
+2025-08-21 13:21:45,517 - __main__ - INFO -   Total Unique Persons: 1
+2025-08-21 13:21:45,517 - __main__ - INFO -   Total Visits: 3
+2025-08-21 13:21:45,522 - __main__ - INFO -   Recent Visitors (24h): 0
+2025-08-21 13:21:45,522 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-21 13:21:45,522 - __main__ - INFO -   Total Batches: 0
+2025-08-21 13:21:45,523 - __main__ - INFO -   Total Images Processed: 0
+2025-08-21 13:21:45,523 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-21 13:21:45,523 - __main__ - INFO -   Total New Persons: 0
+2025-08-21 13:21:45,523 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-21 13:21:45,525 - __main__ - INFO -   Total Processing Time: 0.00s
+2025-08-21 13:21:45,525 - __main__ - INFO -   System Uptime: 0:00:48.668925
+2025-08-21 13:21:45,525 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-21 13:21:45,525 - __main__ - INFO -   Memory Usage: 196.5 MB (1.2%)
+2025-08-21 13:21:45,525 - __main__ - INFO -   Average Processing Time: 0.000s
+2025-08-21 13:21:45,525 - __main__ - INFO -   Cache Hit Rate: 0.00%
+2025-08-21 13:21:45,525 - __main__ - INFO -   FAISS Available: True
+2025-08-21 13:21:45,539 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-21 13:21:45,542 - __main__ - INFO -   Total Duplicates (24h): 8
+2025-08-21 13:21:45,542 - __main__ - INFO -   Image Duplicates: 8
+2025-08-21 13:21:45,542 - __main__ - INFO -   Face Duplicates: 0
+2025-08-21 13:21:45,542 - __main__ - INFO -   Batch Duplicates: 0
+2025-08-21 13:21:45,542 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-21 13:21:45,544 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-21 13:21:45,544 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-21 13:21:45,544 - __main__ - INFO -   Max Batch Size: 10
+2025-08-21 13:21:45,546 - __main__ - INFO -   Processing Interval: 5s
+2025-08-21 13:21:45,546 - __main__ - INFO -   Quality Check: True
+2025-08-21 13:21:45,548 - __main__ - INFO -   FAISS Enabled: True
+2025-08-21 13:21:45,548 - __main__ - INFO -   Sleep Mode: True
+2025-08-21 13:21:45,548 - __main__ - INFO -   Max Duplicate Threshold: 3
+2025-08-21 13:21:45,548 - __main__ - INFO - ======================================================================
+
+2025-08-21 13:21:45,550 - utils.enhanced_face_service - INFO - Cleaned up 0 temporary face files
+2025-08-21 13:21:45,552 - utils.performance_optimizer - INFO - [GC] Performing garbage collection...
+2025-08-21 13:21:45,581 - utils.performance_optimizer - INFO - [OK] Memory after GC: 196.5 MB
+2025-08-21 13:21:45,581 - __main__ - INFO - [DONE] System shutdown complete
