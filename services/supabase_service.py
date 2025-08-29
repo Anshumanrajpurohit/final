@@ -3,6 +3,7 @@ Universal Supabase compatibility wrapper
 Works with all versions of supabase-py
 """
 import os
+import logging
 from supabase import create_client
 from dotenv import load_dotenv
 import requests
@@ -17,31 +18,9 @@ class UniversalSupabaseService:
         self.bucket = os.getenv('SUPABASE_BUCKET_NAME')
         self.client = create_client(self.url, self.key)
         self._api_version = self._detect_api_version()
+        self.logger = logging.getLogger(__name__)
 
-    def fetch_images_from_supabase():
-        supabase_url = os.getenv("SUPABASE_URL")
-        supabase_key = os.getenv("SUPABASE_API_KEY")
-        bucket = "your_bucket_name"  # Replace with your actual bucket name
-
-        headers = {
-            "apikey": supabase_key,
-            "Authorization": f"Bearer {supabase_key}"
-        }
-
-        try:
-            response = requests.get(f"{supabase_url}/storage/v1/object/list/{bucket}", headers=headers)
-            print("Supabase response status:", response.status_code)
-            print("Supabase response data:", response.text)
-            if response.status_code == 200:
-                data = response.json()
-                # Parse and return image URLs or filenames
-                return [item['name'] for item in data['data']]
-            else:
-                print("Failed to fetch images from Supabase.")
-                return []
-        except Exception as e:
-            print("Error fetching images from Supabase:", e)
-            return []
+    # Deprecated helper removed (use get_recent_images instead)
 
     def _detect_api_version(self) -> str:
         """Detect which version of Supabase API we're working with"""
@@ -191,8 +170,13 @@ class UniversalSupabaseService:
                     name.lower().endswith(('.jpg', '.jpeg', '.png', '.bmp', '.gif', '.webp'))):
                     files.append(file_info)
             
-            # Sort by name (most reliable)
-            files.sort(key=lambda x: x.get('name', ''), reverse=True)
+            # Prefer created_at or last_modified if present, else fallback to name
+            if files and any('created_at' in f for f in files):
+                files.sort(key=lambda x: x.get('created_at', ''), reverse=True)
+            elif files and any('last_modified' in f for f in files):
+                files.sort(key=lambda x: x.get('last_modified', ''), reverse=True)
+            else:
+                files.sort(key=lambda x: x.get('name', ''), reverse=True)
             
         except Exception as e:
             print(f"Error processing file list: {e}")
@@ -229,23 +213,35 @@ class UniversalSupabaseService:
             return f"{base_url}/storage/v1/object/public/{self.bucket}/{image_path}"
         return ""
     
-    def download_image(self, image_path: str, local_path: str) -> bool:
-        """Universal image download"""
+    def download_image(self, image_name, save_path):
+        """Download an image from the bucket and save it locally."""
         try:
-            url = self.get_image_url(image_path)
-            if not url:
+            # Create directory if it doesn't exist
+            os.makedirs(os.path.dirname(save_path), exist_ok=True)
+            
+            # Get signed URL for the image
+            signed_url = self.get_image_url(image_name)
+            
+            if not signed_url:
+                self.logger.error(f"Failed to get signed URL for image {image_name}")
                 return False
             
-            response = requests.get(url, timeout=30)
-            if response.status_code == 200:
-                os.makedirs(os.path.dirname(local_path), exist_ok=True)
-                with open(local_path, 'wb') as f:
-                    f.write(response.content)
-                return True
+            # Download the image using requests
+            response = requests.get(signed_url, timeout=30)
             
-            return False
+            if response.status_code != 200:
+                self.logger.error(f"Failed to download image {image_name}: HTTP {response.status_code}")
+                return False
+            
+            # Save the image
+            with open(save_path, 'wb') as f:
+                f.write(response.content)
+                
+            self.logger.info(f"Downloaded image {image_name} to {save_path}")
+            return True
+        
         except Exception as e:
-            print(f"Error downloading image: {e}")
+            self.logger.exception(f"Error downloading image {image_name}: {e}")
             return False
 
 # Replace your current SupabaseService with this

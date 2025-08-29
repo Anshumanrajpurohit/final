@@ -113,6 +113,10 @@ class AgeGenderManager:
                 'age_confidence': 0.0,
                 'gender_confidence': 0.0
             }
+
+    def predict(self, face_bgr: np.ndarray) -> Dict[str, str]:
+        """Compatibility wrapper. Accepts BGR face image and returns age_range and gender keys."""
+        return self.detect_age_gender(face_bgr)
     
     def predict_batch(self, face_images: List[np.ndarray]) -> List[Dict[str, str]]:
         """Predict age and gender for a batch of face images

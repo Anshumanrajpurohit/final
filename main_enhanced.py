@@ -1,536 +1,462 @@
 """
-Enhanced Face Recognition System
-Integrates performance optimization, quality assessment, and advanced monitoring
+Enhanced Face Recognition System (resilient)
+- Uses MediaPipe via EnhancedFaceService
+- Safe against missing optional methods
+- No hard-coded local image paths
 """
 import os
 import time
-import uuid
-from datetime import datetime
-from dotenv import load_dotenv
-import schedule
 import logging
-import json
-from typing import Dict, Any, List
+import uuid
+import datetime
+import signal
+from typing import Dict, Any
 
-from services.supabase_service import SupabaseService
-from services.enhanced_mysql_service import EnhancedMySQLService
-from services.enhanced_face_service import EnhancedFaceService
-from utils.performance_optimizer import PerformanceOptimizer
-from utils.duplicate_detector import DuplicateDetector, SleepModeConfig
-
-load_dotenv()
-
-# Configure logging
+# Logging
+os.makedirs("logs", exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('logs/face_recognition.log'),
-        logging.StreamHandler()
-    ]
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[logging.FileHandler("logs/face_recognition.log"), logging.StreamHandler()],
 )
+logger = logging.getLogger(__name__)
+
+# Services
+from services.enhanced_face_service import EnhancedFaceService
+from services.enhanced_mysql_service import EnhancedMySQLService
+from services.supabase_service import SupabaseService
+from utils.duplicate_detector import DuplicateDetector
+from utils.performance_optimizer import PerformanceOptimizer
+
 
 class EnhancedFaceRecognitionSystem:
     def __init__(self):
-        self.logger = logging.getLogger(__name__)
-        
-        # Initialize services
-        self.supabase_service = SupabaseService()
-        
-        # Initialize MySQL service with configuration
-        from config.database import MySQLConfig
-        mysql_config = MySQLConfig()
-        self.mysql_service = EnhancedMySQLService(mysql_config)
-        
-        # Initialize enhanced face service with performance optimization
+        self.running = True
+        self.batch_size = 10
+        self.processing_interval = 5
+        self.config = self._load_config()
+
+        os.makedirs("temp_images", exist_ok=True)
+
+        # Init services (in dependency order)
         self.face_service = EnhancedFaceService()
-        
-        # Performance optimizer
+        self.mysql_service = EnhancedMySQLService(self.config)
+        self.supabase_service = SupabaseService()
+        self.duplicate_detector = DuplicateDetector(self.mysql_service)
         self.performance_optimizer = PerformanceOptimizer()
-        
-        # Configuration
-        self.max_batch_size = int(os.getenv('MAX_BATCH_SIZE', 10))
-        self.processing_interval = int(os.getenv('PROCESSING_INTERVAL', 5))
-        self.enable_quality_check = os.getenv('ENABLE_QUALITY_CHECK', 'true').lower() == 'true'
-        self.enable_faiss = os.getenv('ENABLE_FAISS', 'true').lower() == 'true'
-        
-        # Duplicate detection and sleep mode configuration
-        sleep_config = SleepModeConfig(
-            duplicate_sleep_duration=int(os.getenv('DUPLICATE_SLEEP_DURATION', 300)),
-            max_duplicate_threshold=int(os.getenv('MAX_DUPLICATE_THRESHOLD', 3)),
-            image_hash_cache_duration=int(os.getenv('IMAGE_HASH_CACHE_DURATION', 86400)),
-            sleep_mode_backoff_multiplier=float(os.getenv('SLEEP_MODE_BACKOFF_MULTIPLIER', 1.5)),
-            enable_sleep_mode=os.getenv('ENABLE_SLEEP_MODE', 'true').lower() == 'true',
-            min_sleep_duration=int(os.getenv('MIN_SLEEP_DURATION', 60)),
-            max_sleep_duration=int(os.getenv('MAX_SLEEP_DURATION', 3600))
+
+        signal.signal(signal.SIGINT, self._signal_handler)
+        signal.signal(signal.SIGTERM, self._signal_handler)
+
+        self.stats = {
+            "start_time": datetime.datetime.now(),
+            "total_batches": 0,
+            "total_images": 0,
+            "total_faces": 0,
+            "total_new_persons": 0,
+            "total_existing_persons": 0,
+            "total_processing_time": 0.0,
+        }
+
+        logger.info("[START] Enhanced Face Recognition System initialized")
+        logger.info(
+            f"Configuration: batch_size={self.batch_size}, interval={self.processing_interval}s, "
+            f"quality_check={self.config.get('USE_QUALITY_CHECK', True)}, faiss={self.config.get('USE_FAISS', True)}"
         )
-        
-        # Initialize duplicate detector
-        self.duplicate_detector = DuplicateDetector(self.mysql_service, sleep_config)
-        
-        # Statistics tracking
-        self.system_stats = {
-            'total_batches': 0,
-            'total_images_processed': 0,
-            'total_faces_detected': 0,
-            'total_new_persons': 0,
-            'total_existing_persons': 0,
-            'total_processing_time': 0,
-            'start_time': datetime.now()
-        }
-        
-        self.logger.info("[START] Enhanced Face Recognition System initialized")
-        self.logger.info(f"Configuration: batch_size={self.max_batch_size}, "
-                        f"interval={self.processing_interval}s, "
-                        f"quality_check={self.enable_quality_check}, "
-                        f"faiss={self.enable_faiss}")
-        self.logger.info(f"Sleep Mode: enabled={sleep_config.enable_sleep_mode}, "
-                        f"sleep_duration={sleep_config.duplicate_sleep_duration}s, "
-                        f"max_duplicates={sleep_config.max_duplicate_threshold}")
-    
-    def process_batch_enhanced(self):
-        """Enhanced batch processing with performance monitoring and duplicate detection"""
-        batch_id = str(uuid.uuid4())
-        start_time = time.time()
-        
-        self.logger.info(f"[START] Starting enhanced batch processing: {batch_id}")
-        
-        # Check if system is in sleep mode
-        if self.duplicate_detector.is_sleeping():
-            sleep_status = self.duplicate_detector.get_sleep_status()
-            self.logger.info(f"[SLEEP] System in sleep mode - {sleep_status['remaining_seconds']}s remaining")
-            return
-        
-        # Initialize batch statistics
-        batch_stats = {
-            'batch_id': batch_id,
-            'images_processed': 0,
-            'faces_detected': 0,
-            'new_persons': 0,
-            'existing_persons': 0,
-            'processing_time': 0,
-            'status': 'success',
-            'quality_metrics': {},
-            'performance_metrics': {},
-            'duplicate_events': []
-        }
-        
-        try:
-            # Monitor memory before processing
-            memory_before = self.performance_optimizer.monitor_memory_usage()
-            self.logger.info(f"Memory before processing: {memory_before['rss_mb']:.1f} MB")
-            
-            # Step 1: Fetch recent images from Supabase
-            recent_images = self.supabase_service.get_recent_images(self.max_batch_size)
-            self.logger.info(f"[FOUND] Found {len(recent_images)} recent images")
-            
-            if not recent_images:
-                self.logger.info("No new images to process")
-                return
+        logger.info(
+            f"Sleep Mode: enabled={self.config.get('USE_SLEEP_MODE', True)}, "
+            f"sleep_duration={self.config.get('SLEEP_DURATION', 300)}s, max_duplicates={self.config.get('MAX_DUPLICATES', 3)}"
+        )
 
-            self.logger.info("[AGE/GENDER] Age and gender detection enabled")
-            
-            # Step 1.5: Check for image duplicates
-            duplicate_images = []
-            new_images = []
-            
-            for image_info in recent_images:
-                image_name = image_info['name']
-                local_path = f"temp_images/{image_name}"
-                
-                # Download image temporarily to generate hash
-                if self.supabase_service.download_image(image_name, local_path):
-                    image_hash = self.duplicate_detector.generate_image_hash(local_path)
-                    
-                    if image_hash and self.duplicate_detector.is_image_processed(image_hash, image_name):
-                        duplicate_images.append(image_info)
-                        self.logger.info(f"[DUPLICATE] Image already processed: {image_name}")
-                    else:
-                        new_images.append((image_info, image_hash, local_path))
-                else:
-                    self.logger.warning(f"Could not download image: {image_name}")
-            
-            # Handle image duplicates
-            if duplicate_images:
-                duplicate_count = len(duplicate_images)
-                sleep_duration = self.duplicate_detector.calculate_sleep_duration(duplicate_count, 'image')
-                
-                # Log duplicate event
-                from utils.duplicate_detector import DuplicateEvent
-                event = DuplicateEvent(
-                    event_time=datetime.now(),
-                    duplicate_type='image',
-                    duplicate_count=duplicate_count,
-                    sleep_duration=sleep_duration,
-                    description=f"Found {duplicate_count} duplicate images"
-                )
-                self.duplicate_detector.log_duplicate_event(event)
-                batch_stats['duplicate_events'].append(event)
-                
-                # Enter sleep mode if threshold exceeded
-                if duplicate_count >= self.duplicate_detector.config.max_duplicate_threshold:
-                    self.duplicate_detector.enter_sleep_mode(
-                        f"Image duplicates: {duplicate_count}", 
-                        sleep_duration
-                    )
-                    batch_stats['status'] = 'sleep_mode'
-                    return
-                
-                self.logger.info(f"[DUPLICATE] Found {duplicate_count} duplicate images, continuing with new images")
-            
-            if not new_images:
-                self.logger.info("No new images to process after duplicate check")
-                return
-            
-            # Step 2: Process each new image with enhanced face detection
-            for image_info, image_hash, local_path in new_images:
-                try:
-                    image_name = image_info['name']
-                    
-                    batch_stats['images_processed'] += 1
-                    
-                    # Step 3: Enhanced face detection with quality assessment
-                    cropped_faces = self.face_service.detect_and_crop_faces_enhanced(
-                        local_path,
-                        detection_model='hog',  # Use HOG for speed
-                        quality_check=self.enable_quality_check
-                    )
-                    
-                    batch_stats['faces_detected'] += len(cropped_faces)
-                    
-                    # Step 4: Process each detected face with age and gender
-                    for face_data in self.face_service.process_batch([local_path]):
-                        if face_data['success']:
-                            data = face_data['data']
-                            
-                            # Extract age from range
-                            age = int(data['age_range'].split('-')[0]) if data['age_range'] != 'unknown' else None
-                            
-                            # Store quality metrics
-                            batch_stats['quality_metrics'][local_path] = {
-                                'quality_score': data['quality_score'],
-                                'age_confidence': data['age_confidence'],
-                                'gender_confidence': data['gender_confidence']
-                            }
-                            
-                            # Prepare person data
-                            person_data = {
-                                'face_encoding': data['face_encoding'],
-                                'age': age,
-                                'gender': data['gender'],
-                                'quality_score': data['quality_score']
-                            }
-                            
-                            # Insert new person with age and gender
-                            image_url = self.supabase_service.get_image_url(image_name)
-                            person_id = self.mysql_service.insert_new_person(person_data)
-                            
-                            if person_id:
-                                self.logger.info(f"[SUCCESS] New person added - Age: {data['age_range']}, Gender: {data['gender']}")
-                                batch_stats['new_persons'] += 1
-                    
-                    # Mark image as processed
-                    image_url = self.supabase_service.get_image_url(image_name)
-                    self.duplicate_detector.mark_image_processed(image_hash, image_name, image_url, len(cropped_faces))
-                    
-                    # Clean up original downloaded image
-                    if os.path.exists(local_path):
-                        os.remove(local_path)
-                        
-                except Exception as e:
-                    self.logger.error(f"Error processing image {image_info.get('name', 'unknown')}: {e}")
-                    continue
-            
-            # Step 5: Enhanced temp faces processing with duplicate detection
-            self.process_temp_faces_enhanced(batch_stats)
-            
-            # Step 6: Clear processed temp faces
-            self.mysql_service.clear_processed_temp_faces()
-            
-            # Step 7: Clean up temp files with performance monitoring
-            self.face_service.cleanup_temp_files()
-            
-            # Monitor memory after processing
-            memory_after = self.performance_optimizer.monitor_memory_usage()
-            self.logger.info(f"Memory after processing: {memory_after['rss_mb']:.1f} MB")
-            
-            # Calculate performance metrics
-            batch_stats['performance_metrics'] = {
-                'memory_usage_mb': memory_after['rss_mb'],
-                'memory_increase_mb': memory_after['rss_mb'] - memory_before['rss_mb'],
-                'processing_time': time.time() - start_time
-            }
-            
-        except Exception as e:
-            self.logger.error(f"Batch processing error: {e}")
-            batch_stats['status'] = 'error'
-            batch_stats['error_message'] = str(e)
-        
-        # Calculate processing time
-        batch_stats['processing_time'] = time.time() - start_time
-        
-        # Update system statistics
-        self._update_system_stats(batch_stats)
-        
-        # Log batch statistics
-        self.mysql_service.log_processing_batch(batch_stats)
-        
-        # Log performance statistics
-        self.performance_optimizer.log_performance_stats()
-        
-        # Print batch summary
-        self._print_batch_summary(batch_stats)
-        
-        # Log duplicate events if any
-        if batch_stats['duplicate_events']:
-            self.logger.info(f"[DUPLICATE] Batch had {len(batch_stats['duplicate_events'])} duplicate events")
-    
-    def process_temp_faces_enhanced(self, batch_stats: Dict[str, Any]):
-        """Enhanced temporary faces processing with performance optimization and duplicate detection"""
-        # Get all unprocessed temp faces
-        temp_faces = self.mysql_service.get_unprocessed_temp_faces()
-        
-        if not temp_faces:
-            return
-        
-        # Get all known encodings
-        known_encodings = self.mysql_service.get_all_unique_encodings()
-        
-        self.logger.info(f"Processing {len(temp_faces)} temp faces against {len(known_encodings)} known persons")
-        
-        # Extract face encodings for duplicate detection
-        face_encodings = [temp_face['face_encoding'] for temp_face in temp_faces if temp_face['face_encoding']]
-        
-        # Check for face duplicates
-        if face_encodings and known_encodings:
-            duplicate_count, duplicate_person_ids = self.duplicate_detector.detect_face_duplicates(
-                face_encodings, known_encodings
-            )
-            
-            if duplicate_count > 0:
-                self.logger.info(f"[DUPLICATE] Found {duplicate_count} duplicate faces")
-                
-                # Calculate sleep duration for face duplicates
-                sleep_duration = self.duplicate_detector.calculate_sleep_duration(duplicate_count, 'face')
-                
-                # Log duplicate event
-                from utils.duplicate_detector import DuplicateEvent
-                event = DuplicateEvent(
-                    event_time=datetime.now(),
-                    duplicate_type='face',
-                    duplicate_count=duplicate_count,
-                    sleep_duration=sleep_duration,
-                    description=f"Found {duplicate_count} duplicate faces"
-                )
-                self.duplicate_detector.log_duplicate_event(event)
-                batch_stats['duplicate_events'].append(event)
-                
-                # Enter sleep mode if threshold exceeded
-                if duplicate_count >= self.duplicate_detector.config.max_duplicate_threshold:
-                    self.duplicate_detector.enter_sleep_mode(
-                        f"Face duplicates: {duplicate_count}", 
-                        sleep_duration
-                    )
-                    batch_stats['status'] = 'sleep_mode'
-                    return
-        
-        # Process each temp face
-        for temp_face in temp_faces:
+    def _load_config(self) -> Dict[str, Any]:
+        cfg = {
+            "USE_QUALITY_CHECK": True,
+            "USE_AGE_GENDER": True,
+            "USE_FAISS": True,
+            "USE_SLEEP_MODE": True,
+            "SLEEP_DURATION": 300,
+            "FACE_THRESHOLD": 0.6,
+            "MAX_DUPLICATES": 3,
+            "DB_HOST": "localhost",
+            "DB_USER": "root",
+            "DB_PASSWORD": "",
+            "DB_NAME": "face_recognition_db",
+        }
+        env_path = ".env"
+        if os.path.exists(env_path):
             try:
-                face_encoding = temp_face['face_encoding']
-                if not face_encoding:
-                    continue
-                import numpy as np
-                face_encoding_array = np.array(face_encoding)
-
-                # Use enhanced person matching with FAISS support
-                matching_person_id = self.face_service.find_matching_person_enhanced(
-                    face_encoding_array,
-                    known_encodings,
-                    use_faiss=self.enable_faiss
-                )
-
-                if matching_person_id:
-                    # Update existing person
-                    self.mysql_service.update_person_visit(matching_person_id)
-                    batch_stats['existing_persons'] += 1
-                    self.logger.info(f"[UPDATE] Updated visit for person: {matching_person_id}")
-                else:
-                    # Create new person
-                    person_id = self.mysql_service.insert_new_person(
-                        face_encoding,
-                        temp_face['original_image_url'],
-                        0.9
-                    )
-                    if person_id:
-                        batch_stats['new_persons'] += 1
-                        self.logger.info(f"[NEW] Created new person: {person_id}")
-                        # Add to known encodings for this batch
-                        known_encodings.append((person_id, face_encoding))
-
-                        # --- Attribute extraction and DB insert ---
-                        # Try to load the cropped face image
-                        crop_path = temp_face.get('cropped_face_path') or temp_face.get('cropped_path')
-                        if not crop_path:
-                            crop_path = temp_face.get('cropped_path')
-                        if crop_path and os.path.exists(crop_path):
-                            import cv2
-                            face_img = cv2.imread(crop_path)
-                            if face_img is not None:
-                                attributes = self.face_service.extract_attributes(face_img)
-                                # Insert only if not already present
-                                if not self.mysql_service.customer_data_exists(person_id):
-                                    self.mysql_service.insert_customer_data(
-                                        person_id,
-                                        attributes.get('age', None),
-                                        attributes.get('gender', None),
-                                        attributes.get('skin_tone', None),
-                                        attributes.get('hair_status', None)
-                                    )
+                with open(env_path, "r", encoding="utf-8") as f:
+                    for line in f:
+                        line = line.strip()
+                        if not line or line.startswith("#") or "=" not in line:
+                            continue
+                        k, v = line.split("=", 1)
+                        vs = v.strip()
+                        l = vs.lower()
+                        if l in ("true", "yes", "1"):
+                            cfg[k] = True
+                        elif l in ("false", "no", "0"):
+                            cfg[k] = False
                         else:
-                            self.logger.warning(f"Cropped face image not found for attribute extraction: {crop_path}")
-
-                # Mark as processed
-                self.mysql_service.mark_temp_face_processed(temp_face['id'])
-
+                            try:
+                                cfg[k] = float(vs) if "." in vs else int(vs)
+                            except ValueError:
+                                cfg[k] = vs
             except Exception as e:
-                self.logger.error(f"Error processing temp face {temp_face['id']}: {e}")
-                continue
-    
-    def _update_system_stats(self, batch_stats: Dict[str, Any]):
-        """Update system-wide statistics"""
-        self.system_stats['total_batches'] += 1
-        self.system_stats['total_images_processed'] += batch_stats['images_processed']
-        self.system_stats['total_faces_detected'] += batch_stats['faces_detected']
-        self.system_stats['total_new_persons'] += batch_stats['new_persons']
-        self.system_stats['total_existing_persons'] += batch_stats['existing_persons']
-        self.system_stats['total_processing_time'] += batch_stats['processing_time']
-    
-    def _print_batch_summary(self, batch_stats: Dict[str, Any]):
-        """Print detailed batch summary"""
-        self.logger.info("=" * 60)
-        self.logger.info("[BATCH] BATCH PROCESSING SUMMARY")
-        self.logger.info("=" * 60)
-        self.logger.info(f"[ID] Batch ID: {batch_stats['batch_id']}")
-        self.logger.info(f"[IMAGES] Images processed: {batch_stats['images_processed']}")
-        self.logger.info(f"[FACES] Faces detected: {batch_stats['faces_detected']}")
-        self.logger.info(f"[NEW] New persons: {batch_stats['new_persons']}")
-        self.logger.info(f"[RETURN] Returning persons: {batch_stats['existing_persons']}")
-        self.logger.info(f"[TIME] Processing time: {batch_stats['processing_time']:.2f}s")
-        self.logger.info(f"[STATUS] Status: {batch_stats['status'].upper()}")
-        
-        # Performance metrics
-        if 'performance_metrics' in batch_stats:
-            perf = batch_stats['performance_metrics']
-            self.logger.info(f"[MEMORY] Memory usage: {perf.get('memory_usage_mb', 0):.1f} MB")
-            self.logger.info(f"[INCREASE] Memory increase: {perf.get('memory_increase_mb', 0):.1f} MB")
-        
-        self.logger.info("=" * 60)
-    
-    def print_system_statistics(self):
-        """Print comprehensive system statistics"""
-        # Get database statistics
-        db_stats = self.mysql_service.get_statistics()
-        
-        # Get performance statistics
-        perf_stats = self.performance_optimizer.get_performance_stats()
-        
-        # Calculate system uptime
-        uptime = datetime.now() - self.system_stats['start_time']
-        
-        self.logger.info("\n" + "=" * 70)
-        self.logger.info("[STATS] ENHANCED SYSTEM STATISTICS")
-        self.logger.info("=" * 70)
-        
-        # Database statistics
-        self.logger.info("[DB] DATABASE STATISTICS:")
-        self.logger.info(f"  Total Unique Persons: {db_stats.get('total_unique_persons', 0)}")
-        self.logger.info(f"  Total Visits: {db_stats.get('total_visits', 0)}")
-        self.logger.info(f"  Recent Visitors (24h): {db_stats.get('recent_visitors_24h', 0)}")
-        
-        # System statistics
-        self.logger.info("\n[SYSTEM] SYSTEM STATISTICS:")
-        self.logger.info(f"  Total Batches: {self.system_stats['total_batches']}")
-        self.logger.info(f"  Total Images Processed: {self.system_stats['total_images_processed']}")
-        self.logger.info(f"  Total Faces Detected: {self.system_stats['total_faces_detected']}")
-        self.logger.info(f"  Total New Persons: {self.system_stats['total_new_persons']}")
-        self.logger.info(f"  Total Existing Persons: {self.system_stats['total_existing_persons']}")
-        self.logger.info(f"  Total Processing Time: {self.system_stats['total_processing_time']:.2f}s")
-        self.logger.info(f"  System Uptime: {uptime}")
-        
-        # Performance statistics
-        self.logger.info("\n[PERF] PERFORMANCE STATISTICS:")
-        self.logger.info(f"  Memory Usage: {perf_stats['memory_usage_mb']:.1f} MB ({perf_stats['memory_percent']:.1f}%)")
-        self.logger.info(f"  Average Processing Time: {perf_stats['avg_processing_time']:.3f}s")
-        self.logger.info(f"  Cache Hit Rate: {perf_stats['cache_hit_rate']:.2%}")
-        self.logger.info(f"  FAISS Available: {perf_stats['faiss_available']}")
-        
-        # Duplicate detection statistics
-        duplicate_stats = self.duplicate_detector.get_duplicate_statistics()
-        self.logger.info("\n[DUPLICATE] DUPLICATE DETECTION STATISTICS:")
-        self.logger.info(f"  Total Duplicates (24h): {duplicate_stats['total_duplicates_24h']}")
-        self.logger.info(f"  Image Duplicates: {duplicate_stats['image_duplicates']}")
-        self.logger.info(f"  Face Duplicates: {duplicate_stats['face_duplicates']}")
-        self.logger.info(f"  Batch Duplicates: {duplicate_stats['batch_duplicates']}")
-        self.logger.info(f"  Sleep Mode: {'ACTIVE' if duplicate_stats['is_sleeping'] else 'INACTIVE'}")
-        if duplicate_stats['is_sleeping']:
-            self.logger.info(f"  Remaining Sleep: {duplicate_stats['remaining_sleep_seconds']}s")
-            self.logger.info(f"  Sleep Reason: {duplicate_stats['sleep_reason']}")
-        
-        # Configuration
-        self.logger.info("\n[CONFIG] CONFIGURATION:")
-        self.logger.info(f"  Face Threshold: {self.face_service.threshold}")
-        self.logger.info(f"  Max Batch Size: {self.max_batch_size}")
-        self.logger.info(f"  Processing Interval: {self.processing_interval}s")
-        self.logger.info(f"  Quality Check: {self.enable_quality_check}")
-        self.logger.info(f"  FAISS Enabled: {self.enable_faiss}")
-        self.logger.info(f"  Sleep Mode: {self.duplicate_detector.config.enable_sleep_mode}")
-        self.logger.info(f"  Max Duplicate Threshold: {self.duplicate_detector.config.max_duplicate_threshold}")
-        
-        self.logger.info("=" * 70 + "\n")
-    
-    def run_continuous_enhanced(self):
-        """Run the enhanced system continuously with monitoring"""
-        self.logger.info("[START] Starting Enhanced Face Recognition System...")
-        
-        # Create logs directory
-        os.makedirs('logs', exist_ok=True)
-        
-        # Schedule the processing
-        schedule.every(self.processing_interval).seconds.do(self.process_batch_enhanced)
-        schedule.every(30).seconds.do(self.print_system_statistics)
-        schedule.every(1).hours.do(self.duplicate_detector.cleanup_old_processed_images, 7)
-        
-        # Initial statistics
-        self.print_system_statistics()
-        
-        # Run scheduler
+                logger.warning(f"Config load warning: {e}")
+        return cfg
+
+    def _signal_handler(self, *_):
+        logger.info("[STOP] System shutdown requested by user")
+        self.running = False
+
+    def start(self):
+        logger.info("[START] Starting Enhanced Face Recognition System...")
+        while self.running:
+            try:
+                batch_id = str(uuid.uuid4())
+                logger.info(f"[START] Starting enhanced batch processing: {batch_id}")
+
+                batch_stats = {
+                    "batch_id": batch_id,
+                    "start_time": datetime.datetime.now(),
+                    "images_processed": 0,
+                    "faces_detected": 0,
+                    "new_persons": 0,
+                    "existing_persons": 0,
+                    "duplicate_events": 0,
+                }
+
+                # Sleep-mode check (supports multiple APIs)
+                sleep_active = False
+                sleep_remaining = 0
+                if getattr(self.duplicate_detector, "is_in_sleep_mode", None):
+                    sleep_active = self.duplicate_detector.is_in_sleep_mode()
+                    if getattr(self.duplicate_detector, "get_sleep_remaining", None):
+                        sleep_remaining = self.duplicate_detector.get_sleep_remaining()
+                elif getattr(self.duplicate_detector, "is_sleeping", None):
+                    sleep_active = self.duplicate_detector.is_sleeping()
+                    if getattr(self.duplicate_detector, "get_sleep_status", None):
+                        try:
+                            status = self.duplicate_detector.get_sleep_status()
+                            sleep_remaining = int(status.get('remaining_seconds', 0))
+                        except Exception:
+                            sleep_remaining = 0
+                if sleep_active:
+                    logger.info(f"[SLEEP] System in sleep mode - {sleep_remaining}s remaining")
+                    time.sleep(min(5, max(1, sleep_remaining)))
+                    continue
+
+                t0 = time.time()
+                self._process_images(batch_stats)
+                dt = time.time() - t0
+
+                self.stats["total_batches"] += 1
+                self.stats["total_images"] += batch_stats["images_processed"]
+                self.stats["total_faces"] += batch_stats["faces_detected"]
+                self.stats["total_new_persons"] += batch_stats["new_persons"]
+                self.stats["total_existing_persons"] += batch_stats["existing_persons"]
+                self.stats["total_processing_time"] += dt
+
+                if batch_stats["images_processed"] > 0:
+                    logger.info("============================================================")
+                    logger.info("[BATCH] BATCH PROCESSING SUMMARY")
+                    logger.info("============================================================")
+                    logger.info(f"[ID] Batch ID: {batch_id}")
+                    logger.info(f"[IMAGES] Images processed: {batch_stats['images_processed']}")
+                    logger.info(f"[FACES] Faces detected: {batch_stats['faces_detected']}")
+                    logger.info(f"[NEW] New persons: {batch_stats['new_persons']}")
+                    logger.info(f"[RETURN] Returning persons: {batch_stats['existing_persons']}")
+                    logger.info(f"[TIME] Processing time: {dt:.2f}s")
+
+                    mem_usage = 0.0
+                    if getattr(self.performance_optimizer, "get_memory_usage", None):
+                        mem_usage = self.performance_optimizer.get_memory_usage()
+                    logger.info(f"[MEMORY] Memory usage: {mem_usage:.1f} MB")
+
+                    if getattr(self.performance_optimizer, "get_memory_increase", None):
+                        logger.info(f"[INCREASE] Memory increase: {self.performance_optimizer.get_memory_increase():.1f} MB")
+                    logger.info("============================================================")
+
+                if batch_stats["duplicate_events"] > 0:
+                    logger.info(f"[DUPLICATE] Batch had {batch_stats['duplicate_events']} duplicate events")
+
+                time.sleep(self.processing_interval)
+
+                if self.stats["total_batches"] % 12 == 0:
+                    self._print_statistics()
+            except Exception as e:
+                logger.exception(f"Error in main loop: {e}")
+                time.sleep(5)
+
+        self._cleanup()
+
+    def _process_images(self, batch_stats: Dict[str, Any]):
         try:
-            while True:
-                schedule.run_pending()
-                time.sleep(1)
-        except KeyboardInterrupt:
-            self.logger.info("[STOP] System shutdown requested by user")
-            self._shutdown_cleanup()
+            mem_before = 0.0
+            if getattr(self.performance_optimizer, "get_memory_usage", None):
+                mem_before = self.performance_optimizer.get_memory_usage()
+            logger.info(f"Memory before processing: {mem_before:.1f} MB")
+
+            # Prefer Supabase
+            recent_images = []
+            get_recent = getattr(self.supabase_service, "get_recent_images", None)
+            if get_recent:
+                try:
+                    recent_images = get_recent(limit=self.batch_size) or []
+                except Exception as e:
+                    logger.warning(f"Supabase get_recent_images failed: {e}")
+
+            # Optional fallback: local temp_images (no hard-coded image)
+            if not recent_images:
+                try:
+                    local_files = [
+                        f for f in os.listdir("temp_images")
+                        if f.lower().endswith((".jpg", ".jpeg", ".png"))
+                    ]
+                    local_files.sort()
+                    recent_images = [{"name": f, "_local": True} for f in local_files[: self.batch_size]]
+                    if recent_images:
+                        logger.info(f"[FALLBACK] Using {len(recent_images)} local images from temp_images")
+                except Exception as e:
+                    logger.warning(f"Local fallback scan failed: {e}")
+                    recent_images = []
+
+            if not recent_images:
+                logger.info("No new images found")
+                return False
+
+            logger.info(f"[FOUND] Found {len(recent_images)} images to process")
+            logger.info(f"[AGE/GENDER] Age and gender detection {'enabled' if self.config.get('USE_AGE_GENDER', True) else 'disabled'}")
+
+            for img_info in recent_images:
+                image_name = img_info.get("name") or img_info.get("filename") or ""
+                if not image_name:
+                    continue
+                is_local = bool(img_info.get("_local"))
+
+                # Duplicate check (if available)
+                is_dup = False
+                image_hash = None
+                if getattr(self.duplicate_detector, "generate_image_hash", None):
+                    try:
+                        # For remote images, we haven't downloaded yet; use name as proxy hash
+                        local_tmp = os.path.join("temp_images", image_name)
+                        image_hash = self.duplicate_detector.generate_image_hash(local_tmp) if os.path.exists(local_tmp) else image_name
+                    except Exception:
+                        image_hash = image_name
+                if getattr(self.duplicate_detector, "is_image_processed", None):
+                    try:
+                        is_dup = self.duplicate_detector.is_image_processed(image_hash or image_name, image_name)
+                    except Exception as e:
+                        logger.warning(f"Duplicate check failed: {e}")
+                if is_dup:
+                    batch_stats["duplicate_events"] += 1
+                    logger.info(f"[DUPLICATE] Image already processed: {image_name}")
+                    continue
+
+                local_path = os.path.join("temp_images", image_name)
+                downloaded = False
+                if not is_local:
+                    if getattr(self.supabase_service, "download_image", None):
+                        downloaded = self.supabase_service.download_image(image_name, local_path)
+                    if not downloaded:
+                        logger.warning(f"Failed to download image: {image_name}")
+                        continue
+                else:
+                    if not os.path.exists(local_path):
+                        logger.warning(f"Local file missing: {local_path}")
+                        continue
+
+                try:
+                    # Detect and process faces
+                    results = self.face_service.process_batch(local_path) or []
+                    detected = sum(1 for r in results if r.get("success"))
+                    batch_stats["faces_detected"] += detected
+                    batch_stats["images_processed"] += 1
+
+                    for r in results:
+                        if not r.get("success"):
+                            continue
+                        data = r.get("data", {})
+                        face_encoding = data.get("face_encoding")
+                        if face_encoding is None:
+                            continue
+                        if hasattr(face_encoding, "tolist"):
+                            face_encoding = face_encoding.tolist()
+
+                        insert = getattr(self.mysql_service, "insert_face_data", None)
+                        if insert:
+                            try:
+                                image_url = ""
+                                if getattr(self.supabase_service, "get_image_url", None) and not is_local:
+                                    image_url = self.supabase_service.get_image_url(image_name)
+
+                                res = insert(
+                                    image_url=image_url,
+                                    image_path=local_path,
+                                    face_encoding=face_encoding,
+                                    crop_path=data.get("crop_path", ""),
+                                    quality_score=data.get("quality_score", 0.0),
+                                    age=data.get("age_range", "unknown"),
+                                    gender=data.get("gender", "unknown"),
+                                    x=data.get("x", 0),
+                                    y=data.get("y", 0),
+                                    width=data.get("w", 0),
+                                    height=data.get("h", 0),
+                                )
+                                if res and res.get("new_person"):
+                                    batch_stats["new_persons"] += 1
+                                else:
+                                    batch_stats["existing_persons"] += 1
+                            except Exception as e:
+                                logger.exception(f"DB insert failed: {e}")
+
+                    # Mark processed (if available)
+                    if getattr(self.duplicate_detector, "mark_image_processed", None):
+                        try:
+                            image_url = ""
+                            if getattr(self.supabase_service, "get_image_url", None) and not is_local:
+                                image_url = self.supabase_service.get_image_url(image_name)
+                            # Compute actual hash if file exists now
+                            if getattr(self.duplicate_detector, "generate_image_hash", None) and os.path.exists(local_path):
+                                try:
+                                    image_hash = self.duplicate_detector.generate_image_hash(local_path)
+                                except Exception:
+                                    pass
+                            self.duplicate_detector.mark_image_processed(
+                                image_hash or image_name, image_name, image_url, detected
+                            )
+                        except Exception as e:
+                            logger.warning(f"Mark processed failed: {e}")
+
+                except Exception as e:
+                    logger.exception(f"Error processing image {image_name}: {e}")
+                finally:
+                    # Only delete downloaded files (never delete local originals)
+                    if downloaded:
+                        try:
+                            if os.path.exists(local_path):
+                                os.remove(local_path)
+                        except Exception as e:
+                            logger.warning(f"Temp cleanup failed for {local_path}: {e}")
+
+            mem_after = 0.0
+            if getattr(self.performance_optimizer, "get_memory_usage", None):
+                mem_after = self.performance_optimizer.get_memory_usage()
+            logger.info(f"Memory after processing: {mem_after:.1f} MB")
+            return True
         except Exception as e:
-            self.logger.error(f"[ERROR] System error: {e}")
-            self._shutdown_cleanup()
-    
-    def _shutdown_cleanup(self):
-        """Clean shutdown with cleanup"""
-        self.logger.info("[CLEANUP] Performing cleanup...")
-        
-        # Final statistics
-        self.print_system_statistics()
-        
-        # Cleanup temp files
-        self.face_service.cleanup_temp_files()
-        
-        # Force garbage collection
-        self.performance_optimizer.force_garbage_collection()
-        
-        self.logger.info("[DONE] System shutdown complete")
+            logger.exception(f"Error in _process_images: {e}")
+            return False
+
+    def _print_statistics(self):
+        try:
+            now = datetime.datetime.now()
+            uptime = now - self.stats["start_time"]
+
+            logger.info("\n======================================================================")
+            logger.info("[STATS] ENHANCED SYSTEM STATISTICS")
+            logger.info("======================================================================")
+
+            # DB stats (optional)
+            total_persons = 0
+            total_visits = 0
+            recent_visitors = 0
+            if getattr(self.mysql_service, "get_total_persons", None):
+                total_persons = self.mysql_service.get_total_persons()
+            if getattr(self.mysql_service, "get_total_visits", None):
+                total_visits = self.mysql_service.get_total_visits()
+            if getattr(self.mysql_service, "get_recent_visitors", None):
+                recent_visitors = self.mysql_service.get_recent_visitors(hours=24)
+            logger.info(f"[DB] Total Unique Persons: {total_persons}")
+            logger.info(f"[DB] Total Visits: {total_visits}")
+            logger.info(f"[DB] Recent Visitors (24h): {recent_visitors}")
+
+            # System stats
+            avg_time = self.stats["total_processing_time"] / max(1, self.stats["total_batches"])
+            logger.info("\n[SYSTEM] SYSTEM STATISTICS:")
+            logger.info(f"  Total Batches: {self.stats['total_batches']}")
+            logger.info(f"  Total Images Processed: {self.stats['total_images']}")
+            logger.info(f"  Total Faces Detected: {self.stats['total_faces']}")
+            logger.info(f"  Total New Persons: {self.stats['total_new_persons']}")
+            logger.info(f"  Total Existing Persons: {self.stats['total_existing_persons']}")
+            logger.info(f"  Total Processing Time: {self.stats['total_processing_time']:.2f}s")
+            logger.info(f"  System Uptime: {uptime}")
+
+            # Performance stats (optional)
+            mem_usage = 0.0
+            mem_percent = 0.0
+            if getattr(self.performance_optimizer, "get_memory_usage", None):
+                mem_usage = self.performance_optimizer.get_memory_usage()
+            if getattr(self.performance_optimizer, "get_memory_percent", None):
+                mem_percent = self.performance_optimizer.get_memory_percent()
+            logger.info("\n[PERF] PERFORMANCE STATISTICS:")
+            logger.info(f"  Memory Usage: {mem_usage:.1f} MB ({mem_percent:.1f}%)")
+
+            if getattr(self.mysql_service, "get_cache_hit_rate", None):
+                try:
+                    cache_hit = self.mysql_service.get_cache_hit_rate() * 100
+                    logger.info(f"  Cache Hit Rate: {cache_hit:.2f}%")
+                except Exception:
+                    pass
+            if getattr(self.mysql_service, "is_faiss_available", None):
+                logger.info(f"  FAISS Available: {self.mysql_service.is_faiss_available()}")
+
+            # Duplicate stats (optional)
+            duplicates_24h = 0
+            if getattr(self.duplicate_detector, "get_duplicate_count", None):
+                try:
+                    duplicates_24h = self.duplicate_detector.get_duplicate_count(None, hours=24)
+                except Exception:
+                    pass
+            sleep_status = False
+            if getattr(self.duplicate_detector, "is_in_sleep_mode", None):
+                sleep_status = self.duplicate_detector.is_in_sleep_mode()
+            sleep_remaining = 0
+            if getattr(self.duplicate_detector, "get_sleep_remaining", None):
+                sleep_remaining = self.duplicate_detector.get_sleep_remaining()
+
+            logger.info("\n[DUPLICATE] DUPLICATE DETECTION STATISTICS:")
+            logger.info(f"  Total Duplicates (24h): {duplicates_24h}")
+            logger.info(f"  Sleep Mode: {'ACTIVE' if sleep_status else 'INACTIVE'}")
+            if sleep_status:
+                logger.info(f"  Remaining Sleep: {sleep_remaining}s")
+
+            # Config
+            logger.info("\n[CONFIG] CONFIGURATION:")
+            logger.info(f"  Face Threshold: {self.config.get('FACE_THRESHOLD', 0.6)}")
+            logger.info(f"  Max Batch Size: {self.batch_size}")
+            logger.info(f"  Processing Interval: {self.processing_interval}s")
+            logger.info(f"  Quality Check: {self.config.get('USE_QUALITY_CHECK', True)}")
+            logger.info(f"  FAISS Enabled: {self.config.get('USE_FAISS', True)}")
+            logger.info(f"  Sleep Mode: {self.config.get('USE_SLEEP_MODE', True)}")
+            logger.info("======================================================================\n")
+        except Exception as e:
+            logger.exception(f"Error printing statistics: {e}")
+
+    def _cleanup(self):
+        logger.info("[CLEANUP] Performing cleanup...")
+        try:
+            self.face_service.cleanup_temp_files()
+        except Exception as e:
+            logger.warning(f"Temp cleanup error: {e}")
+        try:
+            self._print_statistics()
+        except Exception:
+            pass
+        if getattr(self.performance_optimizer, "optimize_memory", None):
+            try:
+                self.performance_optimizer.optimize_memory()
+            except Exception:
+                pass
+        logger.info("[DONE] System shutdown complete")
+
+
+def main():
+    system = EnhancedFaceRecognitionSystem()
+    system.start()
+
 
 if __name__ == "__main__":
-    system = EnhancedFaceRecognitionSystem()
-    system.run_continuous_enhanced()
+    main()

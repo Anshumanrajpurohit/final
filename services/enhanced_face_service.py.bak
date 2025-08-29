@@ -1,0 +1,209 @@
+import os
+import logging
+import uuid
+from typing import List, Tuple, Dict
+
+import face_recognition
+import cv2
+import numpy as np
+from PIL import Image
+
+from .age_gender_manager import AgeGenderManager
+
+logger = logging.getLogger(__name__)
+
+
+class EnhancedFaceService:
+    def __init__(self):
+        self.threshold = 0.6
+        self.min_detection_confidence = 0.95
+        self.temp_dir = "temp_images"
+        self.age_gender_manager = AgeGenderManager()
+        os.makedirs(self.temp_dir, exist_ok=True)
+
+    def process_face_image(self, image_path: str) -> Dict:
+        """Process a face image to extract face encoding, age, and gender."""
+        try:
+            # Try PIL first (better format handling)
+            try:
+                pil_img = Image.open(image_path).convert('RGB')
+                rgb_image = np.array(pil_img)
+                # Convert back to BGR for OpenCV operations
+                image = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2BGR)
+            except Exception:
+                # Fall back to OpenCV
+                image = cv2.imread(image_path)
+                if image is None:
+                    raise ValueError(f"Could not read image at {image_path}")
+                rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+            face_locations = face_recognition.face_locations(rgb_image, model="hog")
+            if not face_locations:
+                raise ValueError("No face detected in image")
+
+            face_encodings = face_recognition.face_encodings(rgb_image, face_locations)
+            if not face_encodings:
+                raise ValueError("Could not generate face encoding")
+
+            face_image = self._extract_face_region(image, face_locations[0])
+            age_gender_data = self.age_gender_manager.detect_age_gender(face_image)
+
+            quality_score = self._calculate_quality_score(image, face_locations[0])
+
+            return {
+                'face_encoding': face_encodings[0],
+                'age_range': age_gender_data.get('age_range'),
+                'gender': age_gender_data.get('gender'),
+                'age_confidence': age_gender_data.get('age_confidence'),
+                'gender_confidence': age_gender_data.get('gender_confidence'),
+                'quality_score': quality_score,
+                'location': face_locations[0]
+            }
+        except Exception as e:
+            logger.exception(f"Error processing face image {image_path}: {e}")
+            raise
+
+    def _extract_face_region(self, image: np.ndarray, face_location: Tuple) -> np.ndarray:
+        top, right, bottom, left = face_location
+        return image[top:bottom, left:right]
+
+    def _calculate_quality_score(self, image: np.ndarray, face_location: Tuple) -> float:
+        face_image = self._extract_face_region(image, face_location)
+        gray = cv2.cvtColor(face_image, cv2.COLOR_BGR2GRAY)
+        blur_score = cv2.Laplacian(gray, cv2.CV_64F).var()
+        brightness = np.mean(gray)
+        contrast = np.std(gray)
+
+        blur_score_norm = min(1.0, blur_score / 500)
+        brightness_norm = 1.0 - abs(brightness - 128) / 128
+        contrast_norm = min(1.0, contrast / 80)
+
+        quality_score = (blur_score_norm * 0.5 + brightness_norm * 0.25 + contrast_norm * 0.25)
+        return float(quality_score)
+
+    def match_face(self, face_encoding: np.ndarray, known_encodings: List[np.ndarray]) -> Tuple[bool, int]:
+        if not known_encodings:
+            return False, -1
+        face_distances = face_recognition.face_distance(known_encodings, face_encoding)
+        best_match_index = int(np.argmin(face_distances))
+        if face_distances[best_match_index] <= self.threshold:
+            return True, best_match_index
+        return False, -1
+
+    def detect_and_crop_faces_enhanced(self, image_path: str, *args, **kwargs) -> List[Tuple[str, int, int, int, int]]:
+        """Compatibility wrapper used by main_enhanced.py. Returns list of (crop_path, x, y, w, h)."""
+        logger.info(f"Using OpenCV-based face detection for {image_path}")
+        
+        # Validate image path
+        if not isinstance(image_path, str) or not image_path:
+            logger.warning(f"Invalid image path type: {type(image_path)}")
+            return []
+            
+        if not os.path.exists(image_path):
+            logger.warning(f"Image path does not exist: {image_path}")
+            return []
+            
+        try:
+            # Load image with PIL (better format handling)
+            try:
+                from PIL import Image
+                img = Image.open(image_path).convert('RGB')
+                
+                # Convert to numpy array for OpenCV
+                img_array = np.array(img)
+                image = cv2.cvtColor(img_array, cv2.COLOR_RGB2BGR)
+            except Exception as e:
+                logger.warning(f"PIL loading failed: {e}")
+                # Fall back to OpenCV
+                image = cv2.imread(image_path)
+                if image is None:
+                    logger.warning(f"Failed to load image: {image_path}")
+                    return []
+            
+            # Convert to grayscale for detection
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            
+            # Detect faces using OpenCV
+            face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+            faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+            
+            logger.info(f"Detected {len(faces)} faces with OpenCV")
+            
+            # Crop and save faces
+            results = []
+            for (x, y, w, h) in faces:
+                # Extract face region
+                face = image[y:y+h, x:x+w]
+                
+                # Generate unique filename
+                import uuid
+                crop_path = os.path.join(self.temp_dir, f"tmp_crop_{uuid.uuid4().hex}.jpg")
+                
+                # Save face image
+                cv2.imwrite(crop_path, face)
+                
+                # Add to results (crop_path, x, y, w, h)
+                results.append((crop_path, x, y, w, h))
+            
+            return results
+        except Exception as e:
+            logger.exception(f"OpenCV face detection failed: {e}")
+            return []
+    def process_batch(self, image_path: str, *args, **kwargs) -> List[Dict]:
+        """
+        Minimal compatibility wrapper used by main_enhanced.py.
+        Returns list of face result dicts for each detected face (can be empty).
+        """
+        results = []
+        crops = self.detect_and_crop_faces_enhanced(image_path, *args, **kwargs)
+        for crop_path, x, y, w, h in crops:
+            try:
+                face_data = self.process_face_image(crop_path)
+                results.append({
+                    "crop_path": crop_path,
+                    "x": x, "y": y, "w": w, "h": h,
+                    "face_encoding": face_data.get("face_encoding"),
+                    "age_range": face_data.get("age_range"),
+                    "gender": face_data.get("gender"),
+                    "quality_score": face_data.get("quality_score"),
+                    "location": face_data.get("location"),
+                })
+            except Exception:
+                logger.exception("process_batch: failed to process crop %s", crop_path)
+        return results
+
+    def cleanup_temp_files(self):
+        """Remove temporary files created by this service. Safe no-op on error."""
+        try:
+            tmp_dir = getattr(self, "temp_dir", os.path.join(os.getcwd(), "temp_images"))
+            temp_list = getattr(self, "temp_files", None)
+            if temp_list:
+                for p in temp_list:
+                    try:
+                        if os.path.exists(p):
+                            os.remove(p)
+                    except Exception:
+                        pass
+            else:
+                if os.path.isdir(tmp_dir):
+                    for fname in os.listdir(tmp_dir):
+                        if fname.startswith("tmp_") or fname.startswith("tmp_crop_"):
+                            p = os.path.join(tmp_dir, fname)
+                            try:
+                                os.remove(p)
+                            except Exception:
+                                pass
+        except Exception:
+            logger.exception("cleanup_temp_files encountered an error")
+
+# temp_inspect_image.py
+import cv2, sys
+p = r"temp_images\WhatsApp Image 2025-08-27 at 10.13.19 PM.jpeg"
+if len(sys.argv) > 1:
+    p = sys.argv[1]
+img = cv2.imread(p, cv2.IMREAD_UNCHANGED)
+print("path:", p, "exists?", img is not None)
+if img is None:
+    sys.exit(0)
+print("shape:", getattr(img, "shape", None), "dtype:", img.dtype, "ndim:", getattr(img, "ndim", None))
+print("min,max:", img.min(), img.max())
