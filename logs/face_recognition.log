@@ -4662,3 +4662,1506 @@ ValueError: No faces found in cropped image temp_images\tmp_crop_d22f046aae4a48f
 2025-08-30 02:00:43,094 - __main__ - INFO - ======================================================================
 
 2025-08-30 02:00:43,094 - __main__ - INFO - [DONE] System shutdown complete
+2025-08-30 02:13:02,694 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-08-30 02:13:02,705 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-08-30 02:13:02,710 - services.age_gender_manager - INFO - Loading age and gender detection models...
+2025-08-30 02:13:02,828 - services.age_gender_manager - INFO - Age and gender detection models loaded successfully
+2025-08-30 02:13:02,905 - __main__ - INFO - [START] Enhanced Face Recognition System initialized
+2025-08-30 02:13:02,905 - __main__ - INFO - Configuration: batch_size=10, interval=5s, quality_check=True, faiss=True
+2025-08-30 02:13:02,905 - __main__ - INFO - Sleep Mode: enabled=True, sleep_duration=300s, max_duplicates=3
+2025-08-30 02:13:02,905 - __main__ - INFO - [START] Starting Enhanced Face Recognition System...
+2025-08-30 02:13:02,906 - __main__ - INFO - [START] Starting enhanced batch processing: 5221c77e-fb75-4b5a-a72b-7ce875507603
+2025-08-30 02:13:02,909 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:13:03,737 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:13:03,739 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:13:03,739 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:13:03,740 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:03,740 - __main__ - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:03,742 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:03,742 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:03,756 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:03,756 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:03,760 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:03,761 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:03,764 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:03,764 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:03,769 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:03,769 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:03,771 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:13:03,771 - __main__ - INFO - [DUPLICATE] Batch had 6 duplicate events
+2025-08-30 02:13:08,776 - __main__ - INFO - [START] Starting enhanced batch processing: fd5e02a8-0306-4552-a5e9-92798d159657
+2025-08-30 02:13:08,780 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:13:09,000 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:13:09,005 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:13:09,006 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:13:09,009 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:09,009 - __main__ - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:09,012 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:09,012 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:09,015 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:09,015 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:09,018 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:09,018 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:09,020 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:09,021 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:09,026 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:09,026 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:09,026 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:13:09,026 - __main__ - INFO - [DUPLICATE] Batch had 6 duplicate events
+2025-08-30 02:13:14,034 - __main__ - INFO - [START] Starting enhanced batch processing: a7a221c9-e4d8-45ad-97e6-61b03c9f97a0
+2025-08-30 02:13:14,038 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:13:14,396 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:13:14,398 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:13:14,398 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:13:14,400 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:14,400 - __main__ - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:14,402 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:14,402 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:14,403 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:14,403 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:14,404 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:14,404 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:14,406 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:14,406 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:14,412 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:14,412 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:14,413 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:13:14,413 - __main__ - INFO - [DUPLICATE] Batch had 6 duplicate events
+2025-08-30 02:13:19,425 - __main__ - INFO - [START] Starting enhanced batch processing: 4a1efbd9-bbd8-4dcb-b4e8-5a512be27101
+2025-08-30 02:13:19,430 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:13:20,069 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:13:20,070 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:13:20,070 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:13:20,072 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:20,073 - __main__ - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:20,075 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:20,075 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:20,077 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:20,077 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:20,079 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:20,079 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:20,081 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:20,081 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:20,087 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:20,087 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:20,088 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:13:20,088 - __main__ - INFO - [DUPLICATE] Batch had 6 duplicate events
+2025-08-30 02:13:25,100 - __main__ - INFO - [START] Starting enhanced batch processing: 8e3483eb-eded-42e8-9e8c-9fe932dc5bb3
+2025-08-30 02:13:25,104 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:13:25,330 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:13:25,334 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:13:25,335 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:13:25,336 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:25,336 - __main__ - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:25,339 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:25,339 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:25,341 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:25,341 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:25,342 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:25,342 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:25,344 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:25,344 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:25,349 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:25,349 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:25,350 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:13:25,350 - __main__ - INFO - [DUPLICATE] Batch had 6 duplicate events
+2025-08-30 02:13:30,354 - __main__ - INFO - [START] Starting enhanced batch processing: d38d02b7-8c56-465a-bd5c-21b615401875
+2025-08-30 02:13:30,357 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:13:30,588 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:13:30,592 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:13:30,592 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:13:30,595 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:30,596 - __main__ - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:30,598 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:30,598 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:30,599 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:30,599 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:30,602 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:30,602 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:30,604 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:30,605 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:30,610 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:30,610 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:30,610 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:13:30,610 - __main__ - INFO - [DUPLICATE] Batch had 6 duplicate events
+2025-08-30 02:13:35,616 - __main__ - INFO - [START] Starting enhanced batch processing: d2ca3ef1-193c-4a5c-8b5a-9d939428f4f1
+2025-08-30 02:13:35,620 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:13:35,925 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:13:35,930 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:13:35,930 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:13:35,932 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:35,932 - __main__ - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:35,937 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:35,937 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:35,939 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:35,939 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:35,942 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:35,942 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:35,944 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:35,944 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:35,952 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:35,952 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:35,952 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:13:35,952 - __main__ - INFO - [DUPLICATE] Batch had 6 duplicate events
+2025-08-30 02:13:40,956 - __main__ - INFO - [START] Starting enhanced batch processing: 90b131d5-503d-462c-90ce-9ea16b850d81
+2025-08-30 02:13:40,965 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:13:41,495 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:13:41,495 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:13:41,495 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:13:41,502 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:41,502 - __main__ - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:41,509 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:41,509 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:41,512 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:41,512 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:41,514 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:41,515 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:41,522 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:41,522 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:41,527 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:41,527 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:41,528 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:13:41,528 - __main__ - INFO - [DUPLICATE] Batch had 6 duplicate events
+2025-08-30 02:13:46,534 - __main__ - INFO - [START] Starting enhanced batch processing: 0a58c07d-3fb3-4d7b-88d4-70e05f1bcdcc
+2025-08-30 02:13:46,541 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:13:46,773 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:13:46,773 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:13:46,773 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:13:46,775 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:46,775 - __main__ - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:46,777 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:46,777 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:46,778 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:46,778 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:46,779 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:46,779 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:46,781 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:46,781 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:46,788 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:46,788 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:46,788 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:13:46,788 - __main__ - INFO - [DUPLICATE] Batch had 6 duplicate events
+2025-08-30 02:13:51,805 - __main__ - INFO - [START] Starting enhanced batch processing: e0f76bc8-6004-42a8-93e1-dc9a95145663
+2025-08-30 02:13:51,805 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:13:52,035 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:13:52,035 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:13:52,035 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:13:52,035 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:52,035 - __main__ - INFO - [DUPLICATE] Image already processed: download (2).jpg
+2025-08-30 02:13:52,050 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:52,050 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:13:52,052 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:52,052 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:13:52,054 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:52,054 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:13:52,057 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:52,057 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:13:52,062 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:52,062 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:13:52,062 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:13:52,062 - __main__ - INFO - [DUPLICATE] Batch had 6 duplicate events
+2025-08-30 02:13:52,125 - __main__ - INFO - [STOP] System shutdown requested by user
+2025-08-30 02:13:57,076 - __main__ - INFO - [CLEANUP] Performing cleanup...
+2025-08-30 02:13:57,077 - __main__ - INFO - 
+======================================================================
+2025-08-30 02:13:57,078 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-30 02:13:57,079 - __main__ - INFO - ======================================================================
+2025-08-30 02:13:57,079 - __main__ - INFO - [DB] Total Unique Persons: 0
+2025-08-30 02:13:57,081 - __main__ - INFO - [DB] Total Visits: 0
+2025-08-30 02:13:57,081 - __main__ - INFO - [DB] Recent Visitors (24h): 0
+2025-08-30 02:13:57,082 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-30 02:13:57,083 - __main__ - INFO -   Total Batches: 10
+2025-08-30 02:13:57,083 - __main__ - INFO -   Total Images Processed: 0
+2025-08-30 02:13:57,084 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-30 02:13:57,084 - __main__ - INFO -   Total New Persons: 0
+2025-08-30 02:13:57,084 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-30 02:13:57,085 - __main__ - INFO -   Total Processing Time: 4.04s
+2025-08-30 02:13:57,085 - __main__ - INFO -   System Uptime: 0:00:54.172525
+2025-08-30 02:13:57,085 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-30 02:13:57,085 - __main__ - INFO -   Memory Usage: 0.0 MB (0.0%)
+2025-08-30 02:13:57,086 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-30 02:13:57,086 - __main__ - INFO -   Total Duplicates (24h): 0
+2025-08-30 02:13:57,086 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-30 02:13:57,086 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-30 02:13:57,087 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-30 02:13:57,087 - __main__ - INFO -   Max Batch Size: 10
+2025-08-30 02:13:57,087 - __main__ - INFO -   Processing Interval: 5s
+2025-08-30 02:13:57,087 - __main__ - INFO -   Quality Check: True
+2025-08-30 02:13:57,088 - __main__ - INFO -   FAISS Enabled: True
+2025-08-30 02:13:57,088 - __main__ - INFO -   Sleep Mode: True
+2025-08-30 02:13:57,088 - __main__ - INFO - ======================================================================
+
+2025-08-30 02:13:57,088 - __main__ - INFO - [DONE] System shutdown complete
+2025-08-30 02:28:11,440 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-08-30 02:28:11,449 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-08-30 02:28:11,457 - services.age_gender_manager - INFO - Loading age and gender detection models...
+2025-08-30 02:28:11,599 - services.age_gender_manager - INFO - Age and gender detection models loaded successfully
+2025-08-30 02:28:11,710 - __main__ - INFO - [START] Enhanced Face Recognition System initialized
+2025-08-30 02:28:11,710 - __main__ - INFO - Configuration: batch_size=10, interval=5s, quality_check=True, faiss=True
+2025-08-30 02:28:11,710 - __main__ - INFO - Sleep Mode: enabled=True, sleep_duration=300s, max_duplicates=3
+2025-08-30 02:28:11,710 - __main__ - INFO - [START] Starting Enhanced Face Recognition System...
+2025-08-30 02:28:11,711 - __main__ - INFO - [START] Starting enhanced batch processing: 324d3453-cc49-44c6-836c-2f072345527c
+2025-08-30 02:28:11,715 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:28:12,370 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:28:12,374 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:28:12,375 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:28:12,720 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:28:12,722 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceService' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\services\enhanced_face_service.py", line 284, in process_batch
+    detections = self._detect_faces_mediapipe(image_path)
+AttributeError: 'EnhancedFaceService' object has no attribute '_detect_faces_mediapipe'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 273, in _process_images
+    results = self.face_service.process_batch(local_path)
+  File "D:\face\takla\services\enhanced_face_service.py", line 347, in process_batch
+    self.logger.exception(f"Error processing image {image_path}: {e}")
+AttributeError: 'EnhancedFaceService' object has no attribute 'logger'
+2025-08-30 02:28:12,738 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:28:12,739 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:28:12,767 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:28:12,767 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:28:12,771 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:28:12,772 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:28:12,775 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:28:12,775 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:28:12,782 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:28:12,782 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:28:12,783 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:28:12,783 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:28:17,785 - __main__ - INFO - [START] Starting enhanced batch processing: d608aae4-1886-4e48-9c51-798df3c09c72
+2025-08-30 02:28:17,789 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:28:18,221 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:28:18,221 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:28:18,221 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:28:18,418 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:28:18,418 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceService' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\services\enhanced_face_service.py", line 284, in process_batch
+    detections = self._detect_faces_mediapipe(image_path)
+AttributeError: 'EnhancedFaceService' object has no attribute '_detect_faces_mediapipe'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 273, in _process_images
+    results = self.face_service.process_batch(local_path)
+  File "D:\face\takla\services\enhanced_face_service.py", line 347, in process_batch
+    self.logger.exception(f"Error processing image {image_path}: {e}")
+AttributeError: 'EnhancedFaceService' object has no attribute 'logger'
+2025-08-30 02:28:18,425 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:28:18,425 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:28:18,427 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:28:18,427 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:28:18,430 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:28:18,430 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:28:18,432 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:28:18,433 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:28:18,441 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:28:18,441 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:28:18,442 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:28:18,442 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:28:23,172 - __main__ - INFO - [STOP] System shutdown requested by user
+2025-08-30 02:28:23,442 - __main__ - INFO - [CLEANUP] Performing cleanup...
+2025-08-30 02:28:23,442 - __main__ - INFO - 
+======================================================================
+2025-08-30 02:28:23,443 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-30 02:28:23,443 - __main__ - INFO - ======================================================================
+2025-08-30 02:28:23,443 - __main__ - INFO - [DB] Total Unique Persons: 0
+2025-08-30 02:28:23,443 - __main__ - INFO - [DB] Total Visits: 0
+2025-08-30 02:28:23,443 - __main__ - INFO - [DB] Recent Visitors (24h): 0
+2025-08-30 02:28:23,443 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-30 02:28:23,444 - __main__ - INFO -   Total Batches: 2
+2025-08-30 02:28:23,444 - __main__ - INFO -   Total Images Processed: 0
+2025-08-30 02:28:23,444 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-30 02:28:23,444 - __main__ - INFO -   Total New Persons: 0
+2025-08-30 02:28:23,444 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-30 02:28:23,444 - __main__ - INFO -   Total Processing Time: 1.72s
+2025-08-30 02:28:23,444 - __main__ - INFO -   System Uptime: 0:00:11.733946
+2025-08-30 02:28:23,444 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-30 02:28:23,445 - __main__ - INFO -   Memory Usage: 0.0 MB (0.0%)
+2025-08-30 02:28:23,445 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-30 02:28:23,445 - __main__ - INFO -   Total Duplicates (24h): 0
+2025-08-30 02:28:23,445 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-30 02:28:23,445 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-30 02:28:23,445 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-30 02:28:23,445 - __main__ - INFO -   Max Batch Size: 10
+2025-08-30 02:28:23,445 - __main__ - INFO -   Processing Interval: 5s
+2025-08-30 02:28:23,445 - __main__ - INFO -   Quality Check: True
+2025-08-30 02:28:23,446 - __main__ - INFO -   FAISS Enabled: True
+2025-08-30 02:28:23,446 - __main__ - INFO -   Sleep Mode: True
+2025-08-30 02:28:23,446 - __main__ - INFO - ======================================================================
+
+2025-08-30 02:28:23,446 - __main__ - INFO - [DONE] System shutdown complete
+2025-08-30 02:31:55,891 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-08-30 02:31:55,902 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-08-30 02:31:55,905 - services.age_gender_manager - INFO - Loading age and gender detection models...
+2025-08-30 02:31:56,036 - services.age_gender_manager - INFO - Age and gender detection models loaded successfully
+2025-08-30 02:31:56,122 - __main__ - INFO - [START] Enhanced Face Recognition System initialized
+2025-08-30 02:31:56,122 - __main__ - INFO - Configuration: batch_size=10, interval=5s, quality_check=True, faiss=True
+2025-08-30 02:31:56,123 - __main__ - INFO - Sleep Mode: enabled=True, sleep_duration=300s, max_duplicates=3
+2025-08-30 02:31:56,123 - __main__ - INFO - [START] Starting Enhanced Face Recognition System...
+2025-08-30 02:31:56,123 - __main__ - INFO - [START] Starting enhanced batch processing: fbf76694-5767-4c3d-bcf1-40246901131e
+2025-08-30 02:31:56,127 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:31:56,800 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:31:56,800 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:31:56,800 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:31:57,112 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:31:57,112 - services.enhanced_face_service - INFO - MediaPipe face detector initialized
+2025-08-30 02:31:57,386 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:31:57,608 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:31:57,844 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:31:57,845 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:31:57,845 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:31:57,848 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:31:57,848 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:31:57,850 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:31:57,850 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:31:57,857 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:31:57,857 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:31:57,860 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:31:57,860 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:31:57,868 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:31:57,869 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:31:57,869 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:31:57,869 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:32:02,877 - __main__ - INFO - [START] Starting enhanced batch processing: 1128ec0d-001e-4cc9-9e40-8838db121c3d
+2025-08-30 02:32:02,877 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:32:03,349 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:32:03,363 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:32:03,364 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:32:03,575 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:32:03,809 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:32:04,038 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:32:04,266 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:32:04,267 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:32:04,267 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:32:04,270 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:04,270 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:04,273 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:04,273 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:04,275 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:04,276 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:04,278 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:04,278 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:04,284 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:04,284 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:04,284 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:32:04,284 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:32:09,300 - __main__ - INFO - [START] Starting enhanced batch processing: 9dba5e65-b8a2-4a21-a378-c6ae9d45268f
+2025-08-30 02:32:09,311 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:32:09,529 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:32:09,533 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:32:09,533 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:32:09,716 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:32:09,947 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:32:10,159 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:32:10,394 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:32:10,394 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:32:10,394 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:32:10,394 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:10,394 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:10,408 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:10,408 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:10,411 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:10,411 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:10,414 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:10,415 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:10,420 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:10,420 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:10,420 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:32:10,420 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:32:15,433 - __main__ - INFO - [START] Starting enhanced batch processing: cf5efc12-efec-43bc-bad5-c0183e9e9759
+2025-08-30 02:32:15,452 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:32:15,784 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:32:15,799 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:32:15,799 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:32:15,976 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:32:16,215 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:32:16,438 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:32:16,664 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:32:16,664 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:32:16,664 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:32:16,689 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:16,689 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:16,697 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:16,697 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:16,701 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:16,701 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:16,703 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:16,704 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:16,708 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:16,708 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:16,710 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:32:16,710 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:32:21,710 - __main__ - INFO - [START] Starting enhanced batch processing: a47e49ea-e7ba-461c-b32f-2b8ae58246ca
+2025-08-30 02:32:21,721 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:32:21,972 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:32:21,976 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:32:21,976 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:32:22,159 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:32:22,402 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:32:22,618 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:32:22,846 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:32:22,846 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:32:22,846 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:32:22,846 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:22,846 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:22,846 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:22,846 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:22,857 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:22,857 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:22,862 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:22,862 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:22,868 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:22,868 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:22,868 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:32:22,868 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:32:27,880 - __main__ - INFO - [START] Starting enhanced batch processing: ffe402c8-0e45-4260-972f-9387c5b529bc
+2025-08-30 02:32:27,889 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:32:28,174 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:32:28,174 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:32:28,174 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:32:28,421 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:32:28,645 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:32:28,870 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:32:29,115 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:32:29,116 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:32:29,116 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:32:29,138 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:29,138 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:29,140 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:29,140 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:29,144 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:29,144 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:29,147 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:29,147 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:29,156 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:29,156 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:29,157 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:32:29,157 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:32:34,158 - __main__ - INFO - [START] Starting enhanced batch processing: 52f5eed9-cee7-44fe-9f8e-28c999e49a0f
+2025-08-30 02:32:34,164 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:32:34,487 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:32:34,487 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:32:34,487 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:32:34,690 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:32:34,935 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:32:35,164 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:32:35,391 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:32:35,391 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:32:35,391 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:32:35,395 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:35,395 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:35,397 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:35,398 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:35,400 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:35,400 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:35,402 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:35,402 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:35,410 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:35,410 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:35,410 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:32:35,410 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:32:40,418 - __main__ - INFO - [START] Starting enhanced batch processing: 177633d4-28e1-4f57-8d69-f4c1c1f7515e
+2025-08-30 02:32:40,426 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:32:40,767 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:32:40,767 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:32:40,767 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:32:40,986 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:32:41,222 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:32:41,446 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:32:41,671 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:32:41,672 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:32:41,672 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:32:41,675 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:41,675 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:41,676 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:41,676 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:41,677 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:41,677 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:41,680 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:41,680 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:41,684 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:41,684 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:41,684 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:32:41,684 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:32:46,696 - __main__ - INFO - [START] Starting enhanced batch processing: 609b89f5-13e6-46a4-b52b-65e2b4df4f59
+2025-08-30 02:32:46,696 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:32:47,035 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:32:47,035 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:32:47,035 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:32:47,239 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:32:47,476 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:32:47,698 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:32:47,935 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:32:47,935 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:32:47,936 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:32:47,940 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:47,940 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:47,945 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:47,945 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:47,948 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:47,948 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:47,949 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:47,950 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:47,953 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:47,953 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:47,955 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:32:47,955 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:32:52,959 - __main__ - INFO - [START] Starting enhanced batch processing: 91bcd65a-90fc-4802-946a-96573e99a6fd
+2025-08-30 02:32:52,959 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:32:53,202 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:32:53,202 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:32:53,202 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:32:53,543 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:32:53,774 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:32:53,998 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:32:54,226 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:32:54,226 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:32:54,226 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:32:54,228 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:54,228 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:32:54,229 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:54,229 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:32:54,232 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:54,232 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:32:54,233 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:54,234 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:32:54,238 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:54,238 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:32:54,239 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:32:54,240 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:32:59,255 - __main__ - INFO - [START] Starting enhanced batch processing: 80e62765-6767-4406-a7dc-926274b18680
+2025-08-30 02:32:59,279 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:32:59,564 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:32:59,576 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:32:59,576 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:32:59,807 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:33:00,041 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:33:00,257 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:33:00,491 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:33:00,492 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:33:00,492 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:33:00,496 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:00,496 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:00,499 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:00,500 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:00,503 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:00,503 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:00,506 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:00,506 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:00,517 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:00,517 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:00,518 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:33:00,518 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:33:05,522 - __main__ - INFO - [START] Starting enhanced batch processing: c6e5082a-2784-4d54-8032-52b882bf84cf
+2025-08-30 02:33:05,532 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:33:05,768 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:33:05,769 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:33:05,769 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:33:05,957 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:33:06,191 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:33:06,419 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:33:06,647 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:33:06,647 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:33:06,647 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:33:06,649 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:06,649 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:06,651 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:06,651 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:06,653 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:06,654 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:06,657 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:06,657 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:06,662 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:06,663 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:06,663 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:33:06,663 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:33:11,665 - __main__ - INFO - 
+======================================================================
+2025-08-30 02:33:11,665 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-30 02:33:11,665 - __main__ - INFO - ======================================================================
+2025-08-30 02:33:11,665 - __main__ - INFO - [DB] Total Unique Persons: 0
+2025-08-30 02:33:11,665 - __main__ - INFO - [DB] Total Visits: 0
+2025-08-30 02:33:11,665 - __main__ - INFO - [DB] Recent Visitors (24h): 0
+2025-08-30 02:33:11,665 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-30 02:33:11,665 - __main__ - INFO -   Total Batches: 12
+2025-08-30 02:33:11,665 - __main__ - INFO -   Total Images Processed: 0
+2025-08-30 02:33:11,665 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-30 02:33:11,665 - __main__ - INFO -   Total New Persons: 0
+2025-08-30 02:33:11,665 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-30 02:33:11,665 - __main__ - INFO -   Total Processing Time: 15.34s
+2025-08-30 02:33:11,665 - __main__ - INFO -   System Uptime: 0:01:15.543083
+2025-08-30 02:33:11,665 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-30 02:33:11,665 - __main__ - INFO -   Memory Usage: 0.0 MB (0.0%)
+2025-08-30 02:33:11,665 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-30 02:33:11,665 - __main__ - INFO -   Total Duplicates (24h): 0
+2025-08-30 02:33:11,665 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-30 02:33:11,665 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-30 02:33:11,665 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-30 02:33:11,665 - __main__ - INFO -   Max Batch Size: 10
+2025-08-30 02:33:11,665 - __main__ - INFO -   Processing Interval: 5s
+2025-08-30 02:33:11,665 - __main__ - INFO -   Quality Check: True
+2025-08-30 02:33:11,665 - __main__ - INFO -   FAISS Enabled: True
+2025-08-30 02:33:11,665 - __main__ - INFO -   Sleep Mode: True
+2025-08-30 02:33:11,665 - __main__ - INFO - ======================================================================
+
+2025-08-30 02:33:11,665 - __main__ - INFO - [START] Starting enhanced batch processing: ca9864e4-8f2d-4442-b568-3b06ad9e8222
+2025-08-30 02:33:11,665 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:33:11,924 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:33:11,924 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:33:11,924 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:33:12,127 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:33:12,379 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:33:12,613 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:33:12,830 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:33:12,830 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:33:12,830 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:33:12,830 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:12,830 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:12,830 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:12,845 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:12,847 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:12,847 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:12,850 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:12,850 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:12,855 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:12,855 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:12,855 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:33:12,855 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:33:17,867 - __main__ - INFO - [START] Starting enhanced batch processing: 9c977828-96a8-4e62-879f-36cfb53f4a11
+2025-08-30 02:33:17,885 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:33:18,220 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:33:18,220 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:33:18,220 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:33:18,382 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:33:18,623 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:33:18,832 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:33:19,074 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:33:19,075 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:33:19,075 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:33:19,078 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:19,078 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:19,080 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:19,080 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:19,084 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:19,084 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:19,087 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:19,087 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:19,092 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:19,092 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:19,092 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:33:19,093 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:33:24,098 - __main__ - INFO - [START] Starting enhanced batch processing: 7564a556-fecd-4092-a92e-5f73badbe713
+2025-08-30 02:33:24,100 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:33:24,518 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:33:24,518 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:33:24,518 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:33:24,738 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:33:24,978 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:33:25,200 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:33:25,430 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:33:25,430 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:33:25,430 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:33:25,430 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:25,430 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:25,430 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:25,430 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:25,430 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:25,430 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:25,437 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:25,439 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:25,447 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:25,447 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:25,447 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:33:25,448 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:33:30,457 - __main__ - INFO - [START] Starting enhanced batch processing: db84cffa-5a64-4983-9537-942a18defb92
+2025-08-30 02:33:30,466 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:33:30,861 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:33:30,861 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:33:30,861 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:33:31,049 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:33:31,286 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:33:31,517 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:33:31,753 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:33:31,753 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:33:31,753 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:33:31,774 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:31,774 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:31,778 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:31,779 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:31,781 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:31,781 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:31,787 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:31,787 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:31,794 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:31,794 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:31,795 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:33:31,795 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:33:36,802 - __main__ - INFO - [START] Starting enhanced batch processing: a445d084-cc84-475b-b5a9-c16416f75632
+2025-08-30 02:33:36,817 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:33:37,080 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:33:37,080 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:33:37,080 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:33:37,275 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:33:37,506 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:33:37,721 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:33:37,956 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:33:37,956 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:33:37,956 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:33:37,965 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:37,965 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:37,967 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:37,968 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:37,969 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:37,970 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:37,972 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:37,973 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:37,984 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:37,984 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:37,984 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:33:37,984 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:33:42,993 - __main__ - INFO - [START] Starting enhanced batch processing: 467d3109-4646-4ed5-aa58-689c58edad10
+2025-08-30 02:33:43,018 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:33:43,394 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:33:43,394 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:33:43,394 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:33:43,626 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:33:43,863 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:33:44,086 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:33:44,314 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:33:44,314 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:33:44,314 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:33:44,315 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:44,315 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:44,315 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:44,315 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:44,320 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:44,320 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:44,324 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:44,325 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:44,330 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:44,330 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:44,330 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:33:44,330 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:33:49,338 - __main__ - INFO - [START] Starting enhanced batch processing: 6a460c39-d7b0-4db5-b086-b10aa1f5fca8
+2025-08-30 02:33:49,372 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:33:49,582 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:33:49,587 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:33:49,587 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:33:49,973 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:33:50,210 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:33:50,423 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:33:50,659 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:33:50,659 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:33:50,659 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:33:50,659 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:50,659 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:50,659 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:50,659 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:50,659 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:50,659 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:50,674 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:50,675 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:50,680 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:50,680 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:50,680 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:33:50,680 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:33:55,682 - __main__ - INFO - [START] Starting enhanced batch processing: 196cd640-fadb-41e7-bcd4-88d3e9d43361
+2025-08-30 02:33:55,703 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:33:55,943 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:33:55,947 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:33:55,947 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:33:56,154 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:33:56,396 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:33:56,618 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:33:56,839 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:33:56,839 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:33:56,839 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:33:56,852 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:56,852 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:33:56,855 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:56,855 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:33:56,857 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:56,858 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:33:56,863 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:56,863 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:33:56,868 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:56,868 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:33:56,869 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:33:56,869 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:34:01,881 - __main__ - INFO - [START] Starting enhanced batch processing: c15487a9-bce1-4fe8-a54e-2a1b10f8f1e6
+2025-08-30 02:34:01,900 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:34:02,284 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:34:02,284 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:34:02,284 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:34:02,472 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:34:02,700 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:34:02,925 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:34:03,153 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:34:03,153 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:34:03,153 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:34:03,157 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:03,157 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:03,159 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:03,159 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:03,161 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:03,161 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:03,164 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:03,164 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:03,169 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:03,169 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:03,169 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:34:03,169 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:34:08,178 - __main__ - INFO - [START] Starting enhanced batch processing: 90957e37-6e36-4b3e-aaf3-a8b6fc9b3596
+2025-08-30 02:34:08,185 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:34:08,518 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:34:08,518 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:34:08,518 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:34:08,763 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:34:08,986 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:34:09,226 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:34:09,456 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:34:09,456 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:34:09,456 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:34:09,458 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:09,460 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:09,462 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:09,462 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:09,463 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:09,463 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:09,464 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:09,465 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:09,468 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:09,468 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:09,470 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:34:09,470 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:34:14,474 - __main__ - INFO - [START] Starting enhanced batch processing: 0d599fc5-e51f-4e7f-bbd0-d02b50263e94
+2025-08-30 02:34:14,474 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:34:14,831 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:34:14,831 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:34:14,831 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:34:15,018 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:34:15,288 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:34:15,513 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:34:15,743 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:34:15,743 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:34:15,743 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:34:15,746 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:15,746 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:15,747 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:15,747 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:15,749 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:15,749 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:15,750 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:15,750 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:15,757 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:15,757 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:15,757 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:34:15,757 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:34:20,761 - __main__ - INFO - [START] Starting enhanced batch processing: 364ef6fe-65e5-41c0-9c8c-35ec6c6d2f30
+2025-08-30 02:34:20,770 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:34:21,120 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:34:21,120 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:34:21,127 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:34:21,315 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:34:21,550 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:34:21,788 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:34:22,019 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:34:22,020 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:34:22,020 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:34:22,028 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:22,029 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:22,031 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:22,032 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:22,034 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:22,034 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:22,042 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:22,042 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:22,048 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:22,048 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:22,049 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:34:22,049 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:34:27,050 - __main__ - INFO - 
+======================================================================
+2025-08-30 02:34:27,050 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-30 02:34:27,050 - __main__ - INFO - ======================================================================
+2025-08-30 02:34:27,050 - __main__ - INFO - [DB] Total Unique Persons: 0
+2025-08-30 02:34:27,050 - __main__ - INFO - [DB] Total Visits: 0
+2025-08-30 02:34:27,050 - __main__ - INFO - [DB] Recent Visitors (24h): 0
+2025-08-30 02:34:27,050 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-30 02:34:27,050 - __main__ - INFO -   Total Batches: 24
+2025-08-30 02:34:27,050 - __main__ - INFO -   Total Images Processed: 0
+2025-08-30 02:34:27,050 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-30 02:34:27,050 - __main__ - INFO -   Total New Persons: 0
+2025-08-30 02:34:27,050 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-30 02:34:27,050 - __main__ - INFO -   Total Processing Time: 30.50s
+2025-08-30 02:34:27,050 - __main__ - INFO -   System Uptime: 0:02:30.928759
+2025-08-30 02:34:27,050 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-30 02:34:27,050 - __main__ - INFO -   Memory Usage: 0.0 MB (0.0%)
+2025-08-30 02:34:27,050 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-30 02:34:27,050 - __main__ - INFO -   Total Duplicates (24h): 0
+2025-08-30 02:34:27,057 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-30 02:34:27,057 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-30 02:34:27,057 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-30 02:34:27,057 - __main__ - INFO -   Max Batch Size: 10
+2025-08-30 02:34:27,057 - __main__ - INFO -   Processing Interval: 5s
+2025-08-30 02:34:27,057 - __main__ - INFO -   Quality Check: True
+2025-08-30 02:34:27,058 - __main__ - INFO -   FAISS Enabled: True
+2025-08-30 02:34:27,058 - __main__ - INFO -   Sleep Mode: True
+2025-08-30 02:34:27,058 - __main__ - INFO - ======================================================================
+
+2025-08-30 02:34:27,058 - __main__ - INFO - [START] Starting enhanced batch processing: a277c1c5-77a8-4724-bef9-86f96feba843
+2025-08-30 02:34:27,066 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:34:27,271 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:34:27,271 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:34:27,271 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:34:27,501 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:34:27,741 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:34:27,970 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:34:28,203 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:34:28,203 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:34:28,203 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:34:28,206 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:28,206 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:28,246 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:28,246 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:28,250 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:28,251 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:28,254 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:28,255 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:28,263 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:28,263 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:28,263 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:34:28,264 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:34:33,276 - __main__ - INFO - [START] Starting enhanced batch processing: af0caed2-21b6-4beb-b8d5-ea7d025e0d2d
+2025-08-30 02:34:33,280 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:34:33,548 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:34:33,548 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:34:33,548 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:34:33,754 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:34:33,989 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:34:34,208 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:34:34,448 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:34:34,448 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:34:34,448 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:34:34,454 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:34,454 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:34,457 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:34,457 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:34,459 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:34,460 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:34,462 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:34,462 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:34,467 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:34,467 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:34,467 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:34:34,468 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:34:39,474 - __main__ - INFO - [START] Starting enhanced batch processing: 7063286e-b0c3-4276-8250-1e350330667b
+2025-08-30 02:34:39,491 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:34:39,713 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:34:39,714 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:34:39,714 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:34:39,925 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:34:40,161 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:34:40,379 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:34:40,615 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:34:40,615 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:34:40,615 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:34:40,615 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:40,615 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:40,623 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:40,623 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:40,625 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:40,626 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:40,628 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:40,628 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:40,633 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:40,633 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:40,634 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:34:40,634 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:34:45,644 - __main__ - INFO - [START] Starting enhanced batch processing: 54c9af18-063b-4f29-b036-5bcb873da26d
+2025-08-30 02:34:45,644 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:34:45,987 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:34:46,002 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:34:46,002 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:34:46,335 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:34:46,573 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:34:46,783 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:34:47,017 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:34:47,017 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:34:47,017 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:34:47,017 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:47,017 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:47,026 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:47,026 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:47,029 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:47,029 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:47,031 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:47,031 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:47,036 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:47,037 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:47,037 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:34:47,037 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:34:52,051 - __main__ - INFO - [START] Starting enhanced batch processing: 1922f459-fbc8-497b-8ca0-775065d9b2ed
+2025-08-30 02:34:52,073 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:34:52,393 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:34:52,412 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:34:52,412 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:34:52,597 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:34:52,831 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:34:53,066 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:34:53,290 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:34:53,290 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:34:53,291 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:34:53,293 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:53,293 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:53,295 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:53,295 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:53,296 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:53,296 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:53,298 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:53,298 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:53,302 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:53,302 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:53,302 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:34:53,302 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:34:58,315 - __main__ - INFO - [START] Starting enhanced batch processing: b3fed0c3-7770-42df-ac34-66a74d5775da
+2025-08-30 02:34:58,344 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:34:58,882 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:34:58,887 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:34:58,888 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:34:59,066 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:34:59,342 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:34:59,570 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:34:59,784 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:34:59,800 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:34:59,800 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:34:59,800 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:59,800 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:34:59,800 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:59,800 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:34:59,807 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:59,807 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:34:59,810 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:59,810 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:34:59,815 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:59,815 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:34:59,815 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:34:59,815 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:35:04,818 - __main__ - INFO - [START] Starting enhanced batch processing: 073b83bd-e7df-4d4e-b544-fb2900b0fa93
+2025-08-30 02:35:04,819 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:35:05,096 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:35:05,099 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:35:05,100 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:35:05,274 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:35:05,506 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:35:05,734 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:35:05,963 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:35:05,964 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:35:05,964 - __main__ - ERROR - Error processing image download (2).jpg: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 278, in _process_images
+    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+AttributeError: 'EnhancedFaceRecognitionSystem' object has no attribute 'logger'
+2025-08-30 02:35:05,967 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:35:05,967 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:35:05,968 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:35:05,968 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:35:05,969 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:35:05,969 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:35:05,970 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:35:05,970 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:35:05,978 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:35:05,979 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:35:05,979 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:35:05,979 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:35:09,316 - __main__ - INFO - [STOP] System shutdown requested by user
+2025-08-30 02:35:10,973 - __main__ - INFO - [CLEANUP] Performing cleanup...
+2025-08-30 02:35:10,973 - __main__ - INFO - 
+======================================================================
+2025-08-30 02:35:10,973 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-30 02:35:10,973 - __main__ - INFO - ======================================================================
+2025-08-30 02:35:10,973 - __main__ - INFO - [DB] Total Unique Persons: 0
+2025-08-30 02:35:10,973 - __main__ - INFO - [DB] Total Visits: 0
+2025-08-30 02:35:10,973 - __main__ - INFO - [DB] Recent Visitors (24h): 0
+2025-08-30 02:35:10,975 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-30 02:35:10,975 - __main__ - INFO -   Total Batches: 31
+2025-08-30 02:35:10,975 - __main__ - INFO -   Total Images Processed: 0
+2025-08-30 02:35:10,975 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-30 02:35:10,977 - __main__ - INFO -   Total New Persons: 0
+2025-08-30 02:35:10,977 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-30 02:35:10,977 - __main__ - INFO -   Total Processing Time: 39.28s
+2025-08-30 02:35:10,977 - __main__ - INFO -   System Uptime: 0:03:14.850967
+2025-08-30 02:35:10,977 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-30 02:35:10,977 - __main__ - INFO -   Memory Usage: 0.0 MB (0.0%)
+2025-08-30 02:35:10,977 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-30 02:35:10,977 - __main__ - INFO -   Total Duplicates (24h): 0
+2025-08-30 02:35:10,977 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-30 02:35:10,977 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-30 02:35:10,977 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-30 02:35:10,977 - __main__ - INFO -   Max Batch Size: 10
+2025-08-30 02:35:10,977 - __main__ - INFO -   Processing Interval: 5s
+2025-08-30 02:35:10,977 - __main__ - INFO -   Quality Check: True
+2025-08-30 02:35:10,979 - __main__ - INFO -   FAISS Enabled: True
+2025-08-30 02:35:10,979 - __main__ - INFO -   Sleep Mode: True
+2025-08-30 02:35:10,979 - __main__ - INFO - ======================================================================
+
+2025-08-30 02:35:10,979 - __main__ - INFO - [DONE] System shutdown complete
+2025-08-30 02:37:45,878 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-08-30 02:37:45,889 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-08-30 02:37:45,893 - services.age_gender_manager - INFO - Loading age and gender detection models...
+2025-08-30 02:37:46,022 - services.age_gender_manager - INFO - Age and gender detection models loaded successfully
+2025-08-30 02:37:46,109 - __main__ - INFO - [START] Enhanced Face Recognition System initialized
+2025-08-30 02:37:46,109 - __main__ - INFO - Configuration: batch_size=10, interval=5s, quality_check=True, faiss=True
+2025-08-30 02:37:46,109 - __main__ - INFO - Sleep Mode: enabled=True, sleep_duration=300s, max_duplicates=3
+2025-08-30 02:37:46,110 - __main__ - INFO - [START] Starting Enhanced Face Recognition System...
+2025-08-30 02:37:46,110 - __main__ - INFO - [START] Starting enhanced batch processing: 845873c6-6ff0-4fb2-bfa3-da8fcbe94c41
+2025-08-30 02:37:46,113 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:37:46,972 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:37:46,972 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:37:46,972 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:37:47,314 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:37:47,318 - services.enhanced_face_service - INFO - MediaPipe face detector initialized
+2025-08-30 02:37:47,602 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:37:47,838 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:37:48,065 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:37:48,065 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:37:48,065 - __main__ - INFO - [ENCODINGS] Successful face encodings: 3
+2025-08-30 02:37:48,065 - __main__ - ERROR - Error processing image download (2).jpg: local variable 'image_url' referenced before assignment
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 285, in _process_images
+    self.duplicate_detector.mark_image_processed(image_hash, image_name, image_url, face_count)
+UnboundLocalError: local variable 'image_url' referenced before assignment
+2025-08-30 02:37:48,077 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:37:48,077 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:37:48,085 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:37:48,085 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:37:48,089 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:37:48,090 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:37:48,095 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:37:48,096 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:37:48,101 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:37:48,102 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:37:48,102 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:37:48,102 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:37:53,115 - __main__ - INFO - [START] Starting enhanced batch processing: 92582f57-f7ba-4054-8c6d-aed6ea4c46a8
+2025-08-30 02:37:53,176 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:37:53,519 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:37:53,519 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:37:53,519 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:37:53,705 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:37:53,966 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:37:54,194 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:37:54,422 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:37:54,422 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:37:54,422 - __main__ - INFO - [ENCODINGS] Successful face encodings: 3
+2025-08-30 02:37:54,422 - __main__ - ERROR - Error processing image download (2).jpg: local variable 'image_url' referenced before assignment
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 285, in _process_images
+    self.duplicate_detector.mark_image_processed(image_hash, image_name, image_url, face_count)
+UnboundLocalError: local variable 'image_url' referenced before assignment
+2025-08-30 02:37:54,424 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:37:54,424 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:37:54,430 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:37:54,430 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:37:54,433 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:37:54,433 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:37:54,435 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:37:54,436 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:37:54,442 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:37:54,443 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:37:54,443 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:37:54,443 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:37:59,458 - __main__ - INFO - [START] Starting enhanced batch processing: 432a4203-ff57-4e8a-9016-6cc356fc340f
+2025-08-30 02:37:59,478 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:37:59,778 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:37:59,784 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:37:59,784 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:37:59,987 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:38:00,224 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:38:00,440 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:38:00,678 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:38:00,678 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:38:00,678 - __main__ - INFO - [ENCODINGS] Successful face encodings: 3
+2025-08-30 02:38:00,678 - __main__ - ERROR - Error processing image download (2).jpg: local variable 'image_url' referenced before assignment
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 285, in _process_images
+    self.duplicate_detector.mark_image_processed(image_hash, image_name, image_url, face_count)
+UnboundLocalError: local variable 'image_url' referenced before assignment
+2025-08-30 02:38:00,681 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:38:00,681 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:38:00,684 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:38:00,684 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:38:00,686 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:38:00,686 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:38:00,688 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:38:00,688 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:38:00,693 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:38:00,693 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:38:00,694 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:38:00,694 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:38:05,705 - __main__ - INFO - [START] Starting enhanced batch processing: e537e9c4-c059-4c38-b839-1499e9d9f178
+2025-08-30 02:38:05,716 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:38:06,156 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:38:06,156 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:38:06,158 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:38:06,379 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:38:06,611 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:38:06,831 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:38:07,065 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:38:07,065 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:38:07,065 - __main__ - INFO - [ENCODINGS] Successful face encodings: 3
+2025-08-30 02:38:07,065 - __main__ - ERROR - Error processing image download (2).jpg: local variable 'image_url' referenced before assignment
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 285, in _process_images
+    self.duplicate_detector.mark_image_processed(image_hash, image_name, image_url, face_count)
+UnboundLocalError: local variable 'image_url' referenced before assignment
+2025-08-30 02:38:07,065 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:38:07,065 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:38:07,065 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:38:07,065 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:38:07,070 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:38:07,072 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:38:07,073 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:38:07,074 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:38:07,079 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:38:07,079 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:38:07,079 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:38:07,079 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:38:12,083 - __main__ - INFO - [START] Starting enhanced batch processing: e801eeef-2db9-44ca-84f4-8bf12f569fe1
+2025-08-30 02:38:12,104 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:38:12,334 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:38:12,335 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:38:12,336 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:38:12,550 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:38:12,893 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:38:13,153 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:38:13,431 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:38:13,431 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:38:13,431 - __main__ - INFO - [ENCODINGS] Successful face encodings: 3
+2025-08-30 02:38:13,431 - __main__ - ERROR - Error processing image download (2).jpg: local variable 'image_url' referenced before assignment
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 285, in _process_images
+    self.duplicate_detector.mark_image_processed(image_hash, image_name, image_url, face_count)
+UnboundLocalError: local variable 'image_url' referenced before assignment
+2025-08-30 02:38:13,436 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:38:13,436 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:38:13,438 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:38:13,439 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:38:13,441 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:38:13,441 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:38:13,444 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:38:13,444 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:38:13,449 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:38:13,449 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:38:13,450 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:38:13,450 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:38:18,457 - __main__ - INFO - [START] Starting enhanced batch processing: d7419a71-8d82-43d3-a124-f61f5a2be8f7
+2025-08-30 02:38:18,468 - __main__ - INFO - Memory before processing: 0.0 MB
+2025-08-30 02:38:18,818 - httpx - INFO - HTTP Request: POST https://hwxyuvtfoyzycggbypmo.supabase.co/storage/v1/object/list/face-images "HTTP/2 200 OK"
+2025-08-30 02:38:18,828 - __main__ - INFO - [FOUND] Found 6 images to process
+2025-08-30 02:38:18,828 - __main__ - INFO - [AGE/GENDER] Age and gender detection enabled
+2025-08-30 02:38:19,049 - services.supabase_service - INFO - Downloaded image download (2).jpg to temp_images\download (2).jpg
+2025-08-30 02:38:19,284 - services.enhanced_face_service - INFO - Face bbox (115,28,29,29) -> encoding=OK
+2025-08-30 02:38:19,516 - services.enhanced_face_service - INFO - Face bbox (99,53,26,26) -> encoding=OK
+2025-08-30 02:38:19,738 - services.enhanced_face_service - INFO - Face bbox (71,34,30,30) -> encoding=OK
+2025-08-30 02:38:19,738 - services.enhanced_face_service - INFO - Detected 3 faces with MediaPipe, encodings OK: 3
+2025-08-30 02:38:19,738 - __main__ - INFO - [ENCODINGS] Successful face encodings: 3
+2025-08-30 02:38:19,738 - __main__ - ERROR - Error processing image download (2).jpg: local variable 'image_url' referenced before assignment
+Traceback (most recent call last):
+  File "D:\face\takla\main_enhanced.py", line 285, in _process_images
+    self.duplicate_detector.mark_image_processed(image_hash, image_name, image_url, face_count)
+UnboundLocalError: local variable 'image_url' referenced before assignment
+2025-08-30 02:38:19,752 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:38:19,752 - __main__ - INFO - [DUPLICATE] Image already processed: dw3.jpg
+2025-08-30 02:38:19,756 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:38:19,757 - __main__ - INFO - [DUPLICATE] Image already processed: download1.jpg
+2025-08-30 02:38:19,759 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:38:19,759 - __main__ - INFO - [DUPLICATE] Image already processed: download2.jpg
+2025-08-30 02:38:19,762 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:38:19,762 - __main__ - INFO - [DUPLICATE] Image already processed: WIN_20250819_00_27_12_Pro.jpg
+2025-08-30 02:38:19,767 - utils.duplicate_detector - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:38:19,768 - __main__ - INFO - [DUPLICATE] Image already processed: h4.jpg
+2025-08-30 02:38:19,768 - __main__ - INFO - Memory after processing: 0.0 MB
+2025-08-30 02:38:19,768 - __main__ - INFO - [DUPLICATE] Batch had 5 duplicate events
+2025-08-30 02:38:22,810 - __main__ - INFO - [STOP] System shutdown requested by user
+2025-08-30 02:38:24,783 - __main__ - INFO - [CLEANUP] Performing cleanup...
+2025-08-30 02:38:24,783 - __main__ - INFO - 
+======================================================================
+2025-08-30 02:38:24,783 - __main__ - INFO - [STATS] ENHANCED SYSTEM STATISTICS
+2025-08-30 02:38:24,783 - __main__ - INFO - ======================================================================
+2025-08-30 02:38:24,783 - __main__ - INFO - [DB] Total Unique Persons: 0
+2025-08-30 02:38:24,783 - __main__ - INFO - [DB] Total Visits: 0
+2025-08-30 02:38:24,783 - __main__ - INFO - [DB] Recent Visitors (24h): 0
+2025-08-30 02:38:24,783 - __main__ - INFO - 
+[SYSTEM] SYSTEM STATISTICS:
+2025-08-30 02:38:24,783 - __main__ - INFO -   Total Batches: 6
+2025-08-30 02:38:24,783 - __main__ - INFO -   Total Images Processed: 0
+2025-08-30 02:38:24,783 - __main__ - INFO -   Total Faces Detected: 0
+2025-08-30 02:38:24,783 - __main__ - INFO -   Total New Persons: 0
+2025-08-30 02:38:24,783 - __main__ - INFO -   Total Existing Persons: 0
+2025-08-30 02:38:24,783 - __main__ - INFO -   Total Processing Time: 8.48s
+2025-08-30 02:38:24,783 - __main__ - INFO -   System Uptime: 0:00:38.674146
+2025-08-30 02:38:24,783 - __main__ - INFO - 
+[PERF] PERFORMANCE STATISTICS:
+2025-08-30 02:38:24,783 - __main__ - INFO -   Memory Usage: 0.0 MB (0.0%)
+2025-08-30 02:38:24,783 - __main__ - INFO - 
+[DUPLICATE] DUPLICATE DETECTION STATISTICS:
+2025-08-30 02:38:24,783 - __main__ - INFO -   Total Duplicates (24h): 0
+2025-08-30 02:38:24,783 - __main__ - INFO -   Sleep Mode: INACTIVE
+2025-08-30 02:38:24,783 - __main__ - INFO - 
+[CONFIG] CONFIGURATION:
+2025-08-30 02:38:24,783 - __main__ - INFO -   Face Threshold: 0.6
+2025-08-30 02:38:24,783 - __main__ - INFO -   Max Batch Size: 10
+2025-08-30 02:38:24,783 - __main__ - INFO -   Processing Interval: 5s
+2025-08-30 02:38:24,783 - __main__ - INFO -   Quality Check: True
+2025-08-30 02:38:24,783 - __main__ - INFO -   FAISS Enabled: True
+2025-08-30 02:38:24,783 - __main__ - INFO -   Sleep Mode: True
+2025-08-30 02:38:24,783 - __main__ - INFO - ======================================================================
+
+2025-08-30 02:38:24,783 - __main__ - INFO - [DONE] System shutdown complete

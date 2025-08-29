@@ -114,9 +114,28 @@ class AgeGenderManager:
                 'gender_confidence': 0.0
             }
 
-    def predict(self, face_bgr: np.ndarray) -> Dict[str, str]:
-        """Compatibility wrapper. Accepts BGR face image and returns age_range and gender keys."""
-        return self.detect_age_gender(face_bgr)
+    def predict(self, face_bgr):
+        """
+        Wrapper for age/gender inference. Returns dict(age_range, gender).
+        Tries common internal method names and normalizes output.
+        """
+        try:
+            if hasattr(self, "predict_age_gender"):
+                age, gender = self.predict_age_gender(face_bgr)
+                return {"age_range": age, "gender": gender}
+            if hasattr(self, "infer"):
+                out = self.infer(face_bgr)
+                if isinstance(out, dict):
+                    return {"age_range": out.get("age_range", "unknown"), "gender": out.get("gender", "unknown")}
+                if isinstance(out, (list, tuple)) and len(out) >= 2:
+                    return {"age_range": out[0], "gender": out[1]}
+            # Fallback to existing public API if present
+            if hasattr(self, "get_age_and_gender"):
+                age, gender = self.get_age_and_gender(face_bgr)
+                return {"age_range": age, "gender": gender}
+        except Exception as e:
+            logging.getLogger(__name__).warning(f"AgeGenderManager.predict fallback failed: {e}")
+        return {"age_range": "unknown", "gender": "unknown"}
     
     def predict_batch(self, face_images: List[np.ndarray]) -> List[Dict[str, str]]:
         """Predict age and gender for a batch of face images

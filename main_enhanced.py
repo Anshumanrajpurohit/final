@@ -191,7 +191,12 @@ class EnhancedFaceRecognitionSystem:
 
         self._cleanup()
 
+    def _ensure_logger(self):
+        if not hasattr(self, "logger"):
+            self.logger = logging.getLogger(__name__)
+
     def _process_images(self, batch_stats: Dict[str, Any]):
+        self._ensure_logger()
         try:
             mem_before = 0.0
             if getattr(self.performance_optimizer, "get_memory_usage", None):
@@ -270,11 +275,15 @@ class EnhancedFaceRecognitionSystem:
 
                 try:
                     # Detect and process faces
-                    results = self.face_service.process_batch(local_path) or []
-                    detected = sum(1 for r in results if r.get("success"))
-                    batch_stats["faces_detected"] += detected
+                    results = self.face_service.process_batch(local_path)
+                    # Count only successful encodings
+                    success_faces = sum(1 for r in results if r.get("success"))
+                    face_count = success_faces
+                    # Update batch stats
+                    batch_stats["faces_detected"] += face_count
                     batch_stats["images_processed"] += 1
-
+                    self.logger.info(f"[ENCODINGS] Successful face encodings: {face_count}")
+                    # Insert to DB per face (if available)
                     for r in results:
                         if not r.get("success"):
                             continue
@@ -325,7 +334,7 @@ class EnhancedFaceRecognitionSystem:
                                 except Exception:
                                     pass
                             self.duplicate_detector.mark_image_processed(
-                                image_hash or image_name, image_name, image_url, detected
+                                image_hash or image_name, image_name, image_url, face_count
                             )
                         except Exception as e:
                             logger.warning(f"Mark processed failed: {e}")

@@ -3,13 +3,12 @@ import logging
 import uuid
 from typing import List, Tuple, Dict, Any
 import numpy as np
-
-import face_recognition
 from PIL import Image
+import face_recognition
+import mediapipe as mp
 
 # Import MediaPipe properly
 try:
-    import mediapipe as mp
     mp_face_detection = mp.solutions.face_detection
     mp_drawing = mp.solutions.drawing_utils
     MEDIAPIPE_AVAILABLE = True
@@ -235,63 +234,136 @@ class EnhancedFaceService:
             logger.exception(f"Face detection failed: {e}")
             return []
 
-    def process_batch(self, image_paths, *args, **kwargs) -> List[Dict]:
+    def _ensure_init(self):
+        """Ensure logger and MediaPipe detector are ready."""
+        if not hasattr(self, "logger"):
+            self.logger = logging.getLogger(__name__)
+        if not hasattr(self, "_mp_detector"):
+            # MediaPipe Face Detection: model_selection=1 for >2m, 0 for close-up
+            self._mp_detector = mp.solutions.face_detection.FaceDetection(
+                model_selection=1, min_detection_confidence=0.4
+            )
+            try:
+                self.logger.info("MediaPipe face detector initialized")
+            except Exception:
+                pass
+
+    def _detect_faces_mediapipe(self, image_path: str):
+        """Detect faces using MediaPipe and return list of dicts: x,y,w,h (pixels)."""
+        self._ensure_init()
+        # Load as RGB
+        image_rgb = face_recognition.load_image_file(image_path)
+        img_h, img_w = image_rgb.shape[:2]
+        res = self._mp_detector.process(image_rgb)
+        boxes = []
+        if res and getattr(res, "detections", None):
+            for det in res.detections:
+                rbb = det.location_data.relative_bounding_box
+                x = max(0, int(rbb.xmin * img_w))
+                y = max(0, int(rbb.ymin * img_h))
+                w = max(1, int(rbb.width * img_w))
+                h = max(1, int(rbb.height * img_h))
+                boxes.append({"x": x, "y": y, "w": w, "h": h})
+        return boxes
+
+    def _expand_bbox(self, x, y, w, h, img_w, img_h, ratio=0.25):
+        dx = int(w * ratio); dy = int(h * ratio)
+        nx = max(0, x - dx); ny = max(0, y - dy)
+        nr = min(img_w, x + w + dx); nb = min(img_h, y + h + dy)
+        return nx, ny, nr, nb  # left, top, right, bottom
+
+    def _encode_from_bbox(self, image_rgb, x, y, w, h, try_ratios=(0.25, 0.5, 0.8)):
+        img_h, img_w = image_rgb.shape[:2]
+        for r in try_ratios:
+            left, top, right, bottom = self._expand_bbox(x, y, w, h, img_w, img_h, ratio=r)
+            loc = (top, right, bottom, left)  # (t, r, b, l)
+            encs = face_recognition.face_encodings(image_rgb, known_face_locations=[loc], num_jitters=1)
+            if encs:
+                return encs[0], (left, top, right, bottom)
+        # Fallback small HOG in expanded crop (without cv2)
+        left, top, right, bottom = self._expand_bbox(x, y, w, h, img_w, img_h, ratio=1.0)
+        crop = image_rgb[top:bottom, left:right]
+        if crop.size > 0:
+            locs = face_recognition.face_locations(crop, model="hog")
+            if locs:
+                t, r, b, l = locs[0]
+                loc_abs = (top + t, left + r, top + b, left + l)
+                encs = face_recognition.face_encodings(image_rgb, known_face_locations=[loc_abs], num_jitters=1)
+                if encs:
+                    return encs[0], (left, top, right, bottom)
+        return None, None
+
+    def process_batch(self, image_path: str):
         """
-        Process multiple images or a single image to extract faces and their data.
-        Returns a list of face result dictionaries.
+        MediaPipe-only detection; encode directly from original image using detected bboxes.
         """
+        self._ensure_init()
         results = []
-        
-        # Handle both single string and list inputs
-        if isinstance(image_paths, str):
-            image_paths = [image_paths]
-        elif not isinstance(image_paths, list):
-            logger.warning(f"Invalid image path type: {type(image_paths)}")
-            return []
-        
-        # Process each image
-        for image_path in image_paths:
-            logger.info(f"Processing image: {image_path}")
-            
-            crops = self.detect_and_crop_faces_enhanced(image_path, *args, **kwargs)
-            for crop_path, x, y, w, h in crops:
-                try:
-                    face_data = self.process_face_image(crop_path)
-                    if face_data.get("success", False):
-                        results.append({
-                            "success": True,
-                            "data": {
-                                "crop_path": crop_path,
-                                "x": x, "y": y, "w": w, "h": h,
-                                "face_encoding": face_data.get("face_encoding"),
-                                "age_range": face_data.get("age_range", "unknown"),
-                                "gender": face_data.get("gender", "unknown"),
-                                "quality_score": face_data.get("quality_score", 0.0),
-                                "original_image": image_path
-                            }
-                        })
-                    else:
-                        results.append({
-                            "success": False,
-                            "error": face_data.get("error", "Unknown error"),
-                            "data": {
-                                "crop_path": crop_path,
-                                "x": x, "y": y, "w": w, "h": h,
-                                "original_image": image_path
-                            }
-                        })
-                except Exception as e:
-                    logger.exception(f"Failed to process crop {crop_path}: {e}")
-                    results.append({
-                        "success": False,
-                        "error": str(e),
-                        "data": {
-                            "crop_path": crop_path,
-                            "x": x, "y": y, "w": w, "h": h,
-                            "original_image": image_path
-                        }
-                    })
-        
+        try:
+            # Load once (RGB)
+            image_rgb = face_recognition.load_image_file(image_path)
+            img_h, img_w = image_rgb.shape[:2]
+
+            detections = self._detect_faces_mediapipe(image_path)
+            detected_count = len(detections) if detections else 0
+
+            success_count = 0
+            for det in detections or []:
+                x = int(det.get("x", 0)); y = int(det.get("y", 0))
+                w = int(det.get("w", 0)); h = int(det.get("h", 0))
+
+                encoding, enc_bbox = self._encode_from_bbox(image_rgb, x, y, w, h)
+                success = encoding is not None
+                success_count += 1 if success else 0
+
+                # Build face chip for age/gender
+                if enc_bbox:
+                    l, t, r, b = enc_bbox
+                else:
+                    l, t, r, b = self._expand_bbox(x, y, w, h, img_w, img_h, ratio=0.25)
+                face_rgb = image_rgb[t:b, l:r]
+                face_bgr = face_rgb[..., ::-1] if face_rgb.size > 0 else None
+
+                age_range, gender = "unknown", "unknown"
+                if face_bgr is not None and hasattr(self, "age_gender_manager") and getattr(self.age_gender_manager, "predict", None):
+                    try:
+                        pred = self.age_gender_manager.predict(face_bgr) or {}
+                        age_range = pred.get("age_range", "unknown")
+                        gender = pred.get("gender", "unknown")
+                    except Exception as e:
+                        self.logger.warning(f"Age/gender detection failed: {e}")
+
+                quality_score = 0.0
+                if face_rgb.size > 0:
+                    try:
+                        gy = np.gradient(face_rgb.astype(np.float32), axis=(0, 1))
+                        fm = (gy[0] ** 2 + gy[1] ** 2).mean()
+                        quality_score = float(fm)
+                    except Exception:
+                        pass
+
+                self.logger.info(f"Face bbox ({x},{y},{w},{h}) -> encoding={'OK' if success else 'FAIL'}")
+
+                results.append({
+                    "success": success,
+                    "data": {
+                        "x": x, "y": y, "w": w, "h": h,
+                        "quality_score": quality_score,
+                        "age_range": age_range,
+                        "gender": gender,
+                        "face_encoding": encoding.tolist() if (success and hasattr(encoding, "tolist")) else (encoding if success else None),
+                    }
+                })
+
+            if detected_count:
+                self.logger.info(f"Detected {detected_count} faces with MediaPipe, encodings OK: {success_count}")
+
+        except Exception as e:
+            # Ensure logger exists even if init partially failed
+            try:
+                self.logger.exception(f"Error processing image {image_path}: {e}")
+            except Exception:
+                print(f"[EnhancedFaceService] Error processing image {image_path}: {e}")
         return results
 
     def cleanup_temp_files(self):
